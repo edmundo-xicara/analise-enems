@@ -7,6 +7,7 @@ Uso:  python scripts/recortar_questoes.py   (precisa dos PDFs em ENEMs/, ver REA
 import io
 import json
 import re
+import time
 from pathlib import Path
 
 import pymupdf
@@ -15,6 +16,7 @@ from PIL import Image, ImageChops
 RAIZ = Path(__file__).resolve().parent.parent
 ENEMS = RAIZ / "ENEMs"
 SAIDA = RAIZ / "site" / "questoes"
+RODAPE = re.compile(r"CADERNO|AZUL|ENEM\S*|\*\S+\*", re.I)
 ZOOM = 1.6          # ~115 dpi: legível no celular sem pesar demais
 LARGURA_MAX = 760   # px
 
@@ -58,8 +60,13 @@ class Layout:
             w, h = pagina.rect.width, pagina.rect.height
             meio = w / 2
             palavras = pagina.get_text("words")
-            corpo = [p for p in palavras if p[1] < h * 0.93]
-            self.base[pn] = max((p[3] for p in corpo), default=h * 0.93) + 4
+            # rodapé: palavras típicas no fim da página ("CADERNO", "AZUL", logo "enem2021", código de barras)
+            rodape = [p for p in palavras if p[1] > h * 0.85 and RODAPE.fullmatch(p[4])]
+            # só a linha mais baixa: marcas d'água verticais ("ENEM 2022" entre as colunas) não contam
+            pe = max((p[1] for p in rodape), default=h * 0.96)
+            limite = min((p[1] for p in rodape if p[1] > pe - 25), default=pe) - 2
+            corpo = [p for p in palavras if p[3] <= limite]
+            self.base[pn] = min(max((p[3] for p in corpo), default=limite) + 4, limite)
             tem_direita = any(p == pn and x > meio * 0.9 for _, p, x, _ in heads)
             atravessam = sum(1 for p in corpo if p[0] < meio - 25 and p[2] > meio + 25)
             self.duas_colunas[pn] = tem_direita or atravessam < 4
@@ -116,7 +123,9 @@ def recortes(layout: Layout, inicio, fim):
             pn, col, y = pn + 1, 0, layout.topo
             continue
         pedacos.append((pn, pymupdf.Rect(x0, y, x1, y_fim)))
-        if mesma_coluna or fim is None:
+        if fim is None:
+            return pedacos + continuacao_da_ultima(layout, pn, col, pedacos[-1][1])
+        if mesma_coluna:
             return pedacos
         col += 1
         if col >= len(layout.colunas(pn)):
@@ -125,6 +134,30 @@ def recortes(layout: Layout, inicio, fim):
                 return pedacos
         y = layout.topo
     return pedacos
+
+
+def continuacao_da_ultima(layout: Layout, pn: int, col: int, ret: pymupdf.Rect):
+    """A última questão da prova não tem "próxima questão" para servir de limite. Se ela
+    chega ao pé da coluna, segue o bloco de texto contínuo do topo da coluna seguinte."""
+    palavras = layout.doc[pn].get_text("words")
+    if max((w[3] for w in palavras if ret.x0 <= w[0] <= ret.x1 and ret.y0 <= w[1] <= ret.y1), default=0) < ret.y1 - 45:
+        return []
+    col += 1
+    if col >= len(layout.colunas(pn)):
+        pn, col = pn + 1, 0
+        if pn >= len(layout.doc):
+            return []
+    x0, x1 = layout.colunas(pn)[col]
+    linhas = sorted(w[1:4:2] for w in layout.doc[pn].get_text("words")
+                    if x0 <= w[0] <= x1 and layout.topo - 4 <= w[1] <= layout.base[pn])
+    if not linhas or linhas[0][0] - layout.topo > 60:
+        return []
+    fim_y = linhas[0][1]
+    for y0, y1 in linhas[1:]:
+        if y0 - fim_y > 28:  # um espaço grande separa o fim da questão do que vem depois
+            break
+        fim_y = max(fim_y, y1)
+    return [(pn, pymupdf.Rect(x0, layout.topo, x1, fim_y + 6))]
 
 
 def renderizar(doc, pedacos) -> Image.Image:
@@ -183,7 +216,12 @@ def main() -> None:
             img = renderizar(doc, recortes(layout, ordem[i], fim))
             destino = SAIDA / area / f"{ano}-{q}.webp"
             destino.parent.mkdir(parents=True, exist_ok=True)
-            img.save(destino, "WEBP", quality=62, method=6)
+            for tentativa in range(5):  # o OneDrive às vezes segura o arquivo por um instante
+                try:
+                    img.save(destino, "WEBP", quality=62, method=6)
+                    break
+                except OSError:
+                    time.sleep(1 + tentativa)
         print(pdf.name, len(lista), "questões")
     total = sum(f.stat().st_size for f in SAIDA.rglob("*.webp"))
     print(f"Falhas: {falhas}\nTotal: {total / 1e6:.1f} MB")
