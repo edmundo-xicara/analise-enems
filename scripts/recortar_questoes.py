@@ -17,6 +17,7 @@ RAIZ = Path(__file__).resolve().parent.parent
 ENEMS = RAIZ / "ENEMs"
 SAIDA = RAIZ / "site" / "questoes"
 RODAPE = re.compile(r"CADERNO|AZUL|ENEM\S*|\*\S+\*", re.I)
+FOLGA = 1.5        # pt antes de cada "QUESTÃO NN": a alternativa E da anterior pode estar colada
 ZOOM = 1.6          # ~115 dpi: legível no celular sem pesar demais
 LARGURA_MAX = 760   # px
 
@@ -56,16 +57,19 @@ class Layout:
         self.duas_colunas = {}
         self.base = {}
         self.caixas = {}
+        self.palavras = {}
         for pn, pagina in enumerate(doc):
             w, h = pagina.rect.width, pagina.rect.height
             meio = w / 2
             palavras = pagina.get_text("words")
             # rodapé: palavras típicas no fim da página ("CADERNO", "AZUL", logo "enem2021", código de barras)
-            rodape = [p for p in palavras if p[1] > h * 0.85 and RODAPE.fullmatch(p[4])]
-            # só a linha mais baixa: marcas d'água verticais ("ENEM 2022" entre as colunas) não contam
+            # texto vertical (a marca d'água "ENEM 2022" entre as colunas) não é rodapé nem corpo
+            vertical = lambda p: (p[3] - p[1]) > 1.5 * (p[2] - p[0])
+            rodape = [p for p in palavras if p[1] > h * 0.85 and RODAPE.fullmatch(p[4]) and not vertical(p)]
             pe = max((p[1] for p in rodape), default=h * 0.96)
             limite = min((p[1] for p in rodape if p[1] > pe - 25), default=pe) - 2
-            corpo = [p for p in palavras if p[3] <= limite]
+            corpo = [p for p in palavras if p[3] <= limite and not vertical(p)]
+            self.palavras[pn] = corpo
             self.base[pn] = min(max((p[3] for p in corpo), default=limite) + 4, limite)
             tem_direita = any(p == pn and x > meio * 0.9 for _, p, x, _ in heads)
             atravessam = sum(1 for p in corpo if p[0] < meio - 25 and p[2] > meio + 25)
@@ -77,6 +81,18 @@ class Layout:
                       if sp["bbox"][1] < h * 0.93 and sp["text"].strip()]
             imagens = [i for i in imagens if i[2] - i[0] < w * 0.9]  # ignora fundos de página inteira
             self.caixas[pn] = linhas + imagens
+
+    def sem_fatiar(self, pn: int, x0: float, x1: float, y: float) -> float:
+        """Desce a linha de corte para baixo de qualquer linha de texto que ela atravessaria
+        (a última linha de uma questão às vezes invade a altura do cabeçalho seguinte)."""
+        coluna = [p for p in self.palavras[pn] if x0 <= p[0] <= x1]
+        cortadas = [p[3] for p in coluna if p[1] + 1 < y < p[3] - 1]
+        if not cortadas:
+            return y
+        abaixo = max(cortadas)
+        # se as caixas da linha de cima e da de baixo se sobrepõem, corta no meio da sobreposição
+        proxima = min((p[1] for p in coluna if y <= p[1] < abaixo), default=None)
+        return (abaixo + proxima) / 2 if proxima is not None else abaixo + 0.5
 
     def largura_total(self, pn: int, y0: float, y1: float) -> bool:
         """Há texto ou figura atravessando o meio da página entre y0 e y1?"""
@@ -105,14 +121,15 @@ def recortes(layout: Layout, inicio, fim):
     """Lista de (página, retângulo) do cabeçalho `inicio` até o cabeçalho `fim` (exclusive).
     Trechos com texto ou figura em largura total usam a página inteira."""
     pn, col = inicio[1], layout.coluna_de(inicio[1], inicio[2])
-    y = inicio[3] - 6
+    x0, x1 = layout.colunas(pn)[col]
+    y = layout.sem_fatiar(pn, x0, x1, inicio[3] - FOLGA)
     pedacos = []
     for _ in range(6):  # uma questão nunca ocupa mais que algumas colunas
         x0, x1 = layout.colunas(pn)[col]
         fim_aqui = fim if (fim and fim[1] == pn and fim[3] > y) else None
         mesma_coluna = fim_aqui and layout.coluna_de(pn, fim_aqui[2]) == col
-        y_fim = fim_aqui[3] - 6 if mesma_coluna else layout.base[pn]
-        y_fim_total = fim_aqui[3] - 6 if fim_aqui else layout.base[pn]
+        y_fim = layout.sem_fatiar(pn, x0, x1, fim_aqui[3] - FOLGA) if mesma_coluna else layout.base[pn]
+        y_fim_total = layout.sem_fatiar(pn, 18, layout.doc[pn].rect.width - 18, fim_aqui[3] - FOLGA) if fim_aqui else layout.base[pn]
         invade = any(h is not inicio and h[1] == pn and y + 8 < h[3] < y_fim_total for h in layout.heads)
         if y_fim_total - y > 40 and not invade and layout.largura_total(pn, y, y_fim):
             largura = layout.doc[pn].rect.width
