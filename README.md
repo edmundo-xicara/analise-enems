@@ -1,6 +1,6 @@
-# O que cai em Humanas no ENEM (2009–2025)
+# O que cai no ENEM: Humanas (2009–2025) e Exatas (2015–2025)
 
-Análise aberta das questões de **Ciências Humanas** do ENEM: disciplina, matéria, assuntos, abordagem, fonte do texto-base e se a questão é ambientada no Brasil.
+Análise aberta das questões de **Ciências Humanas** e de **Matemática e Ciências da Natureza** do ENEM: disciplina, matéria, assuntos, abordagem, fonte do texto-base e se a questão é ambientada no Brasil.
 
 **Site:** abra `site/index.html` com um servidor local (veja abaixo) ou acesse a versão publicada no GitHub Pages.
 
@@ -13,7 +13,8 @@ Em 2025, com *vibe coding* (o Claude, da Anthropic, como assistente de programa�
 1. extraí o modelo de dados do arquivo `.pbix` do Power BI;
 2. continuei a análise para **2023, 2024 e 2025** com o mesmo esquema de classificação;
 3. consolidei tudo em um CSV único;
-4. construí este site para substituir a apresentação do Power BI.
+4. construí este site para substituir a apresentação do Power BI;
+5. apliquei o mesmo método às **990 questões de Matemática e Ciências da Natureza** de 2015 a 2025 (aba *Matemática e Natureza* do site), também com ajuda de IA.
 
 ## O que tem aqui
 
@@ -23,7 +24,9 @@ Em 2025, com *vibe coding* (o Claude, da Anthropic, como assistente de programa�
 | `dados/anotacoes/2023.csv` … `2025.csv` | A continuação (2023–2025), classificada com ajuda de IA |
 | `dados/resumo_2009_2014_powerbi.csv` | Totais de 2009–2014, transcritos da apresentação original |
 | `dados/questoes.csv` | **Base consolidada**: 495 questões de 2015 a 2025 |
-| `scripts/build_data.py` | Gera `dados/questoes.csv` e os JSON do site |
+| `dados/anotacoes_exatas/2015.psv` … `2025.psv` | Matemática e Natureza, classificadas com ajuda de IA (separador `\|`) |
+| `dados/questoes_exatas.csv` | **Base consolidada de Exatas**: 990 questões de 2015 a 2025 (mesmas colunas) |
+| `scripts/build_data.py` | Gera `dados/questoes.csv`, `dados/questoes_exatas.csv` e os JSON do site |
 | `site/` | Site estático (HTML + CSS + JS + Apache ECharts) |
 
 ### Colunas de `dados/questoes.csv`

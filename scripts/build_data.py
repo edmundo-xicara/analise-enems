@@ -77,6 +77,36 @@ def main() -> None:
     (SITE / "anual.json").write_text(json.dumps(anual, ensure_ascii=False), encoding="utf-8")
     print(f"{len(registros)} questões ({questoes['ano'].min()}–{questoes['ano'].max()}), {len(anual)} anos no resumo")
 
+    exatas()
+
+
+def exatas() -> None:
+    """Matemática e Ciências da Natureza (2015–2025), classificadas com ajuda de IA."""
+    frames = []
+    for arq in sorted((DADOS / "anotacoes_exatas").glob("*.psv")):
+        df = pd.read_csv(arq, sep="|", dtype=str, keep_default_na=False)
+        df["Ano"] = int(arq.stem)
+        df["Questão"] = df["Questão"].astype(int)
+        frames.append(limpar(df, "ia"))
+    questoes = pd.concat(frames).sort_values(["ano", "questao"]).reset_index(drop=True)
+    questoes.to_csv(DADOS / "questoes_exatas.csv", index=False, quoting=csv.QUOTE_NONNUMERIC)
+
+    anual = [{
+        "ano": int(ano), "fonte": "ia",
+        "disciplinas": g["disciplina"].value_counts().to_dict(),
+        "brasil": int(g["brasil"].sum()), "total": len(g),
+    } for ano, g in questoes.groupby("ano")]
+    registros = [{
+        "ano": int(q.ano), "q": int(q.questao), "disciplina": q.disciplina,
+        "materia": q.materia, "assuntos": separar(q.assuntos), "brasil": bool(q.brasil),
+        "abordagem": q.abordagem, "fonte": q.fonte, "tipos": separar(q.tipo_fonte),
+        "metodo": q.metodo,
+    } for q in questoes.itertuples()]
+
+    (SITE / "questoes_exatas.json").write_text(json.dumps(registros, ensure_ascii=False), encoding="utf-8")
+    (SITE / "anual_exatas.json").write_text(json.dumps(anual, ensure_ascii=False), encoding="utf-8")
+    print(f"Exatas: {len(registros)} questões")
+
 
 if __name__ == "__main__":
     main()

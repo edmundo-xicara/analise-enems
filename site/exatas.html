@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exatas no ENEM</title>
+  <meta name="description" content="Análise aberta das questões de Matemática e Ciências da Natureza do ENEM de 2015 a 2025: disciplinas, matérias, assuntos, fontes e questões ambientadas no Brasil.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body data-area="exatas">
+  <header class="hero">
+    <div class="wrap">
+      <nav class="tabs" aria-label="Áreas">
+        <a href="index.html">Ciências Humanas</a>
+        <a href="exatas.html" aria-current="page">Matemática e Natureza</a>
+      </nav>
+    </div>
+    <div class="wrap">
+      <p class="eyebrow">Análise aberta · ENEM 2015–2025</p>
+      <h1>O que cai em <em>Exatas</em> no ENEM</h1>
+      <p class="lede">A mesma análise feita em Humanas, aplicada às 90 questões de Matemática e de Ciências da Natureza (Física, Química e Biologia) de cada prova de 2015 a 2025. Esta parte foi classificada inteiramente com ajuda de IA, seguindo o mesmo método.</p>
+      <div class="kpis" id="kpis"></div>
+      <nav class="toc">
+        <a href="#disciplinas">Disciplinas</a>
+        <a href="#brasil">Ambientadas no Brasil</a>
+        <a href="#materias">Matérias, assuntos e questões</a>
+        <a href="#fontes">Fontes</a>
+        <a href="#metodologia">Metodologia</a>
+        <a href="https://github.com/edmundo-xicara/analise-enems" target="_blank" rel="noopener">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="filters" id="filters">
+    <div class="wrap filters-inner">
+      <label class="field">Ano
+        <select id="f-ano"></select>
+      </label>
+      <div class="chips" id="f-disc" role="group" aria-label="Disciplinas"></div>
+      <span class="filter-note" id="f-note"></span>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <section id="disciplinas">
+      <p class="group-num">1</p>
+      <h2>Proporção das disciplinas</h2>
+      <p class="section-lede">Quantas questões de cada disciplina caíram por prova. Matemática tem sempre 45 questões; as outras 45 se dividem entre Física, Química e Biologia. <strong>Clique numa fatia</strong> para isolar a disciplina em todo o site.</p>
+      <div class="grid g3">
+        <figure class="card span2">
+          <figcaption>Número de questões de cada disciplina por ano</figcaption>
+          <div class="chart tall" id="c-disc-ano"></div>
+        </figure>
+        <figure class="card">
+          <figcaption>Média por prova, por disciplina <span class="hint" data-scope></span></figcaption>
+          <div class="chart tall" id="c-disc-media"></div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="brasil">
+      <p class="group-num">2</p>
+      <h2>Questões ambientadas no Brasil</h2>
+      <p class="section-lede">Quantas questões têm recorte brasileiro, em quais disciplinas e em quais matérias. <strong>Clique numa barra de disciplina</strong> para isolá-la; o seletor ao lado filtra as matérias pelo recorte.</p>
+      <div class="group-filters" id="gf-brasil">
+        <div class="seg" role="group" aria-label="Recorte" data-key="brasil">
+          <button type="button" data-v="todos" aria-pressed="true">Todas</button>
+          <button type="button" data-v="sim" aria-pressed="false">No Brasil</button>
+          <button type="button" data-v="nao" aria-pressed="false">Fora do Brasil</button>
+        </div>
+      </div>
+      <div class="grid g2">
+        <figure class="card">
+          <figcaption>Questões ambientadas no Brasil por ano</figcaption>
+          <div class="chart" id="c-brasil-ano"></div>
+        </figure>
+        <figure class="card">
+          <figcaption>Média de questões ambientadas no Brasil por disciplina <span class="hint" data-scope></span></figcaption>
+          <div class="chart" id="c-brasil-disc"></div>
+        </figure>
+        <figure class="card span2">
+          <figcaption>Proporção de questões ambientadas no Brasil por matéria <span class="hint" data-scope></span></figcaption>
+          <div class="chart xtall" id="c-materias-brasil"></div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="materias">
+      <p class="group-num">3</p>
+      <h2>Matérias, assuntos e questões</h2>
+      <p class="section-lede">Que matérias mais caem, que assuntos aparecem dentro delas e quais foram as questões. <strong>Clique numa matéria ou num assunto</strong> para filtrar o resto do bloco, ou use os seletores.</p>
+      <div class="group-filters" id="gf-materias">
+        <label class="field">Matéria <select id="f-materia"></select></label>
+        <label class="field">Assunto <select id="f-assunto"></select></label>
+        <div class="seg" role="group" aria-label="Recorte" data-key="brasilM">
+          <button type="button" data-v="todos" aria-pressed="true">Todas</button>
+          <button type="button" data-v="sim" aria-pressed="false">No Brasil</button>
+          <button type="button" data-v="nao" aria-pressed="false">Fora do Brasil</button>
+        </div>
+        <button type="button" class="clear" data-clear="materias">Limpar filtros</button>
+      </div>
+      <div class="grid g2">
+        <figure class="card">
+          <figcaption>Média de questões por prova de cada matéria <span class="hint" data-scope></span></figcaption>
+          <div class="chart xtall" id="c-materias"></div>
+        </figure>
+        <figure class="card">
+          <figcaption>Assuntos abordados <span class="hint" id="h-assuntos"></span></figcaption>
+          <div class="table-wrap xtall-table"><table class="data clickable" id="t-assuntos"></table></div>
+        </figure>
+        <figure class="card span2" id="explorar">
+          <figcaption>Explorar questões <span class="hint" id="h-questoes"></span></figcaption>
+          <div class="search-row">
+            <input id="busca" type="search" placeholder="Buscar: escravidão, Foucault, Amazônia, IBGE…" aria-label="Buscar questões">
+            <span class="count" id="busca-count"></span>
+          </div>
+          <div class="table-wrap tall-table">
+            <table class="data questions" id="t-questoes">
+              <thead><tr><th>Ano</th><th>Q.</th><th>Disciplina</th><th>Matéria</th><th>Abordagem</th><th>Fonte</th><th>BR</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <button class="more" id="mais" type="button">Mostrar mais</button>
+        </figure>
+      </div>
+    </section>
+
+    <section id="fontes">
+      <p class="group-num">4</p>
+      <h2>De onde vêm os textos</h2>
+      <p class="section-lede">Em Exatas, muitas questões não citam fonte nenhuma: o enunciado é criado pela própria banca. <strong>Clique num tipo de fonte, numa fonte ou num autor</strong> para ver as abordagens das questões correspondentes.</p>
+      <div class="group-filters" id="gf-fontes">
+        <label class="field">Tipo de fonte <select id="f-tipo"></select></label>
+        <span class="pills" id="p-fontes"></span>
+        <button type="button" class="clear" data-clear="fontes">Limpar filtros</button>
+      </div>
+      <div class="grid g3">
+        <figure class="card">
+          <figcaption>Tipo de fonte <span class="hint" data-scope></span></figcaption>
+          <div class="chart" id="c-tipos"></div>
+        </figure>
+        <figure class="card">
+          <figcaption>Fontes mais citadas</figcaption>
+          <div class="table-wrap"><table class="data clickable" id="t-fontes"></table></div>
+        </figure>
+        <figure class="card">
+          <figcaption>Autores mais citados</figcaption>
+          <div class="table-wrap"><table class="data clickable" id="t-autores"></table></div>
+        </figure>
+        <figure class="card span3">
+          <figcaption>Abordagens <span class="hint" id="h-abordagens"></span></figcaption>
+          <div class="table-wrap"><table class="data" id="t-abordagens"></table></div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="metodologia" class="prose">
+      <h2>Metodologia</h2>
+      <h3>Como foi feito</h3>
+      <p>Esta aba aplica o mesmo esquema da análise de Ciências Humanas às questões de Matemática (Q136–180) e de Ciências da Natureza (Q91–135; em 2015 e 2016, Q46–90 do 1º dia) do caderno azul de cada ano, de 2015 a 2025. São 990 questões.</p>
+      <p>O texto das questões foi extraído dos cadernos oficiais do INEP, e cada uma foi classificada pelo Claude (IA da Anthropic) com as mesmas colunas: disciplina, matéria, assuntos, ambientada no Brasil, abordagem, fonte e tipo de fonte. <strong>Todas as linhas desta aba estão marcadas como “IA”</strong> e ainda passarão por uma revisão humana.</p>
+      <h3>Critérios específicos de Exatas</h3>
+      <ul>
+        <li><strong>Matérias de Matemática</strong>: Aritmética, Estatística, Probabilidade, Análise combinatória, Funções, Álgebra, Geometria plana, espacial e analítica, Trigonometria, Sequências e progressões, Matemática financeira e Grandezas e medidas.</li>
+        <li><strong>Matérias de Física</strong>: Mecânica, Ondulatória, Eletricidade, Eletromagnetismo, Termologia, Óptica, Hidrostática, Energia, Física moderna e Astronomia.</li>
+        <li><strong>Matérias de Química</strong>: Química geral, Físico-química, Química orgânica, Estequiometria, Eletroquímica, Termoquímica, Radioatividade e Química ambiental.</li>
+        <li><strong>Matérias de Biologia</strong>: Ecologia, Genética, Evolução, Citologia, Bioquímica, Botânica, Zoologia, Fisiologia humana, Saúde e doenças e Biotecnologia.</li>
+        <li><strong>Brasil</strong>: marcado só quando a questão trata explicitamente de um lugar, dado ou fato brasileiro. Valores em reais, sozinhos, não contam.</li>
+        <li><strong>Fonte</strong>: fica em branco quando o enunciado não cita nenhuma.</li>
+      </ul>
+      <h3>Limitações</h3>
+      <ul>
+        <li>Não há dados de 2009 a 2014 para Exatas.</li>
+        <li>Em questões com imagens ou gráficos, a classificação se baseou no texto extraído do PDF, que não descreve a figura.</li>
+        <li>O PDF de 2021 usa uma fonte codificada; o texto foi decodificado automaticamente e alguns símbolos se perderam.</li>
+      </ul>
+      <h3>Dados abertos</h3>
+      <p>As classificações estão em <code>dados/anotacoes_exatas/</code> (um arquivo por ano) e consolidadas em <code>dados/questoes_exatas.csv</code> no <a href="https://github.com/edmundo-xicara/analise-enems" target="_blank" rel="noopener">repositório no GitHub</a>. Achou um erro? Abra uma <em>issue</em>.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">Feito por <a href="https://github.com/edmundo-xicara" target="_blank" rel="noopener">Edmundo</a> · dados das provas: INEP · código e dados abertos no <a href="https://github.com/edmundo-xicara/analise-enems" target="_blank" rel="noopener">GitHub</a></div>
+  </footer>
+</body>
+</html>

@@ -1,5 +1,21 @@
-const DISCIPLINAS = ["História", "Geografia", "Filosofia", "Sociologia"];
-const COR_VAR = { "História": "--hist", "Geografia": "--geo", "Filosofia": "--filo", "Sociologia": "--soc" };
+// A mesma página serve as duas áreas; <body data-area="..."> escolhe qual.
+const AREAS = {
+  humanas: {
+    disciplinas: ["História", "Geografia", "Filosofia", "Sociologia"],
+    cores: { "História": "--hist", "Geografia": "--geo", "Filosofia": "--filo", "Sociologia": "--soc" },
+    dados: ["data/questoes.json", "data/anual.json"],
+    provas: "provas (2009–2025)",
+  },
+  exatas: {
+    disciplinas: ["Matemática", "Física", "Química", "Biologia"],
+    cores: { "Matemática": "--mat", "Física": "--fis", "Química": "--qui", "Biologia": "--bio" },
+    dados: ["data/questoes_exatas.json", "data/anual_exatas.json"],
+    provas: "provas (2015–2025)",
+  },
+};
+const AREA = AREAS[document.body.dataset.area] || AREAS.humanas;
+const DISCIPLINAS = AREA.disciplinas;
+const COR_VAR = AREA.cores;
 const TIPOS = ["Livros", "Notícias", "Revistas", "Artigos", "Imagens", "Músicas", "Poemas"];
 const LIMITE = 40;
 
@@ -89,8 +105,8 @@ function renderKpis() {
   const brasil = QUESTOES.filter((q) => q.brasil).length / anotadas;
   const fontes = new Set(QUESTOES.map((q) => q.fonte).filter(Boolean)).size;
   document.getElementById("kpis").innerHTML = [
-    [ANUAL.length, "provas (2009–2025)"],
-    [total, `questões contadas, ${anotadas} anotadas uma a uma`],
+    [ANUAL.length, AREA.provas],
+    [total === anotadas ? anotadas : total, total === anotadas ? "questões anotadas uma a uma" : `questões contadas, ${anotadas} anotadas uma a uma`],
     [`${fmt(brasil * 100, 0)}%`, "ambientadas no Brasil (2015–2025)"],
     [fontes, "fontes diferentes citadas"],
   ].map(([v, t]) => `<div class="kpi"><b>${v}</b><span>${t}</span></div>`).join("");
@@ -422,7 +438,7 @@ function renderFontes() {
 
 function atualizar() {
   document.querySelectorAll("[data-scope]").forEach((el) => (el.textContent = escopoTexto()));
-  document.getElementById("f-note").textContent = estado.disc.size < DISCIPLINAS.length
+  document.getElementById("f-note").textContent = estado.disc.size < DISCIPLINAS.length && ANUAL.some((a) => a.fonte === "powerbi")
     ? "Com filtro de disciplina, o gráfico do Brasil por ano mostra só 2015–2025." : "";
   renderDisciplinas();
   renderBrasil();
@@ -432,8 +448,8 @@ function atualizar() {
 
 async function iniciar() {
   [QUESTOES, ANUAL] = await Promise.all([
-    fetch("data/questoes.json").then((r) => r.json()),
-    fetch("data/anual.json").then((r) => r.json()),
+    fetch(AREA.dados[0]).then((r) => r.json()),
+    fetch(AREA.dados[1]).then((r) => r.json()),
   ]);
   renderKpis();
   renderFiltros();
