@@ -130,7 +130,7 @@ figcaption { font-weight: 600; font-size: 15px; margin-bottom: 8px; }
 .table-wrap { overflow: auto; max-height: 420px; }
 .tall-table { max-height: none; }
 table.data { width: 100%; border-collapse: collapse; font-size: 14px; }
-table.data th { text-align: left; font-weight: 600; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; padding: 8px; border-bottom: 1px solid var(--line); position: sticky; top: 0; background: var(--surface); }
+table.data th { text-align: left; font-weight: 600; color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .04em; padding: 8px; border-bottom: 1px solid var(--line); position: sticky; top: 0; z-index: 2; background: var(--surface); }
 table.data td { padding: 8px; border-bottom: 1px solid var(--line); vertical-align: top; }
 table.data td.num { text-align: right; font-variant-numeric: tabular-nums; }
 .bar { height: 6px; border-radius: 3px; background: var(--accent); opacity: .7; margin-top: 4px; }

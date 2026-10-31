@@ -171,14 +171,14 @@ function renderDisciplinas() {
   const qs = base(), n = anosNoEscopo();
   grafico("c-disc-media", {
     ...baseOpcoes(),
-    legend: undefined,
+    legend: { bottom: 0, left: "center", icon: "circle", itemGap: 12, selectedMode: false, textStyle: { color: css("--ink"), fontSize: 12 }, formatter: (n) => `${n}  ${fmt(+(qs.filter((q) => q.disciplina === n).length / anosNoEscopo()).toFixed(1))}` },
     tooltip: { trigger: "item", formatter: (p) => `${p.name}: ${fmt(p.value)} questões (${fmt(p.percent)}%)<br><small>Clique para isolar</small>` },
     series: [{
-      type: "pie", radius: ["42%", "70%"], center: ["50%", "52%"], cursor: "pointer",
+      type: "pie", radius: ["38%", "66%"], center: ["50%", "44%"], cursor: "pointer",
       data: DISCIPLINAS.filter((d) => estado.disc.has(d)).map((d) => ({
         name: d, value: +(qs.filter((q) => q.disciplina === d).length / n).toFixed(1), itemStyle: { color: cor(d) },
       })),
-      label: { color: css("--ink"), formatter: (p) => `${p.name}\n${fmt(p.value)} (${fmt(p.percent, 0)}%)` },
+      label: { position: "inside", color: "#fff", fontSize: 11, fontWeight: 600, formatter: (p) => (p.percent >= 5 ? `${fmt(p.percent, 0)}%` : "") },
       itemStyle: { borderColor: css("--surface"), borderWidth: 2 },
     }],
   }, (p) => isolarDisciplina(p.name));
@@ -380,15 +380,15 @@ function renderFontes() {
   const paleta = [css("--hist"), css("--soc"), css("--filo"), css("--geo"), css("--br-yes"), css("--muted"), css("--br-no")];
   grafico("c-tipos", {
     ...baseOpcoes(),
-    legend: undefined,
+    legend: { bottom: 0, left: "center", icon: "circle", itemGap: 12, selectedMode: false, textStyle: { color: css("--ink"), fontSize: 12 }, formatter: (n) => `${n}  ${tipos.find(([t]) => t === n)?.[1] ?? ""}` },
     tooltip: { trigger: "item", formatter: (p) => `${p.name}: ${p.value} (${fmt(p.percent)}%)<br><small>Clique para filtrar</small>` },
     series: [{
-      type: "pie", radius: ["42%", "70%"], center: ["50%", "52%"], cursor: "pointer",
+      type: "pie", radius: ["38%", "66%"], center: ["50%", "42%"], cursor: "pointer",
       data: tipos.map(([t, c], i) => ({
         name: t, value: c,
         itemStyle: { color: paleta[i % paleta.length], opacity: !estado.tipo || estado.tipo === t ? 1 : 0.3 },
       })),
-      label: { color: css("--ink"), formatter: (p) => `${p.name}\n${fmt(p.percent, 0)}%` },
+      label: { position: "inside", color: "#fff", fontSize: 11, fontWeight: 600, formatter: (p) => (p.percent >= 5 ? `${fmt(p.percent, 0)}%` : "") },
       itemStyle: { borderColor: css("--surface"), borderWidth: 2 },
     }],
   }, (p) => { estado.tipo = estado.tipo === p.name ? null : p.name; atualizar(); });
