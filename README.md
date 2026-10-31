@@ -2,7 +2,7 @@
 
 Análise aberta das questões de **Ciências Humanas** e de **Matemática e Ciências da Natureza** do ENEM: disciplina, matéria, assuntos, abordagem, fonte do texto-base e se a questão é ambientada no Brasil.
 
-**Site:** abra `site/index.html` com um servidor local (veja abaixo) ou acesse a versão publicada no GitHub Pages.
+**Site:** abra `site/index.html` com um servidor local (veja abaixo) ou acesse a versão publicada na Vercel (a configuração está em `vercel.json`, que publica a pasta `site/`).
 
 ## A história
 
