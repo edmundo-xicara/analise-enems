@@ -202,7 +202,7 @@ code { font-size: 14px; background: var(--surface); border: 1px solid var(--line
 .sim-progresso div { height: 100%; background: var(--accent); transition: width .3s; }
 .sim-status { display: flex; gap: 16px; align-items: center; font-size: 14px; color: var(--muted); padding-top: 8px; }
 .sim-status #p-encerrar { margin-left: auto; }
-.sim-questao img { display: block; width: 100%; height: auto; border-radius: 8px; background: #fff; border: 1px solid var(--line); }
+.sim-questao img { display: block; width: 100%; max-width: 640px; margin: 0 auto; height: auto; border-radius: 8px; background: #fff; border: 1px solid var(--line); }
 .sim-meta { font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 0 0 10px; }
 .sim-materia { font-weight: 600; color: var(--ink); }
 .sim-alts { display: flex; gap: 10px; justify-content: center; margin: 18px 0 8px; }
@@ -223,7 +223,7 @@ kbd { font: 600 11px Inter, sans-serif; border: 1px solid var(--line); border-ra
 .sim-resultado h3 { margin: 24px 0 8px; }
 .sim-erro { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; }
 .sim-erro summary { cursor: pointer; font-size: 14px; font-weight: 500; }
-.sim-erro img { width: 100%; margin-top: 10px; border-radius: 8px; background: #fff; }
+.sim-erro img { width: 100%; max-width: 640px; display: block; margin: 10px auto 0; border-radius: 8px; background: #fff; }
 @media (max-width: 860px) {
   .sim-label { width: 100%; }
   .sim-alt { width: 46px; height: 46px; }
