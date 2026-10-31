@@ -228,3 +228,6 @@ kbd { font: 600 11px Inter, sans-serif; border: 1px solid var(--line); border-ra
   .sim-label { width: 100%; }
   .sim-alt { width: 46px; height: 46px; }
 }
+
+.footer p { margin: 0 0 8px; }
+.footer .aviso { font-size: 12px; max-width: 820px; line-height: 1.5; }

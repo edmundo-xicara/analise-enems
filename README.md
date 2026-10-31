@@ -8,7 +8,7 @@ Análise aberta das questões de **Ciências Humanas** e de **Matemática e Ciê
 
 Entre o fim de 2022 e o início de 2023, antes do boom da IA generativa, eu li **à mão** as 45 questões de Humanas de cada prova do ENEM e anotei tudo numa planilha. Depois, organizei os dados em Python e montei uma apresentação no Power BI.
 
-Em 2025, com *vibe coding* (o Claude, da Anthropic, como assistente de programação), transformei esse trabalho em um projeto aberto:
+Em 2026, com *vibe coding* (o Claude, da Anthropic, como assistente de programação), transformei esse trabalho em um projeto aberto:
 
 1. extraí o modelo de dados do arquivo `.pbix` do Power BI;
 2. continuei a análise para **2023, 2024 e 2025** com o mesmo esquema de classificação;
@@ -76,6 +76,11 @@ As provas originais ficam em [Provas e gabaritos do INEP](https://www.gov.br/ine
 
 Achou uma classificação errada? Abra uma *issue* ou um *pull request* editando o CSV do ano em `dados/anotacoes/` ou, para 2015–2022, apontando a questão.
 
-## Licença
+## Licença e direitos
 
-Código sob licença MIT. Dados e anotações sob [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.pt_BR). As provas do ENEM são publicações do INEP.
+- **Código** (scripts e site): licença MIT.
+- **Anotações e dados derivados** (classificações, `dados/questoes*.csv`, `dados/anotacoes*/`, JSON do site): [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/deed.pt_BR). Cite este repositório ao reutilizar.
+- **Provas e gabaritos do ENEM**, incluindo as imagens das questões em `site/questoes/`: pertencem ao INEP e **não** estão sob as licenças acima. Elas são reproduzidas sem alteração, com indicação de fonte, para fins de estudo e sem fins lucrativos. Os textos e imagens de terceiros citados nas questões pertencem aos seus autores, indicados na própria questão.
+- Este é um projeto independente, sem vínculo com o INEP ou o MEC.
+
+Se você é titular de algum conteúdo reproduzido aqui e quer que ele seja retirado, abra uma *issue*.
