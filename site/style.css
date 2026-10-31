@@ -174,3 +174,57 @@ code { font-size: 14px; background: var(--surface); border: 1px solid var(--line
   .kpis { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .chart.xtall { height: 480px; }
 }
+
+
+/* ---------- Simulado ---------- */
+.hero-compact { padding-bottom: 20px; }
+.btn-primary { font: 600 15px Inter, sans-serif; padding: 11px 20px; border-radius: 10px; border: 0; background: var(--accent); color: #fff; cursor: pointer; }
+.btn-primary:disabled { opacity: .45; cursor: not-allowed; }
+.linkbtn { font: 500 14px Inter, sans-serif; background: none; border: 0; color: var(--accent); cursor: pointer; padding: 6px 4px; }
+.sim-config { padding-top: 28px; }
+.sim-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 14px; padding: 12px 0; border-bottom: 1px solid var(--line); }
+.sim-row-top { align-items: flex-start; }
+.sim-label { width: 110px; font-weight: 600; font-size: 14px; }
+.sim-materias { flex: 1; min-width: 0; }
+.sim-materias-tools { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 8px; }
+.sim-materias-tools input { flex: 1; min-width: 160px; }
+.sim-materias-lista { max-height: 340px; overflow: auto; display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 8px 16px; }
+.sim-grupo { border: 1px solid var(--line); border-radius: 10px; padding: 6px 10px 10px; margin: 0; }
+.sim-grupo legend { padding: 0 4px; }
+.sim-check { display: flex; align-items: center; gap: 8px; font-size: 14px; padding: 3px 0; cursor: pointer; }
+.sim-check span { flex: 1; }
+.sim-check small { color: var(--muted); font-variant-numeric: tabular-nums; }
+.sim-start { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 12px; padding-top: 16px; }
+.sim-historico { color: var(--muted); font-size: 14px; }
+.sim-prova { padding-top: 24px; max-width: 820px; margin: 0 auto; }
+.sim-topo { position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 10px 0; }
+.sim-progresso { height: 6px; background: var(--line); border-radius: 3px; overflow: hidden; }
+.sim-progresso div { height: 100%; background: var(--accent); transition: width .3s; }
+.sim-status { display: flex; gap: 16px; align-items: center; font-size: 14px; color: var(--muted); padding-top: 8px; }
+.sim-status #p-encerrar { margin-left: auto; }
+.sim-questao img { display: block; width: 100%; height: auto; border-radius: 8px; background: #fff; border: 1px solid var(--line); }
+.sim-meta { font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 6px; align-items: center; margin: 0 0 10px; }
+.sim-materia { font-weight: 600; color: var(--ink); }
+.sim-alts { display: flex; gap: 10px; justify-content: center; margin: 18px 0 8px; }
+.sim-alt { width: 52px; height: 52px; border-radius: 50%; border: 2px solid var(--line); background: var(--surface); color: var(--ink); font: 700 18px Inter, sans-serif; cursor: pointer; }
+.sim-alt:hover:not(:disabled) { border-color: var(--accent); }
+.sim-alt.sel { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 18%, transparent); }
+.sim-alt.certa { border-color: var(--br-yes); background: var(--br-yes); color: #fff; }
+.sim-alt.errada { border-color: #d64545; background: #d64545; color: #fff; }
+.sim-feedback { border-radius: 10px; padding: 12px 14px; margin-top: 12px; }
+.sim-feedback p { margin: 6px 0 0; }
+.sim-feedback .assuntos { color: var(--muted); font-size: 13px; }
+.sim-feedback.ok { background: color-mix(in srgb, var(--br-yes) 14%, transparent); }
+.sim-feedback.erro { background: color-mix(in srgb, #d64545 14%, transparent); }
+.sim-acoes { display: flex; justify-content: space-between; align-items: center; margin-top: 14px; }
+.sim-dica { color: var(--muted); font-size: 12px; text-align: center; margin: 12px 0 0; }
+kbd { font: 600 11px Inter, sans-serif; border: 1px solid var(--line); border-radius: 4px; padding: 1px 5px; background: var(--bg); }
+.sim-resultado { padding-top: 28px; max-width: 900px; margin: 0 auto; }
+.sim-resultado h3 { margin: 24px 0 8px; }
+.sim-erro { border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; margin-bottom: 8px; }
+.sim-erro summary { cursor: pointer; font-size: 14px; font-weight: 500; }
+.sim-erro img { width: 100%; margin-top: 10px; border-radius: 8px; background: #fff; }
+@media (max-width: 860px) {
+  .sim-label { width: 100%; }
+  .sim-alt { width: 46px; height: 46px; }
+}

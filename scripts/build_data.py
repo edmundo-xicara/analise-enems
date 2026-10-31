@@ -34,6 +34,17 @@ def limpar(df: pd.DataFrame, metodo: str, marcador: tuple[str, str] = ("Brasil",
     return df
 
 
+def gabarito() -> dict:
+    """Resposta oficial do caderno azul por (ano, questão); "X" = anulada. Ver scripts/gabaritos.py."""
+    arq = DADOS / "gabaritos.json"
+    if not arq.exists():
+        return {}
+    return {(int(a), int(q)): r for a, qs in json.loads(arq.read_text()).items() for q, r in qs.items()}
+
+
+GABARITO = gabarito()
+
+
 def separar(texto: str) -> list[str]:
     return [p.strip() for p in texto.split(",") if p.strip()]
 
@@ -73,7 +84,7 @@ def main() -> None:
             "ano": int(q.ano), "q": int(q.questao), "disciplina": q.disciplina,
             "materia": q.materia, "assuntos": separar(q.assuntos), "brasil": bool(q.brasil),
             "abordagem": q.abordagem, "fonte": q.fonte, "tipos": separar(q.tipo_fonte),
-            "metodo": q.metodo,
+            "metodo": q.metodo, "gab": GABARITO.get((int(q.ano), int(q.questao)), ""),
         })
 
     SITE.mkdir(parents=True, exist_ok=True)
@@ -104,7 +115,7 @@ def exatas() -> None:
         "ano": int(q.ano), "q": int(q.questao), "disciplina": q.disciplina,
         "materia": q.materia, "assuntos": separar(q.assuntos), "calculo": bool(q.calculo),
         "abordagem": q.abordagem, "fonte": q.fonte, "tipos": separar(q.tipo_fonte),
-        "metodo": q.metodo,
+        "metodo": q.metodo, "gab": GABARITO.get((int(q.ano), int(q.questao)), ""),
     } for q in questoes.itertuples()]
 
     (SITE / "questoes_exatas.json").write_text(json.dumps(registros, ensure_ascii=False), encoding="utf-8")

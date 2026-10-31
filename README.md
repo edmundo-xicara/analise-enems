@@ -14,7 +14,8 @@ Em 2025, com *vibe coding* (o Claude, da Anthropic, como assistente de programa�
 2. continuei a análise para **2023, 2024 e 2025** com o mesmo esquema de classificação;
 3. consolidei tudo em um CSV único;
 4. construí este site para substituir a apresentação do Power BI;
-5. apliquei o mesmo método às **990 questões de Matemática e Ciências da Natureza** de 2015 a 2025 (aba *Matemática e Natureza* do site), também com ajuda de IA.
+5. apliquei o mesmo método às **990 questões de Matemática e Ciências da Natureza** de 2015 a 2025 (aba *Matemática e Natureza* do site), também com ajuda de IA;
+6. criei um **simulado**: o usuário filtra disciplinas, matérias e anos e resolve questões reais sorteadas, corrigidas pelo gabarito oficial.
 
 ## O que tem aqui
 
@@ -27,6 +28,9 @@ Em 2025, com *vibe coding* (o Claude, da Anthropic, como assistente de programa�
 | `dados/anotacoes_exatas/2015.psv` … `2025.psv` | Matemática e Natureza, classificadas com ajuda de IA (separador `\|`) |
 | `dados/questoes_exatas.csv` | **Base consolidada de Exatas**: 990 questões de 2015 a 2025. Mesmas colunas de Humanas, mas `brasil` é trocada por `calculo` (`True` se a questão exige conta) |
 | `scripts/build_data.py` | Gera `dados/questoes.csv`, `dados/questoes_exatas.csv` e os JSON do site |
+| `dados/gabaritos.json` | Gabarito oficial do caderno azul, 2015–2025 (`X` = anulada) |
+| `scripts/gabaritos.py` | Lê os PDFs de gabarito do INEP e gera `dados/gabaritos.json` |
+| `scripts/recortar_questoes.py` | Recorta cada questão dos cadernos oficiais como imagem para o simulado (`site/questoes/`) |
 | `site/` | Site estático (HTML + CSS + JS + Apache ECharts) |
 
 ### Colunas de `dados/questoes.csv`

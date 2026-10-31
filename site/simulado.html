@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simulado ENEM</title>
+  <meta name="description" content="Simulado com questões reais do ENEM (2015–2025): filtre pelas disciplinas, matérias e anos em que você tem mais dificuldade e resolva questões sorteadas.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="simulado.js" defer></script>
+</head>
+<body data-area="simulado">
+  <header class="hero hero-compact">
+    <div class="wrap">
+      <nav class="tabs" aria-label="Áreas">
+        <a href="index.html">Ciências Humanas</a>
+        <a href="exatas.html">Matemática e Natureza</a>
+        <a href="simulado.html" aria-current="page">Simulado</a>
+      </nav>
+      <p class="eyebrow">Questões reais · ENEM 2015–2025</p>
+      <h1>Simulado por <em>matéria</em></h1>
+      <p class="lede">Escolha as disciplinas, matérias e anos em que você tem mais dificuldade. O site sorteia questões reais do ENEM, de anos aleatórios, e corrige com o gabarito oficial do INEP.</p>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <!-- Configuração -->
+    <section id="config" class="sim-config">
+      <div class="card">
+        <div class="sim-row">
+          <span class="sim-label">Área</span>
+          <div class="seg" role="group" aria-label="Área" id="s-area">
+            <button type="button" data-v="todas" aria-pressed="true">Todas</button>
+            <button type="button" data-v="humanas" aria-pressed="false">Humanas</button>
+            <button type="button" data-v="exatas" aria-pressed="false">Matemática e Natureza</button>
+          </div>
+        </div>
+        <div class="sim-row">
+          <span class="sim-label">Disciplinas</span>
+          <div class="chips" id="s-disc" role="group" aria-label="Disciplinas"></div>
+        </div>
+        <div class="sim-row">
+          <span class="sim-label">Anos</span>
+          <label class="field">de <select id="s-de"></select></label>
+          <label class="field">até <select id="s-ate"></select></label>
+        </div>
+        <div class="sim-row sim-row-top">
+          <span class="sim-label">Matérias</span>
+          <div class="sim-materias">
+            <div class="sim-materias-tools">
+              <input type="search" id="s-busca-mat" placeholder="Buscar matéria…" aria-label="Buscar matéria">
+              <button type="button" class="linkbtn" id="s-todas-mat">Marcar todas</button>
+              <button type="button" class="linkbtn" id="s-nenhuma-mat">Desmarcar todas</button>
+            </div>
+            <div class="sim-materias-lista" id="s-materias"></div>
+          </div>
+        </div>
+        <div class="sim-row">
+          <span class="sim-label">Questões</span>
+          <div class="seg" role="group" aria-label="Quantidade" id="s-qtd">
+            <button type="button" data-v="10" aria-pressed="true">10</button>
+            <button type="button" data-v="20" aria-pressed="false">20</button>
+            <button type="button" data-v="45" aria-pressed="false">45</button>
+            <button type="button" data-v="0" aria-pressed="false">Sem limite</button>
+          </div>
+        </div>
+        <div class="sim-start">
+          <span id="s-disponiveis" class="count"></span>
+          <button type="button" class="btn-primary" id="s-comecar">Começar simulado</button>
+        </div>
+      </div>
+      <p class="sim-historico" id="s-historico"></p>
+    </section>
+
+    <!-- Questão -->
+    <section id="prova" class="sim-prova" hidden>
+      <div class="sim-topo">
+        <div class="sim-progresso"><div id="p-barra"></div></div>
+        <div class="sim-status">
+          <span id="p-contador"></span>
+          <span id="p-placar"></span>
+          <button type="button" class="linkbtn" id="p-encerrar">Encerrar</button>
+        </div>
+      </div>
+      <article class="card sim-questao">
+        <p class="sim-meta" id="p-meta"></p>
+        <img id="p-img" alt="" decoding="async">
+        <div class="sim-alts" id="p-alts" role="group" aria-label="Alternativas"></div>
+        <div class="sim-feedback" id="p-feedback" hidden></div>
+        <div class="sim-acoes">
+          <button type="button" class="linkbtn" id="p-pular">Pular</button>
+          <button type="button" class="btn-primary" id="p-confirmar" disabled>Confirmar</button>
+        </div>
+        <p class="sim-dica">Atalhos: teclas <kbd>A</kbd>–<kbd>E</kbd> para escolher e <kbd>Enter</kbd> para confirmar.</p>
+      </article>
+    </section>
+
+    <!-- Resultado -->
+    <section id="resultado" class="sim-resultado" hidden>
+      <div class="card">
+        <p class="eyebrow">Resultado</p>
+        <h2 id="r-titulo"></h2>
+        <div class="kpis" id="r-kpis"></div>
+        <h3>Por matéria</h3>
+        <div class="table-wrap"><table class="data" id="r-materias"></table></div>
+        <h3>Questões que você errou</h3>
+        <div id="r-erros"></div>
+        <div class="sim-start">
+          <button type="button" class="linkbtn" id="r-config">Mudar filtros</button>
+          <button type="button" class="btn-primary" id="r-novo">Novo simulado com os mesmos filtros</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">Questões e gabaritos: INEP (cadernos azuis oficiais) · classificação de matérias: <a href="https://github.com/edmundo-xicara/analise-enems" target="_blank" rel="noopener">projeto aberto no GitHub</a></div>
+  </footer>
+</body>
+</html>
