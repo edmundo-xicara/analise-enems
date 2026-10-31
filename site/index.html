@@ -20,10 +20,10 @@
       <p class="lede">Revisei, à mão, as provas de Ciências Humanas do ENEM e anotei a disciplina, a matéria, os assuntos, a abordagem e a fonte de cada questão. Em 2025, com ajuda de IA, continuei a análise até a prova mais recente. Aqui está tudo, aberto.</p>
       <div class="kpis" id="kpis"></div>
       <nav class="toc">
-        <a href="#tendencias">Tendências</a>
-        <a href="#materias">Matérias e assuntos</a>
+        <a href="#disciplinas">Disciplinas</a>
+        <a href="#brasil">Ambientadas no Brasil</a>
+        <a href="#materias">Matérias, assuntos e questões</a>
         <a href="#fontes">Fontes</a>
-        <a href="#explorar">Explorar questões</a>
         <a href="#metodologia">Metodologia</a>
         <a href="https://github.com/edmundo-xicara/an-lise-enems" target="_blank" rel="noopener">GitHub ↗</a>
       </nav>
@@ -41,51 +41,98 @@
   </div>
 
   <main class="wrap">
-    <section id="tendencias">
-      <h2>Tendências ao longo dos anos</h2>
-      <p class="section-lede">Quantas questões de cada disciplina caíram por prova, e quantas eram ambientadas no Brasil. Os pontos vazados (2009–2014) vêm só dos totais da apresentação original; os anos de 2023 a 2025 foram classificados com ajuda de IA.</p>
-      <div class="grid g2">
+    <section id="disciplinas">
+      <p class="group-num">1</p>
+      <h2>Proporção das disciplinas</h2>
+      <p class="section-lede">Quantas questões de cada disciplina caíram por prova. Os pontos vazados (2009–2014) vêm só dos totais da apresentação original; 2023 a 2025 foram classificados com ajuda de IA. <strong>Clique numa fatia</strong> para isolar a disciplina em todo o site.</p>
+      <div class="grid g3">
         <figure class="card span2">
           <figcaption>Número de questões de cada disciplina por ano</figcaption>
           <div class="chart tall" id="c-disc-ano"></div>
         </figure>
         <figure class="card">
+          <figcaption>Média por prova, por disciplina <span class="hint" data-scope></span></figcaption>
+          <div class="chart tall" id="c-disc-media"></div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="brasil">
+      <p class="group-num">2</p>
+      <h2>Questões ambientadas no Brasil</h2>
+      <p class="section-lede">Quantas questões têm recorte brasileiro, em quais disciplinas e em quais matérias. <strong>Clique numa barra de disciplina</strong> para isolá-la; o seletor ao lado filtra as matérias pelo recorte.</p>
+      <div class="group-filters" id="gf-brasil">
+        <div class="seg" role="group" aria-label="Recorte" data-key="brasil">
+          <button type="button" data-v="todos" aria-pressed="true">Todas</button>
+          <button type="button" data-v="sim" aria-pressed="false">No Brasil</button>
+          <button type="button" data-v="nao" aria-pressed="false">Fora do Brasil</button>
+        </div>
+      </div>
+      <div class="grid g2">
+        <figure class="card">
           <figcaption>Questões ambientadas no Brasil por ano</figcaption>
           <div class="chart" id="c-brasil-ano"></div>
         </figure>
         <figure class="card">
-          <figcaption>Média por prova, por disciplina <span class="hint" data-scope></span></figcaption>
-          <div class="chart" id="c-disc-media"></div>
+          <figcaption>Média de questões ambientadas no Brasil por disciplina <span class="hint" data-scope></span></figcaption>
+          <div class="chart" id="c-brasil-disc"></div>
         </figure>
         <figure class="card span2">
-          <figcaption>Média de questões ambientadas no Brasil por disciplina <span class="hint" data-scope></span></figcaption>
-          <div class="chart short" id="c-brasil-disc"></div>
+          <figcaption>Proporção de questões ambientadas no Brasil por matéria <span class="hint" data-scope></span></figcaption>
+          <div class="chart xtall" id="c-materias-brasil"></div>
         </figure>
       </div>
     </section>
 
     <section id="materias">
-      <h2>Matérias e assuntos</h2>
-      <p class="section-lede">Dentro de cada disciplina, que matérias mais aparecem — e quais costumam vir com um recorte brasileiro.</p>
+      <p class="group-num">3</p>
+      <h2>Matérias, assuntos e questões</h2>
+      <p class="section-lede">Que matérias mais caem, que assuntos aparecem dentro delas e quais foram as questões. <strong>Clique numa matéria ou num assunto</strong> para filtrar o resto do bloco, ou use os seletores.</p>
+      <div class="group-filters" id="gf-materias">
+        <label class="field">Matéria <select id="f-materia"></select></label>
+        <label class="field">Assunto <select id="f-assunto"></select></label>
+        <div class="seg" role="group" aria-label="Recorte" data-key="brasilM">
+          <button type="button" data-v="todos" aria-pressed="true">Todas</button>
+          <button type="button" data-v="sim" aria-pressed="false">No Brasil</button>
+          <button type="button" data-v="nao" aria-pressed="false">Fora do Brasil</button>
+        </div>
+        <button type="button" class="clear" data-clear="materias">Limpar filtros</button>
+      </div>
       <div class="grid g2">
         <figure class="card">
           <figcaption>Média de questões por prova de cada matéria <span class="hint" data-scope></span></figcaption>
           <div class="chart xtall" id="c-materias"></div>
         </figure>
         <figure class="card">
-          <figcaption>Proporção de questões ambientadas no Brasil por matéria <span class="hint" data-scope></span></figcaption>
-          <div class="chart xtall" id="c-materias-brasil"></div>
+          <figcaption>Assuntos abordados <span class="hint" id="h-assuntos"></span></figcaption>
+          <div class="table-wrap xtall-table"><table class="data clickable" id="t-assuntos"></table></div>
         </figure>
-        <figure class="card span2">
-          <figcaption>Assuntos mais recorrentes <span class="hint" data-scope></span></figcaption>
-          <div class="table-wrap"><table class="data" id="t-assuntos"></table></div>
+        <figure class="card span2" id="explorar">
+          <figcaption>Explorar questões <span class="hint" id="h-questoes"></span></figcaption>
+          <div class="search-row">
+            <input id="busca" type="search" placeholder="Buscar: escravidão, Foucault, Amazônia, IBGE…" aria-label="Buscar questões">
+            <span class="count" id="busca-count"></span>
+          </div>
+          <div class="table-wrap tall-table">
+            <table class="data questions" id="t-questoes">
+              <thead><tr><th>Ano</th><th>Q.</th><th>Disciplina</th><th>Matéria</th><th>Abordagem</th><th>Fonte</th><th>BR</th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <button class="more" id="mais" type="button">Mostrar mais</button>
         </figure>
       </div>
     </section>
 
     <section id="fontes">
+      <p class="group-num">4</p>
       <h2>De onde vêm os textos</h2>
-      <p class="section-lede">Toda questão do ENEM parte de um texto-base. Livros dominam, mas notícias, revistas acadêmicas e imagens também pesam.</p>
+      <p class="section-lede">Toda questão do ENEM parte de um texto-base. <strong>Clique num tipo de fonte, numa fonte ou num autor</strong> para ver as abordagens das questões correspondentes.</p>
+      <div class="group-filters" id="gf-fontes">
+        <label class="field">Tipo de fonte <select id="f-tipo"></select></label>
+        <span class="pills" id="p-fontes"></span>
+        <button type="button" class="clear" data-clear="fontes">Limpar filtros</button>
+      </div>
       <div class="grid g3">
         <figure class="card">
           <figcaption>Tipo de fonte <span class="hint" data-scope></span></figcaption>
@@ -93,30 +140,16 @@
         </figure>
         <figure class="card">
           <figcaption>Fontes mais citadas</figcaption>
-          <div class="table-wrap"><table class="data" id="t-fontes"></table></div>
+          <div class="table-wrap"><table class="data clickable" id="t-fontes"></table></div>
         </figure>
         <figure class="card">
           <figcaption>Autores mais citados</figcaption>
-          <div class="table-wrap"><table class="data" id="t-autores"></table></div>
+          <div class="table-wrap"><table class="data clickable" id="t-autores"></table></div>
         </figure>
-      </div>
-    </section>
-
-    <section id="explorar">
-      <h2>Explorar questões</h2>
-      <p class="section-lede">Todas as questões anotadas. Busque por assunto, autor, fonte ou qualquer palavra da abordagem.</p>
-      <div class="card">
-        <div class="search-row">
-          <input id="busca" type="search" placeholder="Buscar: escravidão, Foucault, Amazônia, IBGE…" aria-label="Buscar questões">
-          <span class="count" id="busca-count"></span>
-        </div>
-        <div class="table-wrap tall-table">
-          <table class="data questions" id="t-questoes">
-            <thead><tr><th>Ano</th><th>Q.</th><th>Disciplina</th><th>Matéria</th><th>Abordagem</th><th>Fonte</th><th>BR</th></tr></thead>
-            <tbody></tbody>
-          </table>
-        </div>
-        <button class="more" id="mais" type="button">Mostrar mais</button>
+        <figure class="card span3">
+          <figcaption>Abordagens <span class="hint" id="h-abordagens"></span></figcaption>
+          <div class="table-wrap"><table class="data" id="t-abordagens"></table></div>
+        </figure>
       </div>
     </section>
 
