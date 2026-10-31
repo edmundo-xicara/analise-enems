@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Humanas no ENEM</title>
+  <meta name="description" content="Análise aberta das questões de Ciências Humanas do ENEM de 2009 a 2025: disciplinas, matérias, assuntos, fontes e questões ambientadas no Brasil.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Análise aberta · ENEM 2009–2025</p>
+      <h1>O que cai em <em>Humanas</em> no ENEM</h1>
+      <p class="lede">Revisei, à mão, as provas de Ciências Humanas do ENEM e anotei a disciplina, a matéria, os assuntos, a abordagem e a fonte de cada questão. Em 2025, com ajuda de IA, continuei a análise até a prova mais recente. Aqui está tudo, aberto.</p>
+      <div class="kpis" id="kpis"></div>
+      <nav class="toc">
+        <a href="#tendencias">Tendências</a>
+        <a href="#materias">Matérias e assuntos</a>
+        <a href="#fontes">Fontes</a>
+        <a href="#explorar">Explorar questões</a>
+        <a href="#metodologia">Metodologia</a>
+        <a href="https://github.com/edmundo-xicara/an-lise-enems" target="_blank" rel="noopener">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="filters" id="filters">
+    <div class="wrap filters-inner">
+      <label class="field">Ano
+        <select id="f-ano"></select>
+      </label>
+      <div class="chips" id="f-disc" role="group" aria-label="Disciplinas"></div>
+      <span class="filter-note" id="f-note"></span>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <section id="tendencias">
+      <h2>Tendências ao longo dos anos</h2>
+      <p class="section-lede">Quantas questões de cada disciplina caíram por prova, e quantas eram ambientadas no Brasil. Os pontos vazados (2009–2014) vêm só dos totais da apresentação original; os anos de 2023 a 2025 foram classificados com ajuda de IA.</p>
+      <div class="grid g2">
+        <figure class="card span2">
+          <figcaption>Número de questões de cada disciplina por ano</figcaption>
+          <div class="chart tall" id="c-disc-ano"></div>
+        </figure>
+        <figure class="card">
+          <figcaption>Questões ambientadas no Brasil por ano</figcaption>
+          <div class="chart" id="c-brasil-ano"></div>
+        </figure>
+        <figure class="card">
+          <figcaption>Média por prova, por disciplina <span class="hint" data-scope></span></figcaption>
+          <div class="chart" id="c-disc-media"></div>
+        </figure>
+        <figure class="card span2">
+          <figcaption>Média de questões ambientadas no Brasil por disciplina <span class="hint" data-scope></span></figcaption>
+          <div class="chart short" id="c-brasil-disc"></div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="materias">
+      <h2>Matérias e assuntos</h2>
+      <p class="section-lede">Dentro de cada disciplina, que matérias mais aparecem — e quais costumam vir com um recorte brasileiro.</p>
+      <div class="grid g2">
+        <figure class="card">
+          <figcaption>Média de questões por prova de cada matéria <span class="hint" data-scope></span></figcaption>
+          <div class="chart xtall" id="c-materias"></div>
+        </figure>
+        <figure class="card">
+          <figcaption>Proporção de questões ambientadas no Brasil por matéria <span class="hint" data-scope></span></figcaption>
+          <div class="chart xtall" id="c-materias-brasil"></div>
+        </figure>
+        <figure class="card span2">
+          <figcaption>Assuntos mais recorrentes <span class="hint" data-scope></span></figcaption>
+          <div class="table-wrap"><table class="data" id="t-assuntos"></table></div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="fontes">
+      <h2>De onde vêm os textos</h2>
+      <p class="section-lede">Toda questão do ENEM parte de um texto-base. Livros dominam, mas notícias, revistas acadêmicas e imagens também pesam.</p>
+      <div class="grid g3">
+        <figure class="card">
+          <figcaption>Tipo de fonte <span class="hint" data-scope></span></figcaption>
+          <div class="chart" id="c-tipos"></div>
+        </figure>
+        <figure class="card">
+          <figcaption>Fontes mais citadas</figcaption>
+          <div class="table-wrap"><table class="data" id="t-fontes"></table></div>
+        </figure>
+        <figure class="card">
+          <figcaption>Autores mais citados</figcaption>
+          <div class="table-wrap"><table class="data" id="t-autores"></table></div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="explorar">
+      <h2>Explorar questões</h2>
+      <p class="section-lede">Todas as questões anotadas. Busque por assunto, autor, fonte ou qualquer palavra da abordagem.</p>
+      <div class="card">
+        <div class="search-row">
+          <input id="busca" type="search" placeholder="Buscar: escravidão, Foucault, Amazônia, IBGE…" aria-label="Buscar questões">
+          <span class="count" id="busca-count"></span>
+        </div>
+        <div class="table-wrap tall-table">
+          <table class="data questions" id="t-questoes">
+            <thead><tr><th>Ano</th><th>Q.</th><th>Disciplina</th><th>Matéria</th><th>Abordagem</th><th>Fonte</th><th>BR</th></tr></thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <button class="more" id="mais" type="button">Mostrar mais</button>
+      </div>
+    </section>
+
+    <section id="metodologia" class="prose">
+      <h2>Metodologia</h2>
+      <h3>Como a análise foi feita</h3>
+      <p>Entre o fim de 2022 e o início de 2023, antes da popularização da IA generativa, abri as provas do 1º dia do ENEM e li uma a uma as 45 questões de Ciências Humanas de cada ano. Para cada questão, anotei numa planilha:</p>
+      <ul>
+        <li><strong>Disciplina</strong>: História, Geografia, Filosofia ou Sociologia.</li>
+        <li><strong>Matéria</strong>: o recorte dentro da disciplina (ex.: Brasil República, Climatologia, Ética).</li>
+        <li><strong>Assuntos</strong>: de 2 a 6 palavras-chave do conteúdo cobrado.</li>
+        <li><strong>Brasil</strong>: se a questão é ambientada no Brasil (s/n).</li>
+        <li><strong>Abordagem</strong>: uma frase que resume o que a questão discute.</li>
+        <li><strong>Fonte</strong> e <strong>Tipo de fonte</strong>: de onde vem o texto-base (livro, notícia, revista, artigo, imagem, música, poema).</li>
+      </ul>
+      <p>Depois, organizei tudo em Python (tabelas de assuntos, fontes e autores) e montei uma apresentação no Power BI. Este site substitui essa apresentação por uma versão aberta, que qualquer pessoa pode consultar e reaproveitar.</p>
+      <h3>A continuação (2023–2025)</h3>
+      <p>Em 2025, com o Claude (IA da Anthropic) trabalhando como assistente de programação, segui o mesmo esquema nas provas de 2023, 2024 e 2025. O texto das questões foi extraído dos cadernos oficiais do INEP (caderno azul do 1º dia), e cada questão foi classificada com o mesmo vocabulário de matérias da análise original. <strong>Essas linhas estão marcadas como “IA” no explorador</strong> e ainda passarão por uma revisão humana.</p>
+      <h3>Limitações</h3>
+      <ul>
+        <li>De <strong>2009 a 2014</strong> só existem os totais por disciplina e o número de questões ambientadas no Brasil (transcritos da apresentação original). A anotação questão a questão cobre <strong>2015–2025</strong>.</li>
+        <li>Em 2015 e 2016, parte das questões tem só disciplina, matéria e fonte, sem assuntos nem abordagem.</li>
+        <li>A classificação de matéria e de “ambientada no Brasil” envolve julgamento; outra pessoa poderia classificar diferente.</li>
+        <li>A numeração das questões segue o caderno azul de cada ano.</li>
+      </ul>
+      <h3>Ferramentas open source usadas</h3>
+      <ul>
+        <li><a href="https://github.com/Hugoberry/pbixray" target="_blank" rel="noopener">pbixray</a>: leu o modelo de dados do arquivo do Power BI.</li>
+        <li><a href="https://enem.dev" target="_blank" rel="noopener">enem.dev</a>: API aberta com as questões do ENEM até 2023, usada para conferir o texto de 2023.</li>
+        <li><a href="https://pypdf.readthedocs.io" target="_blank" rel="noopener">pypdf</a> e <a href="https://pandas.pydata.org" target="_blank" rel="noopener">pandas</a>: extração dos textos e montagem dos dados.</li>
+        <li><a href="https://echarts.apache.org" target="_blank" rel="noopener">Apache ECharts</a>: os gráficos deste site.</li>
+      </ul>
+      <h3>Dados abertos</h3>
+      <p>Tudo está no <a href="https://github.com/edmundo-xicara/an-lise-enems" target="_blank" rel="noopener">repositório no GitHub</a>: as planilhas originais, o <code>questoes.csv</code> consolidado e os scripts. Achou um erro de classificação? Abra uma <em>issue</em>.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">Feito por <a href="https://github.com/edmundo-xicara" target="_blank" rel="noopener">Edmundo</a> · dados das provas: INEP · código e dados abertos no <a href="https://github.com/edmundo-xicara/an-lise-enems" target="_blank" rel="noopener">GitHub</a></div>
+  </footer>
+</body>
+</html>

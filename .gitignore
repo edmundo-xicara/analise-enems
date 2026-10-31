@@ -1,0 +1,8 @@
+# Provas do INEP (baixe em gov.br/inep)
+ENEMs/
+
+# Arquivos temporários do Excel/Office
+~$*
+
+__pycache__/
+.claude/settings.local.json
