@@ -1,91 +1,91 @@
-Questão|Disciplina|Matéria|Assuntos|Brasil|Abordagem|Fonte|Tipo de Fonte
+Questão|Disciplina|Matéria|Assuntos|Cálculo|Abordagem|Fonte|Tipo de Fonte
 91|Química|Físico-química|Adsorção, Carvão ativado, Superfície de contato|n|Carvão ativado mais eficiente na filtração de água pela maior superfície de contato|Cosmetologia: ciência e técnica - M. A. Corrêa|Livros
 92|Biologia|Biotecnologia|Ciclo circadiano, Transgenia, Bactérias|n|Organismo geneticamente modificado que recebe genes de relógio biológico de outra espécie|Science Advances|Revistas
 93|Biologia|Zoologia|Aves aquáticas, Glândula uropigiana, Impermeabilização|n|Aves que se afogam pela redução da secreção oleosa que impermeabiliza as penas||
-94|Física|Eletricidade|Potência elétrica, Fusível, Régua elétrica|n|Atividades realizadas com uma régua elétrica sem queimar o fusível pela corrente total||
-95|Física|Termologia|Irradiação, Transferência de calor, Mariposas|s|Mariposas aquecidas pela lâmpada por irradiação, citando canção de Adoniran Barbosa|As mariposas - Adoniran Barbosa, National Geographic|Músicas, Revistas
+94|Física|Eletricidade|Potência elétrica, Fusível, Régua elétrica|s|Atividades realizadas com uma régua elétrica sem queimar o fusível pela corrente total||
+95|Física|Termologia|Irradiação, Transferência de calor, Mariposas|n|Mariposas aquecidas pela lâmpada por irradiação, citando canção de Adoniran Barbosa|As mariposas - Adoniran Barbosa, National Geographic|Músicas, Revistas
 96|Biologia|Zoologia|Sapo-ponta-de-flecha, Veneno, Alimentação|n|Sapos nascidos em cativeiro sem veneno pela ausência das formigas que fornecem a toxina|Medicinal Chemistry Research|Revistas
 97|Biologia|Saúde e doenças|Vacinas, Antígenos, Memória imunológica|n|Antígeno da vacina que induz anticorpos e memória contra o vírus||
-98|Biologia|Ecologia|Espécies invasoras, Capim-gordura, Cerrado|s|Capim-gordura invasor que reduz a diversidade de plantas nativas do Cerrado|Jornal do Biólogo|Revistas
-99|Biologia|Evolução|Convergência adaptativa, Lagartos, Caatinga|s|Lagartos com adaptações à falta de alimento mais prováveis na Caatinga brasileira|Ozempic e outros remédios inspirados em veneno de animais - C. Russell|Notícias
+98|Biologia|Ecologia|Espécies invasoras, Capim-gordura, Cerrado|n|Capim-gordura invasor que reduz a diversidade de plantas nativas do Cerrado|Jornal do Biólogo|Revistas
+99|Biologia|Evolução|Convergência adaptativa, Lagartos, Caatinga|n|Lagartos com adaptações à falta de alimento mais prováveis na Caatinga brasileira|Ozempic e outros remédios inspirados em veneno de animais - C. Russell|Notícias
 100|Química|Química geral|Água destilada, Purificação, Sais dissolvidos|n|Água destilada, sem sais, inadequada para beber por causar carência iônica||
 101|Física|Óptica|Olhos vermelhos, Pupila, Fotografia|n|Efeito de olhos vermelhos mais comum no escuro com a pupila dilatada|UOL|Notícias
 102|Biologia|Saúde e doenças|Tetrodotoxina, Baiacu, Intoxicação alimentar|n|Retirar gônadas e vísceras do baiacu para evitar a intoxicação por tetrodotoxina||
 103|Biologia|Citologia|Lisossomos, Enzimas, Doenças genéticas|n|Deficiência de lipase ácida como falha funcional dos lisossomos|Genomics|Revistas
 104|Biologia|Ecologia|Mudanças climáticas, Sequestro de carbono, Reflorestamento|n|Plantar árvores como ação que remove gás carbônico da atmosfera|BBC|Notícias
-105|Física|Termologia|Poluição térmica, Usinas nucleares, Oxigênio dissolvido|s|Água de refrigeração aquecida que reduz o oxigênio dissolvido no ecossistema aquático|Eletronuclear|Artigos
-106|Química|Química geral|Fórmulas químicas, Nomenclatura antiga, Ácido nítrico|s|Fórmulas do ácido nítrico e do cloreto de cálcio na notação química de 1909|Novo Milênio|Artigos
+105|Física|Termologia|Poluição térmica, Usinas nucleares, Oxigênio dissolvido|n|Água de refrigeração aquecida que reduz o oxigênio dissolvido no ecossistema aquático|Eletronuclear|Artigos
+106|Química|Química geral|Fórmulas químicas, Nomenclatura antiga, Ácido nítrico|n|Fórmulas do ácido nítrico e do cloreto de cálcio na notação química de 1909|Novo Milênio|Artigos
 107|Biologia|Genética|Leis de Mendel, Proporção fenotípica, Cruzamentos|n|Proporção fenotípica do cruzamento entre insetos da primeira geração||
 108|Física|Mecânica|Força de atrito, Plano inclinado, Gráficos|n|Gráfico da força de atrito sobre uma caixa arrastada num plano inclinado||
-109|Química|Química orgânica|Descarboxilação, Castanha de caju, LCC|s|Produção do líquido da castanha de caju técnico por descarboxilação|Química Nova|Revistas
-110|Química|Radioatividade|Meia-vida, Cobalto-60, Radioterapia|n|Massa de cobalto-60 que resta após 26,5 anos pela meia-vida||
+109|Química|Química orgânica|Descarboxilação, Castanha de caju, LCC|n|Produção do líquido da castanha de caju técnico por descarboxilação|Química Nova|Revistas
+110|Química|Radioatividade|Meia-vida, Cobalto-60, Radioterapia|s|Massa de cobalto-60 que resta após 26,5 anos pela meia-vida||
 111|Biologia|Ecologia|Biodigestão, Eutrofização, Resíduos animais|n|Biodigestão de dejetos animais que evita a eutrofização dos corpos d'água|Engenharia Química Santos|Artigos
 112|Biologia|Biotecnologia|Arroz dourado, Vitamina A, Transgênicos|n|Arroz dourado rico em betacaroteno contra a cegueira noturna|Entendendo a biotecnologia - A. Borém; F. R. Santos|Livros
-113|Física|Eletromagnetismo|Força magnética, Elétrons, Tubo de imagem|n|Ponto da tela atingido por um feixe de elétrons desviado por campo magnético|Física 3: eletromagnetismo - GREF|Livros
+113|Física|Eletromagnetismo|Força magnética, Elétrons, Tubo de imagem|s|Ponto da tela atingido por um feixe de elétrons desviado por campo magnético|Física 3: eletromagnetismo - GREF|Livros
 114|Física|Ondulatória|Ressonância, Frequência, Taças de cristal|n|Taças quebradas pela voz da Mônica por ressonância com a frequência natural|Turma da Mônica - Mauricio de Sousa|Imagens
-115|Química|Química orgânica|Fórmula molecular, Cânfora, Oxidação|n|Fórmula molecular da cânfora obtida pela oxidação do borneol|Química Nova|Revistas
-116|Biologia|Ecologia|Cangas, Endemismo, Seleção natural|s|Ambientes de canga ricos em ferro que favorecem espécies endêmicas|Ciência Hoje|Revistas
+115|Química|Química orgânica|Fórmula molecular, Cânfora, Oxidação|s|Fórmula molecular da cânfora obtida pela oxidação do borneol|Química Nova|Revistas
+116|Biologia|Ecologia|Cangas, Endemismo, Seleção natural|n|Ambientes de canga ricos em ferro que favorecem espécies endêmicas|Ciência Hoje|Revistas
 117|Química|Físico-química|Equilíbrio químico, Princípio de Le Chatelier, Titânio|n|Como favorecer a formação de tetracloreto de titânio no equilíbrio||
-118|Física|Hidrostática|Pressão, Densidade, Carga sobre laje|n|Altura máxima de empilhamento que uma laje suporta pela pressão||
+118|Física|Hidrostática|Pressão, Densidade, Carga sobre laje|s|Altura máxima de empilhamento que uma laje suporta pela pressão||
 119|Física|Eletricidade|Placas solares, Associação de geradores, Circuitos|n|Circuito de placas solares associadas para alimentar uma bomba-d'água||
-120|Física|Ondulatória|Velocidade da luz, Sensores, Alarme|n|Menor tempo de resposta de um alarme que detecta movimento por radiação||
+120|Física|Ondulatória|Velocidade da luz, Sensores, Alarme|s|Menor tempo de resposta de um alarme que detecta movimento por radiação||
 121|Química|Físico-química|Ácidos e bases, Dimetilamina, Neutralização|n|Vinagre para neutralizar a dimetilamina básica derramada numa rodovia||
 122|Física|Eletromagnetismo|Indução eletromagnética, Fogão de indução, Correntes de Foucault|n|Campo magnético variável que induz correntes e aquece a panela no fogão de indução|Fatec Sertãozinho|Artigos
 123|Biologia|Bioquímica|Fotossíntese, Bactérias sulfurosas, Doador de elétrons|n|Água como doador de elétrons da fotossíntese oxigênica, análogo ao H2S||
-124|Química|Eletroquímica|Oxirredução, Prata, Potencial padrão|n|Diferenças de potencial do escurecimento e da limpeza de objetos de prata|Química Nova na Escola|Revistas
-125|Química|Físico-química|Gases, Equação de Clapeyron, Fermento químico|n|Massa de bicarbonato de amônio para gerar o volume de gás que faz o bolo crescer||
+124|Química|Eletroquímica|Oxirredução, Prata, Potencial padrão|s|Diferenças de potencial do escurecimento e da limpeza de objetos de prata|Química Nova na Escola|Revistas
+125|Química|Físico-química|Gases, Equação de Clapeyron, Fermento químico|s|Massa de bicarbonato de amônio para gerar o volume de gás que faz o bolo crescer||
 126|Física|Mecânica|Composição de movimentos, Velocidade relativa, Aviação|n|Componentes da velocidade de um avião em relação ao ar para compensar o vento||
 127|Química|Físico-química|Cinética química, Enzimas, Energia de ativação|n|Gráfico de energia de uma reação com e sem enzima (menor energia de ativação)||
-128|Física|Termologia|Resistência e temperatura, Termômetro de platina, Sensibilidade|n|Sensores de temperatura mais sensíveis pela inclinação do gráfico de resistência||
+128|Física|Termologia|Resistência e temperatura, Termômetro de platina, Sensibilidade|s|Sensores de temperatura mais sensíveis pela inclinação do gráfico de resistência||
 129|Biologia|Saúde e doenças|Esquistossomose, Moluscicida, Liquens|n|Ácido úsnico eficiente contra moluscos e indicado no controle da esquistossomose||
 130|Física|Eletricidade|Corrente contínua, Resistor de proteção, Fontes|n|Configuração do circuito e valor do resistor de proteção de um equipamento eletrônico||
 131|Química|Estequiometria|Aluminotermia, Nióbio, Rendimento|s|Massa de alumínio para produzir nióbio, metal do qual o Brasil é o maior produtor|CBMM|Artigos
-132|Física|Ondulatória|Nível sonoro, Decibéis, Logaritmo|n|Ruído estimado de um estádio lotado gritando gol, em decibéis||
+132|Física|Ondulatória|Nível sonoro, Decibéis, Logaritmo|s|Ruído estimado de um estádio lotado gritando gol, em decibéis||
 133|Química|Química ambiental|Derramamento de óleo, Polaridade, Nanopartículas|n|Dispositivo que retém o óleo derramado por afinidade com a camada apolar|Scientific Reports|Revistas
 134|Química|Química orgânica|Solubilidade, Hormônios, Ligações de hidrogênio|n|Hormônio com mais hidroxilas e maior solubilidade em ambientes aquáticos|Environment International|Revistas
 135|Física|Ondulatória|Fototerapia, Icterícia, Luz azul|n|Espectro de fotoluminescência de um sensor no início e no fim da fototerapia com luz azul|Tecnologia em Metalurgia, Materiais e Mineração|Revistas
-136|Matemática|Aritmética|Proporção, Consumo de combustível, GNV|n|Capacidade do cilindro de GNV mais barato que garante um abastecimento por semana||
+136|Matemática|Aritmética|Proporção, Consumo de combustível, GNV|s|Capacidade do cilindro de GNV mais barato que garante um abastecimento por semana||
 137|Matemática|Probabilidade|Probabilidade, Porcentagem, Redes sociais|s|Probabilidade de um internauta brasileiro ser homem e usar redes sociais|Revista Galileu|Revistas
 138|Matemática|Geometria espacial|Projeção ortogonal, Coordenadas, Cubo|n|Projeções de um cubo nos três planos coordenados após deslocamentos num jogo||
-139|Matemática|Geometria plana|Comprimento da circunferência, Ciclovia, Segurança|n|Número mínimo de policiais ao redor de uma ciclovia circular||
-140|Matemática|Aritmética|Porcentagem, Concentração, Soluções|n|Quantidade de uma substância a retirar para mudar sua porcentagem na solução||
-141|Matemática|Aritmética|Proporção, Perdas no transporte, Combustível|n|Volume mínimo de gasolina a enviar considerando as perdas no transporte||
-142|Matemática|Estatística|Moda, Mediana, Velocidade de internet|n|Velocidade de referência de internet adotada por uma empresa pela medida estatística||
-143|Matemática|Aritmética|Multiplicação, Rótulos nutricionais, Sódio|n|Alimento com menos sódio por pacote a partir das porções do rótulo||
-144|Matemática|Geometria espacial|Poliedros, Faces congruentes, Impressão 3D|n|Número de cores para pintar as faces de um protótipo de poliedro||
+139|Matemática|Geometria plana|Comprimento da circunferência, Ciclovia, Segurança|s|Número mínimo de policiais ao redor de uma ciclovia circular||
+140|Matemática|Aritmética|Porcentagem, Concentração, Soluções|s|Quantidade de uma substância a retirar para mudar sua porcentagem na solução||
+141|Matemática|Aritmética|Proporção, Perdas no transporte, Combustível|s|Volume mínimo de gasolina a enviar considerando as perdas no transporte||
+142|Matemática|Estatística|Moda, Mediana, Velocidade de internet|s|Velocidade de referência de internet adotada por uma empresa pela medida estatística||
+143|Matemática|Aritmética|Multiplicação, Rótulos nutricionais, Sódio|s|Alimento com menos sódio por pacote a partir das porções do rótulo||
+144|Matemática|Geometria espacial|Poliedros, Faces congruentes, Impressão 3D|s|Número de cores para pintar as faces de um protótipo de poliedro||
 145|Matemática|Funções|Leitura de gráfico, Frequência respiratória, Meditação|n|Comportamento da frequência respiratória ao longo do tempo durante a meditação|Rede Psi|Artigos
-146|Matemática|Aritmética|Números decimais, Subtração, Usain Bolt|n|Diferença entre a marca de 10 segundos e o recorde de Usain Bolt nos 100 metros||
-147|Matemática|Estatística|Porcentagem, Gráfico de setores, Matrículas|n|Estimativa de matrículas no curso de francês a partir de gráficos percentuais||
-148|Matemática|Grandezas e medidas|Escala, Deslocamentos, Carrinho de controle remoto|n|Maior deslocamento de um carrinho exibido em telas com escalas diferentes||
-149|Matemática|Geometria espacial|Poliedros de Johnson, Vértices, Planificação|n|Número de vértices da cúpula pentagonal giralongada a partir da planificação||
-150|Matemática|Aritmética|Regra de três composta, Produção, Tijolos ecológicos|n|Produção diária de tijolos com mais funcionários e mais horas de trabalho||
-151|Matemática|Aritmética|Códigos, Sistema de numeração, Identificação|n|Código de identificação de um visitante pela regra estabelecida pela empresa||
-152|Matemática|Probabilidade|Permutação, Probabilidade, Envelopes|n|Probabilidade de quatro candidatos receberem de volta os próprios celulares||
-153|Matemática|Geometria analítica|Mediatriz, Equação da reta, Jogo digital|n|Equação da mediatriz por onde o herói anda sem ser atacado pelos vilões||
-154|Matemática|Estatística|Leitura de gráfico, Estoque, Demanda|n|Gênero de livro com estoque insuficiente para a demanda de uma enquete||
-155|Matemática|Análise combinatória|Arranjo, Restrições, Diretoria|n|Diretorias possíveis entre dez casais com no máximo uma pessoa por casal||
-156|Matemática|Grandezas e medidas|Escala, Ampliação, Arte na areia|n|Escala entre o esboço e a obra de arte ampliada na areia da praia||
-157|Matemática|Funções|Função afim, Cortisol, Estresse|n|Relação entre o cortisol de enfermeiros em dias de trabalho e de folga|Revista da Escola de Enfermagem da USP|Revistas
-158|Matemática|Aritmética|Lucro, Reajuste, Mensalidade|n|Mensalidade reajustada de um estacionamento para atingir o lucro desejado||
-159|Matemática|Grandezas e medidas|Volume, Conversão de unidades, Sorvete|n|Número de taças de 250 mL servidas com um pote de 20 000 cm³||
-160|Matemática|Trigonometria|Função tangente, Assíntotas, Enchimento de recipiente|n|Expressão com tangente da altura da água num recipiente enchido com vazão constante||
+146|Matemática|Aritmética|Números decimais, Subtração, Usain Bolt|s|Diferença entre a marca de 10 segundos e o recorde de Usain Bolt nos 100 metros||
+147|Matemática|Estatística|Porcentagem, Gráfico de setores, Matrículas|s|Estimativa de matrículas no curso de francês a partir de gráficos percentuais||
+148|Matemática|Grandezas e medidas|Escala, Deslocamentos, Carrinho de controle remoto|s|Maior deslocamento de um carrinho exibido em telas com escalas diferentes||
+149|Matemática|Geometria espacial|Poliedros de Johnson, Vértices, Planificação|s|Número de vértices da cúpula pentagonal giralongada a partir da planificação||
+150|Matemática|Aritmética|Regra de três composta, Produção, Tijolos ecológicos|s|Produção diária de tijolos com mais funcionários e mais horas de trabalho||
+151|Matemática|Aritmética|Códigos, Sistema de numeração, Identificação|s|Código de identificação de um visitante pela regra estabelecida pela empresa||
+152|Matemática|Probabilidade|Permutação, Probabilidade, Envelopes|s|Probabilidade de quatro candidatos receberem de volta os próprios celulares||
+153|Matemática|Geometria analítica|Mediatriz, Equação da reta, Jogo digital|s|Equação da mediatriz por onde o herói anda sem ser atacado pelos vilões||
+154|Matemática|Estatística|Leitura de gráfico, Estoque, Demanda|s|Gênero de livro com estoque insuficiente para a demanda de uma enquete||
+155|Matemática|Análise combinatória|Arranjo, Restrições, Diretoria|s|Diretorias possíveis entre dez casais com no máximo uma pessoa por casal||
+156|Matemática|Grandezas e medidas|Escala, Ampliação, Arte na areia|s|Escala entre o esboço e a obra de arte ampliada na areia da praia||
+157|Matemática|Funções|Função afim, Cortisol, Estresse|s|Relação entre o cortisol de enfermeiros em dias de trabalho e de folga|Revista da Escola de Enfermagem da USP|Revistas
+158|Matemática|Aritmética|Lucro, Reajuste, Mensalidade|s|Mensalidade reajustada de um estacionamento para atingir o lucro desejado||
+159|Matemática|Grandezas e medidas|Volume, Conversão de unidades, Sorvete|s|Número de taças de 250 mL servidas com um pote de 20 000 cm³||
+160|Matemática|Trigonometria|Função tangente, Assíntotas, Enchimento de recipiente|s|Expressão com tangente da altura da água num recipiente enchido com vazão constante||
 161|Matemática|Geometria plana|Localização, Orientação, Quarteirões|n|Quarteirão da casa de João a partir de instruções de direção||
-162|Matemática|Aritmética|Porcentagem, Reciclagem de plástico, Custo|n|Toneladas mínimas de plástico reciclado para reduzir o custo em 50%||
-163|Matemática|Aritmética|Proporção, Porcentagem, Modalidades esportivas|n|Total de estudantes a partir de quantidades e porcentagens de cada esporte||
-164|Matemática|Trigonometria|Lei dos cossenos, Navegação, Velocidade|n|Direção e tempo de navegação numa rota retilínea usando a lei dos cossenos||
-165|Matemática|Estatística|Mediana, Ensaio clínico, Raciocínio lógico|n|Grupo de um estudo clínico que certamente atende ao critério pela mediana||
-166|Matemática|Estatística|Média, Pace, Corrida|n|Redução de tempo no último trecho para repetir o melhor pace na corrida de 5 km||
-167|Matemática|Aritmética|Proporção, Rendimento, Combustíveis|n|Diferença de gasto entre gasolina e GNV num carro bicombustível||
-168|Matemática|Aritmética|Custo mínimo, Comparação, Autoescola|n|Autoescola com menor custo total para os pacotes de aulas e o exame||
-169|Matemática|Estatística|Gráfico de linhas, Produção de soja, Produtividade|n|Gráfico da produção de soja a partir da área cultivada e da produtividade||
-170|Matemática|Geometria espacial|Volume, Paralelepípedo, Economia de água|n|Número máximo de garrafas na caixa de descarga mantendo o funcionamento||
-171|Matemática|Geometria plana|Circunferência inscrita, Quadrado, Embalagens|n|Aumento mínimo da aresta de caixas quadradas para embalar tortas maiores||
-172|Matemática|Funções|Função exponencial, Inequações, Pressão|n|Maior parâmetro de um modelo de máquina que respeita a pressão recomendada||
-173|Matemática|Geometria plana|Área do semicírculo, Área do retângulo, Túnel|n|Projeto de túnel com menor área de seção transversal||
-174|Matemática|Álgebra|Equação do 2º grau, Parcelamento|n|Número de parcelas de um carro a partir da relação entre duas opções de pagamento||
-175|Matemática|Análise combinatória|Combinação, Distribuição de presentes|n|Maneiras de distribuir oito presentes entre três filhos com restrições||
-176|Matemática|Aritmética|Velocidade média, Distância, Futebol|n|Distância percorrida por um jogador num jogo com prorrogação||
-177|Matemática|Geometria espacial|Volume do cilindro, Área de trapézio, Medalhas|n|Volume de ouro para cunhar 100 medalhas comemorativas||
-178|Matemática|Probabilidade|Probabilidade, Dados, Jogos|n|Jogador com maior probabilidade de vencer num jogo de dados||
-179|Matemática|Grandezas e medidas|Análise dimensional, Luminância, Unidades|n|Unidade de medida da luminância (candela por metro quadrado)||
-180|Matemática|Sequências e progressões|Progressão aritmética, Expressão algébrica, Jogo de moedas|n|Expressão do número de moedas do jogador 1 após n rodadas||
+162|Matemática|Aritmética|Porcentagem, Reciclagem de plástico, Custo|s|Toneladas mínimas de plástico reciclado para reduzir o custo em 50%||
+163|Matemática|Aritmética|Proporção, Porcentagem, Modalidades esportivas|s|Total de estudantes a partir de quantidades e porcentagens de cada esporte||
+164|Matemática|Trigonometria|Lei dos cossenos, Navegação, Velocidade|s|Direção e tempo de navegação numa rota retilínea usando a lei dos cossenos||
+165|Matemática|Estatística|Mediana, Ensaio clínico, Raciocínio lógico|s|Grupo de um estudo clínico que certamente atende ao critério pela mediana||
+166|Matemática|Estatística|Média, Pace, Corrida|s|Redução de tempo no último trecho para repetir o melhor pace na corrida de 5 km||
+167|Matemática|Aritmética|Proporção, Rendimento, Combustíveis|s|Diferença de gasto entre gasolina e GNV num carro bicombustível||
+168|Matemática|Aritmética|Custo mínimo, Comparação, Autoescola|s|Autoescola com menor custo total para os pacotes de aulas e o exame||
+169|Matemática|Estatística|Gráfico de linhas, Produção de soja, Produtividade|s|Gráfico da produção de soja a partir da área cultivada e da produtividade||
+170|Matemática|Geometria espacial|Volume, Paralelepípedo, Economia de água|s|Número máximo de garrafas na caixa de descarga mantendo o funcionamento||
+171|Matemática|Geometria plana|Circunferência inscrita, Quadrado, Embalagens|s|Aumento mínimo da aresta de caixas quadradas para embalar tortas maiores||
+172|Matemática|Funções|Função exponencial, Inequações, Pressão|s|Maior parâmetro de um modelo de máquina que respeita a pressão recomendada||
+173|Matemática|Geometria plana|Área do semicírculo, Área do retângulo, Túnel|s|Projeto de túnel com menor área de seção transversal||
+174|Matemática|Álgebra|Equação do 2º grau, Parcelamento|s|Número de parcelas de um carro a partir da relação entre duas opções de pagamento||
+175|Matemática|Análise combinatória|Combinação, Distribuição de presentes|s|Maneiras de distribuir oito presentes entre três filhos com restrições||
+176|Matemática|Aritmética|Velocidade média, Distância, Futebol|s|Distância percorrida por um jogador num jogo com prorrogação||
+177|Matemática|Geometria espacial|Volume do cilindro, Área de trapézio, Medalhas|s|Volume de ouro para cunhar 100 medalhas comemorativas||
+178|Matemática|Probabilidade|Probabilidade, Dados, Jogos|s|Jogador com maior probabilidade de vencer num jogo de dados||
+179|Matemática|Grandezas e medidas|Análise dimensional, Luminância, Unidades|s|Unidade de medida da luminância (candela por metro quadrado)||
+180|Matemática|Sequências e progressões|Progressão aritmética, Expressão algébrica, Jogo de moedas|s|Expressão do número de moedas do jogador 1 após n rodadas||

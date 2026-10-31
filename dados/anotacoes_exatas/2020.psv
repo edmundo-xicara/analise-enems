@@ -1,91 +1,91 @@
-Questão|Disciplina|Matéria|Assuntos|Brasil|Abordagem|Fonte|Tipo de Fonte
+Questão|Disciplina|Matéria|Assuntos|Cálculo|Abordagem|Fonte|Tipo de Fonte
 91|Física|Eletricidade|Eletrização por atrito, Cargas elétricas, Tirinha|n|Eletrização do gato do Garfield por atrito com a calça, pela troca de elétrons|Garfield - Jim Davis|Imagens
 92|Química|Química ambiental|Polímeros biodegradáveis, Lixo plástico, Decomposição|n|Vantagem dos polímeros biodegradáveis por serem decompostos por microrganismos||
 93|Física|Eletricidade|Amperímetro, Corrente elétrica, Bateria de carro|n|Ligação correta de um amperímetro para medir a corrente que descarrega a bateria do carro||
-94|Química|Química orgânica|Isomeria, Cadeia carbônica, Óleo de rosas|n|Escolha da substância com a estrutura do principal componente do óleo de rosas||
+94|Química|Química orgânica|Isomeria, Cadeia carbônica, Óleo de rosas|s|Escolha da substância com a estrutura do principal componente do óleo de rosas||
 95|Biologia|Ecologia|Fragmentação de hábitats, Corredores ecológicos, Efeito de borda|n|Corredores entre fragmentos de hábitat para conservar a biodiversidade||
-96|Química|Físico-química|Cinética química, Meia-vida, Hidrólise da sacarose|n|Concentração de sacarose após 400 minutos de hidrólise enzimática pela meia-vida||
-97|Química|Química ambiental|Pré-sal, Ciclo do carbono, Combustíveis fósseis|s|Desequilíbrio do ciclo do carbono causado pela queima do petróleo do pré-sal||
+96|Química|Físico-química|Cinética química, Meia-vida, Hidrólise da sacarose|s|Concentração de sacarose após 400 minutos de hidrólise enzimática pela meia-vida||
+97|Química|Química ambiental|Pré-sal, Ciclo do carbono, Combustíveis fósseis|n|Desequilíbrio do ciclo do carbono causado pela queima do petróleo do pré-sal||
 98|Física|Eletromagnetismo|Indução eletromagnética, Geradores, Usinas|n|Aumento da tensão nas bobinas de um gerador pelo aumento da velocidade de rotação||
-99|Física|Mecânica|Movimento uniforme, Semáforos, Sincronização|n|Tempo de abertura de semáforos sincronizados para uma onda verde||
-100|Química|Química ambiental|Queima de plástico, PVC, Ácido clorídrico|n|Gás HCl liberado na decomposição térmica de um plástico clorado (PVC)||
+99|Física|Mecânica|Movimento uniforme, Semáforos, Sincronização|s|Tempo de abertura de semáforos sincronizados para uma onda verde||
+100|Química|Química ambiental|Queima de plástico, PVC, Ácido clorídrico|s|Gás HCl liberado na decomposição térmica de um plástico clorado (PVC)||
 101|Biologia|Evolução|Especiação, Isolamento geográfico, Populações|n|Esquema de isolamento de populações que leva ou não à formação de novas espécies||
 102|Química|Química geral|Extração por solvente, Polaridade, Óleos vegetais|n|Etapa da produção de óleo vegetal baseada apenas na polaridade (extração com hexano)||
 103|Química|Química ambiental|Dióxido de carbono, Acidificação dos oceanos, pH|n|Aumento de CO2 que reduz o pH da água e afeta organismos aquáticos||
 104|Biologia|Zoologia|Aves aquáticas, Vazamento de petróleo, Impermeabilização das penas|n|Aves resgatadas de vazamento de petróleo precisam recuperar a camada oleosa das penas||
 105|Física|Termologia|Refrigerador, Trocas de calor, Consumo de energia|n|Geladeira perto de fontes de calor gasta mais por reduzir a troca de calor no condensador||
-106|Física|Hidrostática|Pressão hidrostática, Mergulho, Descompressão|n|Tempo de descompressão de um mergulhador preso numa caverna submarina||
-107|Física|Hidrostática|Pressão, Semelhança, Torre Eiffel|n|Razão entre as pressões exercidas pela Torre Eiffel e por um modelo em escala||
+106|Física|Hidrostática|Pressão hidrostática, Mergulho, Descompressão|s|Tempo de descompressão de um mergulhador preso numa caverna submarina||
+107|Física|Hidrostática|Pressão, Semelhança, Torre Eiffel|s|Razão entre as pressões exercidas pela Torre Eiffel e por um modelo em escala||
 108|Química|Química geral|Revestimento de medicamentos, Celulose, Acidez estomacal|n|Revestimento de celulose que impede a liberação do medicamento no estômago|Revista da Unifebe|Revistas
 109|Física|Termologia|Panela de pressão, Ebulição, Calor|n|Reduzir o fogo na panela de pressão para evitar desperdício de energia, pois a temperatura não aumenta||
 110|Química|Físico-química|Nanotecnologia, Catálise, Superfície de contato|n|Nanocatalisadores eficientes pela maior superfície de contato das reações||
 111|Física|Ondulatória|Interferência destrutiva, Cancelamento de ruído, Fones de ouvido|n|Fones com cancelamento de ruído baseados na interferência destrutiva de ondas|UOL|Notícias
 112|Química|Físico-química|Equilíbrio químico, Cloreto de cobalto, Umidade|n|Aquecer o cartão indicador de umidade para deslocar o equilíbrio e reutilizá-lo||
 113|Física|Mecânica|Lançamento horizontal, Inércia, Desenhos animados|n|Trajetória parabólica de uma bolinha lançada da mesa, ao contrário dos desenhos animados||
-114|Física|Ondulatória|Ressonância, Tubos sonoros, Frequência|n|Próxima frequência de ressonância numa cavidade de 30 m de profundidade||
-115|Biologia|Biotecnologia|Transgenia, Soja, Cianovirina, HIV|s|Soja transgênica brasileira que produz uma proteína contra o vírus HIV|Pesquisa Fapesp|Revistas
-116|Física|Eletricidade|Divisor de tensão, Resistores, Corrente elétrica|n|Pontos de um divisor de tensão para alimentar um equipamento e a corrente nele||
+114|Física|Ondulatória|Ressonância, Tubos sonoros, Frequência|s|Próxima frequência de ressonância numa cavidade de 30 m de profundidade||
+115|Biologia|Biotecnologia|Transgenia, Soja, Cianovirina, HIV|n|Soja transgênica brasileira que produz uma proteína contra o vírus HIV|Pesquisa Fapesp|Revistas
+116|Física|Eletricidade|Divisor de tensão, Resistores, Corrente elétrica|s|Pontos de um divisor de tensão para alimentar um equipamento e a corrente nele||
 117|Biologia|Saúde e doenças|Câncer, Fotoimunoterapia, Anticorpos|n|Técnica que combina luz infravermelha e anticorpos para destruir tumores|Superinteressante|Revistas
 118|Biologia|Zoologia|Aracnídeos, Exoesqueleto, Ambiente terrestre|n|Exoesqueleto quitinoso como adaptação que permitiu aos aracnídeos ocupar a terra||
 119|Química|Química ambiental|Esgoto, Oxigênio dissolvido, DBO|s|Ponto do rio mais próximo do esgoto identificado pelo oxigênio dissolvido e DBO|Programa Água Azul|Artigos
 120|Química|Estequiometria|Veículo elétrico, Etanol, Equivalência energética|s|Massa de etanol economizada ao usar um veículo elétrico num trajeto|Unesp|Artigos
 121|Biologia|Botânica|Fotossíntese, Espectro de absorção, Experimento de Engelmann|n|Faixa do espectro em que a alga faz mais fotossíntese no experimento de Engelmann||
-122|Biologia|Saúde e doenças|Parasitologia, Exame de fezes, Densidade|s|Ovos de parasitas detectáveis pelo método de centrífugo-flutuação pela densidade|Prosab|Artigos
+122|Biologia|Saúde e doenças|Parasitologia, Exame de fezes, Densidade|n|Ovos de parasitas detectáveis pelo método de centrífugo-flutuação pela densidade|Prosab|Artigos
 123|Química|Química geral|Separação de misturas, Acetato de etila, Densidade|n|Separação do acetato de etila da água num resíduo de laboratório||
-124|Química|Química ambiental|Petróleo, Derramamento, Bacia de Campos|s|Impactos do derramamento de petróleo na Bacia de Campos pela insolubilidade dos hidrocarbonetos||
-125|Biologia|Genética|Sistema ABO, Equilíbrio de Hardy-Weinberg, Transfusão|n|Porcentagem de doadores compatíveis para o grupo B numa população em equilíbrio||
+124|Química|Química ambiental|Petróleo, Derramamento, Bacia de Campos|n|Impactos do derramamento de petróleo na Bacia de Campos pela insolubilidade dos hidrocarbonetos||
+125|Biologia|Genética|Sistema ABO, Equilíbrio de Hardy-Weinberg, Transfusão|s|Porcentagem de doadores compatíveis para o grupo B numa população em equilíbrio||
 126|Física|Física moderna|Bomba atômica, Fissão nuclear, Urânio|n|Detonação da bomba atômica pela fissão nuclear do urânio provocada por nêutrons||
-127|Biologia|Ecologia|Plantas pioneiras, Sucessão ecológica, Restauração ambiental|s|Plantas pioneiras que aumentam a matéria orgânica do solo na restauração ambiental|Chauá|Artigos
-128|Física|Termologia|Calor específico, Potência, Aquário|n|Queda de temperatura de um aquário com o aquecedor desligado por uma hora||
+127|Biologia|Ecologia|Plantas pioneiras, Sucessão ecológica, Restauração ambiental|n|Plantas pioneiras que aumentam a matéria orgânica do solo na restauração ambiental|Chauá|Artigos
+128|Física|Termologia|Calor específico, Potência, Aquário|s|Queda de temperatura de um aquário com o aquecedor desligado por uma hora||
 129|Biologia|Saúde e doenças|Quimioterapia, Câncer, Células normais|n|Quimioterápico que mais reduz células tumorais e menos afeta as normais||
 130|Física|Ondulatória|Radiação infravermelha, Herschel, Espectro|n|Recipiente que mais aquece no experimento de Herschel, além do vermelho|USP|Artigos
 131|Química|Química ambiental|Química verde, Rendimento, Catálise|n|Processo que segue os princípios da química verde: reação rápida, sem resíduos||
-132|Química|Química ambiental|Fogos de artifício, Poluição, Metais pesados|s|Riscos ambientais dos fogos de artifício por liberarem metais e óxidos poluentes|Compound Interest|Artigos
+132|Química|Química ambiental|Fogos de artifício, Poluição, Metais pesados|n|Riscos ambientais dos fogos de artifício por liberarem metais e óxidos poluentes|Compound Interest|Artigos
 133|Física|Eletricidade|Gaiola de Faraday, Raios, Automóveis|n|Carro protege de raios pela blindagem eletrostática (gaiola de Faraday)|Ciência Hoje|Revistas
-134|Química|Química geral|Densidade, Moedas antigas, Volume|s|Identificação de moedas de cobre do Brasil Colônia pela densidade medida em provetas||
+134|Química|Química geral|Densidade, Moedas antigas, Volume|n|Identificação de moedas de cobre do Brasil Colônia pela densidade medida em provetas||
 135|Biologia|Genética|Poliploidia, Café, Mutação cromossômica|n|Origem do café arábica pela duplicação cromossômica de um híbrido||
 136|Matemática|Geometria plana|Proporção, Círculo, Bandeira Nacional|s|Lado do menor quadrado de tecido azul para o círculo da Bandeira Nacional pela lei|Planalto|Artigos
-137|Matemática|Aritmética|Razão, Frações, Assentos de ônibus|n|Razão entre assentos vendidos e o total de assentos de um ônibus||
-138|Matemática|Grandezas e medidas|Escala, Volume, Maquete|n|Escala de uma maquete a partir do volume real da caixa-d'água||
-139|Matemática|Estatística|Razão, Leitura de gráfico, Produtividade|n|Dia com metodologia de produção mais eficiente pela razão peças por hora||
-140|Matemática|Geometria plana|Área, Revestimento, Porcelanato|n|Compra de caixas de porcelanato com menor sobra e menor preço||
-141|Matemática|Aritmética|Contagem de algarismos, Numeração|n|Quantidade de peças com o algarismo 2 para numerar os quartos de um hotel||
+137|Matemática|Aritmética|Razão, Frações, Assentos de ônibus|s|Razão entre assentos vendidos e o total de assentos de um ônibus||
+138|Matemática|Grandezas e medidas|Escala, Volume, Maquete|s|Escala de uma maquete a partir do volume real da caixa-d'água||
+139|Matemática|Estatística|Razão, Leitura de gráfico, Produtividade|s|Dia com metodologia de produção mais eficiente pela razão peças por hora||
+140|Matemática|Geometria plana|Área, Revestimento, Porcelanato|s|Compra de caixas de porcelanato com menor sobra e menor preço||
+141|Matemática|Aritmética|Contagem de algarismos, Numeração|s|Quantidade de peças com o algarismo 2 para numerar os quartos de um hotel||
 142|Matemática|Probabilidade|Probabilidade, Ordenação, Estatuto do Idoso|s|Probabilidade de um idoso ser o sétimo a receber a restituição do imposto de renda||
 143|Matemática|Funções|Função afim, Projeção, Escolaridade|s|Ano em que o tempo médio de estudo atingirá 70% do necessário para um curso superior|IBGE|Artigos
-144|Matemática|Grandezas e medidas|Notação científica, Volume, Gotejamento|n|Tempo para encher um balde com uma torneira gotejando, em notação científica||
-145|Matemática|Grandezas e medidas|Escala, Semelhança, Troféu|n|Altura da caixa de vidro para a maior miniatura possível de um troféu||
-146|Matemática|Álgebra|Inequações, Fórmula de Blondel, Escadas|n|Intervalo da profundidade do degrau que satisfaz as regras para escadas||
-147|Matemática|Aritmética|Razão inversa, Consumo de combustível, Computador de bordo|n|Conversão do consumo do carro de litros por 100 km para km por litro||
+144|Matemática|Grandezas e medidas|Notação científica, Volume, Gotejamento|s|Tempo para encher um balde com uma torneira gotejando, em notação científica||
+145|Matemática|Grandezas e medidas|Escala, Semelhança, Troféu|s|Altura da caixa de vidro para a maior miniatura possível de um troféu||
+146|Matemática|Álgebra|Inequações, Fórmula de Blondel, Escadas|s|Intervalo da profundidade do degrau que satisfaz as regras para escadas||
+147|Matemática|Aritmética|Razão inversa, Consumo de combustível, Computador de bordo|s|Conversão do consumo do carro de litros por 100 km para km por litro||
 148|Matemática|Aritmética|Porcentagem, Gráfico de setores, Pnad|s|Número de jovens que trabalham entre os entrevistados da Pnad|UOL|Notícias
-149|Matemática|Funções|Logaritmo, Lei de Zipf, Função afim|n|Relação linear entre os logaritmos de frequência e posição pela lei de Zipf|SBM|Artigos
-150|Matemática|Funções|Meia-vida, Função exponencial, Carbono-14|n|Fóssil mais antigo identificado pela razão de carbono-14 e a meia-vida||
+149|Matemática|Funções|Logaritmo, Lei de Zipf, Função afim|s|Relação linear entre os logaritmos de frequência e posição pela lei de Zipf|SBM|Artigos
+150|Matemática|Funções|Meia-vida, Função exponencial, Carbono-14|s|Fóssil mais antigo identificado pela razão de carbono-14 e a meia-vida||
 151|Matemática|Geometria espacial|Tronco de pirâmide, Faces, Chichén Itzá|n|Figuras planas que formam o tronco de pirâmide do templo de Kukulkán||
-152|Matemática|Funções|Função afim, Aeração, Porcentagem|n|Equação que relaciona as alturas de líquido num processo de aeração|UFCG|Artigos
-153|Matemática|Aritmética|Velocidade, Tempo, Comparação de trajetos|n|Dias em que ir de bicicleta é mais rápido que de ônibus até a universidade||
-154|Matemática|Grandezas e medidas|Notação científica, Micrômetro, Impressão 3D|n|Comprimento de uma miniatura impressa em 3D em notação científica||
-155|Matemática|Sequências e progressões|Progressão geométrica, Escher, Recursão|n|Lado do centésimo quadrado numa construção recursiva inspirada em Escher||
-156|Matemática|Estatística|Leitura de gráfico, Arrecadação, Estoque|n|Perfume que gerou maior arrecadação e deve ter maior reposição||
-157|Matemática|Probabilidade|Probabilidade, Amigo secreto|n|Probabilidade de o casal ser o primeiro a revelar e o último presenteado no amigo secreto||
-158|Matemática|Análise combinatória|Caminhos em malha, Combinação|n|Número de caminhos de André em ruas quadriculadas passando pelos amigos||
-159|Matemática|Aritmética|Custo total, Frete, Comparação de preços|n|Depósito mais econômico para comprar cimento considerando o frete||
-160|Matemática|Aritmética|Proporção, Consumo de combustível, Viagem|n|Quantidade mínima de gasolina a abastecer num posto numa viagem de moto||
-161|Matemática|Geometria espacial|Volume do cilindro, Razão, Caixas-d'água|n|Raio de uma caixa-d'água cilíndrica com o mesmo volume e altura menor||
-162|Matemática|Geometria plana|Área, Legislação urbana, Plantas de casas|n|Planta de casa aprovada pela prefeitura segundo os afastamentos exigidos||
-163|Matemática|Análise combinatória|Permutação, Anagramas, Harry Potter|n|Número de anagramas de I AM POTTER com vogais e consoantes intercaladas||
-164|Matemática|Funções|Leitura de gráfico, Poluição sonora, Decibéis|n|Horas em que o ruído ficou acima de 55 decibéis num dia|Revista Encontro|Revistas
-165|Matemática|Estatística|Média aritmética, Altura, Basquete|n|Média mínima de altura dos novos jogadores para elevar a média do time||
-166|Matemática|Funções|Gráficos, Taxa de variação, Garrafa de espumante|s|Gráfico da altura do líquido ao encher uma garrafa de espumante||
-167|Matemática|Aritmética|Porcentagem, Orçamento familiar|n|Redução percentual da mesada para manter o gasto total da família||
-168|Matemática|Geometria espacial|Volume, Esferas, Paralelepípedo|n|Número mínimo de bolinhas para elevar a água e retirar um objeto flutuante||
-169|Matemática|Aritmética|Conjuntos, Diagrama de Venn, Tipos sanguíneos|n|Número de pessoas com sangue tipo A a partir dos antígenos encontrados|HowStuffWorks|Artigos
-170|Matemática|Aritmética|Frações, Divisão proporcional, Sociedade|n|Fração do capital que um sócio deve comprar dos outros para igualar as partes||
+152|Matemática|Funções|Função afim, Aeração, Porcentagem|s|Equação que relaciona as alturas de líquido num processo de aeração|UFCG|Artigos
+153|Matemática|Aritmética|Velocidade, Tempo, Comparação de trajetos|s|Dias em que ir de bicicleta é mais rápido que de ônibus até a universidade||
+154|Matemática|Grandezas e medidas|Notação científica, Micrômetro, Impressão 3D|s|Comprimento de uma miniatura impressa em 3D em notação científica||
+155|Matemática|Sequências e progressões|Progressão geométrica, Escher, Recursão|s|Lado do centésimo quadrado numa construção recursiva inspirada em Escher||
+156|Matemática|Estatística|Leitura de gráfico, Arrecadação, Estoque|s|Perfume que gerou maior arrecadação e deve ter maior reposição||
+157|Matemática|Probabilidade|Probabilidade, Amigo secreto|s|Probabilidade de o casal ser o primeiro a revelar e o último presenteado no amigo secreto||
+158|Matemática|Análise combinatória|Caminhos em malha, Combinação|s|Número de caminhos de André em ruas quadriculadas passando pelos amigos||
+159|Matemática|Aritmética|Custo total, Frete, Comparação de preços|s|Depósito mais econômico para comprar cimento considerando o frete||
+160|Matemática|Aritmética|Proporção, Consumo de combustível, Viagem|s|Quantidade mínima de gasolina a abastecer num posto numa viagem de moto||
+161|Matemática|Geometria espacial|Volume do cilindro, Razão, Caixas-d'água|s|Raio de uma caixa-d'água cilíndrica com o mesmo volume e altura menor||
+162|Matemática|Geometria plana|Área, Legislação urbana, Plantas de casas|s|Planta de casa aprovada pela prefeitura segundo os afastamentos exigidos||
+163|Matemática|Análise combinatória|Permutação, Anagramas, Harry Potter|s|Número de anagramas de I AM POTTER com vogais e consoantes intercaladas||
+164|Matemática|Funções|Leitura de gráfico, Poluição sonora, Decibéis|s|Horas em que o ruído ficou acima de 55 decibéis num dia|Revista Encontro|Revistas
+165|Matemática|Estatística|Média aritmética, Altura, Basquete|s|Média mínima de altura dos novos jogadores para elevar a média do time||
+166|Matemática|Funções|Gráficos, Taxa de variação, Garrafa de espumante|n|Gráfico da altura do líquido ao encher uma garrafa de espumante||
+167|Matemática|Aritmética|Porcentagem, Orçamento familiar|s|Redução percentual da mesada para manter o gasto total da família||
+168|Matemática|Geometria espacial|Volume, Esferas, Paralelepípedo|s|Número mínimo de bolinhas para elevar a água e retirar um objeto flutuante||
+169|Matemática|Aritmética|Conjuntos, Diagrama de Venn, Tipos sanguíneos|s|Número de pessoas com sangue tipo A a partir dos antígenos encontrados|HowStuffWorks|Artigos
+170|Matemática|Aritmética|Frações, Divisão proporcional, Sociedade|s|Fração do capital que um sócio deve comprar dos outros para igualar as partes||
 171|Matemática|Geometria plana|Polígonos, Mosaicos, Azulejos|s|Formatos de azulejo que completam um painel de azulejaria|Itaú Cultural|Artigos
-172|Matemática|Geometria espacial|Cone, Geratriz, Teorema de Pitágoras|n|Raio da base de uma iluminação natalina em cone feita com 100 m de fio||
-173|Matemática|Trigonometria|Tangente, Sombra, Pergolado|n|Altura das vigas de um pergolado para a sombra desejada ao meio-dia||
-174|Matemática|Geometria plana|Área, Densidade de pessoas, Manifestações|n|Estimativa do número de pessoas numa manifestação pela área ocupada||
-175|Matemática|Funções|Função afim, Lucro, Receita e custo|n|Gráfico do lucro de uma empresa como diferença entre receita e custo||
+172|Matemática|Geometria espacial|Cone, Geratriz, Teorema de Pitágoras|s|Raio da base de uma iluminação natalina em cone feita com 100 m de fio||
+173|Matemática|Trigonometria|Tangente, Sombra, Pergolado|s|Altura das vigas de um pergolado para a sombra desejada ao meio-dia||
+174|Matemática|Geometria plana|Área, Densidade de pessoas, Manifestações|s|Estimativa do número de pessoas numa manifestação pela área ocupada||
+175|Matemática|Funções|Função afim, Lucro, Receita e custo|s|Gráfico do lucro de uma empresa como diferença entre receita e custo||
 176|Matemática|Geometria espacial|Projeção ortogonal, Sólidos, Jogo de computador|n|Posição de um sólido e suas projeções ortogonais em três planos||
 177|Matemática|Geometria espacial|Vista superior, Telhados, Escoamento|n|Planta do telhado com o sentido de escoamento da água da chuva||
-178|Matemática|Probabilidade|Esperança, Probabilidade, Pneus de corrida|n|Pneu escolhido pelo maior coeficiente considerando 70% de chance de chuva||
-179|Matemática|Grandezas e medidas|Densidade superficial, Conversão de unidades, Papel|n|Quilogramas de papel A4 produzidos por um pé de eucalipto|Revista Galileu|Revistas
-180|Matemática|Estatística|Média ponderada, Pesquisa de satisfação|n|Empresa contratada pela maior média ponderada numa pesquisa de satisfação||
+178|Matemática|Probabilidade|Esperança, Probabilidade, Pneus de corrida|s|Pneu escolhido pelo maior coeficiente considerando 70% de chance de chuva||
+179|Matemática|Grandezas e medidas|Densidade superficial, Conversão de unidades, Papel|s|Quilogramas de papel A4 produzidos por um pé de eucalipto|Revista Galileu|Revistas
+180|Matemática|Estatística|Média ponderada, Pesquisa de satisfação|s|Empresa contratada pela maior média ponderada numa pesquisa de satisfação||

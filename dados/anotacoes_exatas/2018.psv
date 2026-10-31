@@ -1,29 +1,29 @@
-Questão|Disciplina|Matéria|Assuntos|Brasil|Abordagem|Fonte|Tipo de Fonte
+Questão|Disciplina|Matéria|Assuntos|Cálculo|Abordagem|Fonte|Tipo de Fonte
 91|Química|Química orgânica|Nanotecnologia, Isomeria, Luz|n|Movimento molecular induzido pela luz explicado pela isomerização cis-trans|Química Nova na Escola|Revistas
 92|Química|Termoquímica|Calor de combustão, Densidade, Carro flex|s|Volume de etanol consumido num carro flex pela energia equivalente à gasolina||
 93|Química|Eletroquímica|Pilhas, Cátodo, Pilha de Bagdá|n|Componente que atuaria como cátodo na suposta pilha de Bagdá|Jornal GGN|Notícias
 94|Biologia|Fisiologia humana|Insulina, Glucagon, Hipoglicemia|n|Glucagon que induz a quebra do glicogênio hepático numa hipoglicemia||
-95|Física|Hidrostática|Densidade, Densímetro, Empuxo|n|Posição de equilíbrio de um densímetro em água pura e em solução de sal||
+95|Física|Hidrostática|Densidade, Densímetro, Empuxo|s|Posição de equilíbrio de um densímetro em água pura e em solução de sal||
 96|Biologia|Fisiologia humana|Digestão, Lipídios, Bile|n|Ácidos biliares que agem como detergentes na emulsificação de gorduras||
 97|Física|Eletromagnetismo|Indução eletromagnética, RFID, Ondas de rádio|n|Etiqueta RFID que funciona sem pilha pela indução causada pelo campo magnético da onda|HowStuffWorks|Artigos
-98|Biologia|Ecologia|Corredores ecológicos, Fragmentação, Fluxo gênico|s|Corredores ecológicos que recuperam a biodiversidade ao propiciar o fluxo gênico|Ministério do Meio Ambiente|Artigos
+98|Biologia|Ecologia|Corredores ecológicos, Fragmentação, Fluxo gênico|n|Corredores ecológicos que recuperam a biodiversidade ao propiciar o fluxo gênico|Ministério do Meio Ambiente|Artigos
 99|Química|Química geral|Transporte de produtos perigosos, Nomenclatura, Amônia|s|Identificação da amônia pelo código de risco num painel de caminhão|ANTT|Artigos
 100|Biologia|Citologia|Ciclo celular, Proteína p53, Câncer|n|Falta da proteína p53 que favorece a multiplicação de células com DNA danificado|Fundamentos da biologia celular - B. Alberts et al.|Livros
 101|Biologia|Zoologia|Deserto, Adaptações, Excreção|n|Eliminação de excretas nitrogenadas concentradas como adaptação ao deserto||
 102|Química|Química geral|Fotoquímica, Pigmentos, Arte|n|Papel do íon cloreto como catalisador no escurecimento do pigmento vermilion|Chemistry World|Revistas
 103|Física|Ondulatória|Frequência, Sonorizador, Rodovias|s|Frequência da vibração de um carro ao passar por um sonorizador na rodovia|Denatran|Artigos
 104|Física|Mecânica|Alavancas, Torque, Ferramentas|n|Objeto em que a força potente é maior que a resistente (pinça)||
-105|Química|Química geral|Tabela periódica, Nióbio, Tântalo|s|Similaridade entre nióbio e tântalo por estarem na mesma família da tabela periódica|A colher que desaparece - Sam Kean|Livros
-106|Biologia|Evolução|Especiação, Isolamento reprodutivo, Populações|s|Populações brasileiras de plantas e animais em processo evidente de especiação|Pesquisa Fapesp|Revistas
+105|Química|Química geral|Tabela periódica, Nióbio, Tântalo|n|Similaridade entre nióbio e tântalo por estarem na mesma família da tabela periódica|A colher que desaparece - Sam Kean|Livros
+106|Biologia|Evolução|Especiação, Isolamento reprodutivo, Populações|n|Populações brasileiras de plantas e animais em processo evidente de especiação|Pesquisa Fapesp|Revistas
 107|Biologia|Botânica|Enxertia, Reprodução assexuada, Atemoia|n|Enxertia da atemoia para manter as características da planta híbrida||
 108|Física|Eletricidade|Resistência elétrica, Resistor não ôhmico, Gráficos|n|Gráfico da resistência de um resistor não ôhmico em função da corrente||
-109|Química|Química orgânica|Substituição nucleofílica, Reatividade, Hidroxilamina|n|Molécula com menor reatividade nucleofílica entre substitutos da hidroxilamina||
+109|Química|Química orgânica|Substituição nucleofílica, Reatividade, Hidroxilamina|s|Molécula com menor reatividade nucleofílica entre substitutos da hidroxilamina||
 110|Biologia|Genética|Código genético, Genoma, Cevada|n|Correção do conceito de código genético como trincas que codificam aminoácidos||
 111|Biologia|Botânica|Polinização, Vento, Evolução|n|Grande produção de pólen leve como estratégia de plantas polinizadas pelo vento||
-112|Física|Eletricidade|Resistência equivalente, Tela sensível ao toque|n|Resistência equivalente de um circuito fechado pelo toque numa tela resistiva||
+112|Física|Eletricidade|Resistência equivalente, Tela sensível ao toque|s|Resistência equivalente de um circuito fechado pelo toque numa tela resistiva||
 113|Biologia|Biotecnologia|Leveduras modificadas, Enzimas, Indústria têxtil|n|Leveduras modificadas que reduzem resíduos tóxicos no clareamento de jeans|Microbiologia - G. J. Tortora et al.|Livros
-114|Química|Termoquímica|Oxidação da glicose, Rendimento energético, Metabolismo|n|Energia obtida para a atividade muscular na oxidação de 1 g de glicose|Química na saúde - L. M. Lima et al.|Livros
-115|Física|Eletricidade|Potência elétrica, Poraquê, Eletrodomésticos|s|Equipamento com potência parecida à da descarga de um poraquê da Amazônia||
+114|Química|Termoquímica|Oxidação da glicose, Rendimento energético, Metabolismo|s|Energia obtida para a atividade muscular na oxidação de 1 g de glicose|Química na saúde - L. M. Lima et al.|Livros
+115|Física|Eletricidade|Potência elétrica, Poraquê, Eletrodomésticos|n|Equipamento com potência parecida à da descarga de um poraquê da Amazônia||
 116|Química|Eletroquímica|Célula solar, Corante, Oxirredução|n|Reação que regenera o corante numa célula solar de TiO2|Journal of the Brazilian Chemical Society|Revistas
 117|Biologia|Citologia|Nucléolo, Síntese de proteínas, Metabolismo|n|Linhagem celular com nucléolo mais desenvolvido e maior síntese de proteínas||
 118|Física|Termologia|Dilatação térmica, Energia de ligação, Sólidos|n|Aumento da distância média entre átomos com a temperatura, que revela a dilatação||
@@ -34,9 +34,9 @@ Questão|Disciplina|Matéria|Assuntos|Brasil|Abordagem|Fonte|Tipo de Fonte
 123|Biologia|Bioquímica|Fotossíntese, Respiração, Transformação de energia|n|Conversão de energia luminosa em química no ciclo da fotossíntese e respiração|Lehninger - D. L. Nelson; M. M. Cox|Livros
 124|Química|Química orgânica|Petróleo, Craqueamento, Hidrocarbonetos|n|Craqueamento do petróleo que quebra frações em moléculas menores||
 125|Física|Óptica|Dispersão da luz, Prisma, Cores|n|Ordem das cores no filme após a luz atravessar um prisma||
-126|Química|Química ambiental|Tensoativos, Biodegradabilidade, Detergentes|n|Estrutura do tensoativo de cadeia ramificada que persiste no ambiente|Química Nova|Revistas
+126|Química|Química ambiental|Tensoativos, Biodegradabilidade, Detergentes|s|Estrutura do tensoativo de cadeia ramificada que persiste no ambiente|Química Nova|Revistas
 127|Biologia|Genética|Paternidade, Marcadores genéticos, Pequizeiro|s|Doadora de pólen de uma progênie de pequizeiro identificada por marcadores genéticos|Genética na Escola|Revistas
-128|Física|Mecânica|Terceira lei de Newton, Quantidade de movimento, Barco a vela|n|Carrinho com ventilador soprando a vela que não se move, pela ação e reação||
+128|Física|Mecânica|Terceira lei de Newton, Quantidade de movimento, Barco a vela|s|Carrinho com ventilador soprando a vela que não se move, pela ação e reação||
 129|Biologia|Fisiologia humana|Visão, Daltonismo, Cones|n|Pessoa sem o pigmento verde incapaz de distinguir luzes de 530 nm e 600 nm|Comprehensive Physiology|Revistas
 130|Química|Química geral|Grafeno, Hibridação, Alotropia|n|Hibridação sp2 dos carbonos do grafeno com geometria trigonal plana||
 131|Física|Mecânica|Energia potencial elástica, Mola, Lançamento|n|Como quadruplicar a velocidade de lançamento de um cubo por uma mola||
@@ -44,48 +44,48 @@ Questão|Disciplina|Matéria|Assuntos|Brasil|Abordagem|Fonte|Tipo de Fonte
 133|Biologia|Zoologia|Insetos, Metamorfose, Holometabolia|n|Holometabolia que reduz a competição entre larvas e adultos e aumenta a diversidade||
 134|Física|Hidrostática|Pressão atmosférica, Canudo, Sucção|n|Dificuldade de beber suco com um canudo fora do líquido pela pressão atmosférica||
 135|Química|Química geral|Síntese da amônia, Fritz Haber, Ciclo do nitrogênio|n|Discurso de Fritz Haber sobre o desequilíbrio do nitrogênio pelo esgotamento do salitre|Nobel Prize|Artigos
-136|Matemática|Álgebra|Matrizes, Transferências bancárias|n|Banco que mais transferiu dinheiro por TED a partir de uma matriz||
-137|Matemática|Matemática financeira|Logaritmo, Juros compostos, Antecipação de parcelas|n|Parcela que pode ser antecipada com desconto de juros usando logaritmos||
+136|Matemática|Álgebra|Matrizes, Transferências bancárias|s|Banco que mais transferiu dinheiro por TED a partir de uma matriz||
+137|Matemática|Matemática financeira|Logaritmo, Juros compostos, Antecipação de parcelas|s|Parcela que pode ser antecipada com desconto de juros usando logaritmos||
 138|Matemática|Geometria analítica|Circunferência, Equação da reta, Plano cartesiano|n|Equação de trajetória que elimina mais pontos num jogo do plano cartesiano||
-139|Matemática|Geometria plana|Comprimento de arco, Coordenadas polares, Menor caminho|n|Menor percurso numa malha de circunferências e semirretas||
-140|Matemática|Geometria espacial|Volume, Cilindros, Empacotamento|n|Caixa organizadora que comporta mais potes cilíndricos de tinta||
-141|Matemática|Sequências e progressões|Progressão aritmética, Iluminação pública|n|Gasto máximo com postes colocados em progressão aritmética numa estrada||
-142|Matemática|Funções|Proporcionalidade inversa, Gravitação, Gráfico|n|Comparação das forças gravitacionais sobre satélites a partir de um gráfico||
-143|Matemática|Aritmética|Porcentagem, Misturas, Ligas de prata|n|Gramas de prata e cobre para obter prata 950 a partir da prata 925||
-144|Matemática|Estatística|Leitura de gráfico, Tempo de espera, Aeroporto|n|Máquina de raio-X com menor tempo de espera no aeroporto||
-145|Matemática|Estatística|Média ponderada, Tabela de frequência, Acidentes de trabalho|n|Média de acidentes por funcionário numa amostra da CIPA||
-146|Matemática|Funções|Velocidade, Leitura de gráfico, Distâncias|n|Ordem das distâncias percorridas por três equipes a partir de gráficos de velocidade||
-147|Matemática|Aritmética|Porcentagem, Descontos sucessivos, Colesterol|n|Classificação do LDL de um paciente após duas reduções percentuais|Minha Vida|Artigos
-148|Matemática|Funções|Função afim, Publicidade, Expressão algébrica|n|Expressão do número de pessoas alcançadas por anúncios em rádio e panfletos||
-149|Matemática|Aritmética|Porcentagem, Inclinação, Rampas|n|Mudança no nível da garagem para a rampa atender à inclinação máxima||
-150|Matemática|Probabilidade|Probabilidade, Urnas, Sem reposição|n|Opção de transferência entre urnas com maior chance de tirar duas bolas pretas||
-151|Matemática|Geometria plana|Área do círculo, Semelhança, Fonte Ecofont|n|Tamanho da fonte Ecofont para economizar tinta com furos circulares|Goo.gl|Artigos
-152|Matemática|Geometria analítica|Inequações, Região do plano, Logotipo|n|Conjunto de pontos que forma um logotipo triangular no plano cartesiano||
-153|Matemática|Geometria plana|Coroa circular, Teorema de Pitágoras, Praça|n|Área do passeio ao redor de um chafariz a partir da medida de uma corda||
-154|Matemática|Probabilidade|Probabilidade, Tabuleiro, Inequação|n|Dimensão mínima de um tabuleiro para que a probabilidade de combate seja menor que 1/5||
-155|Matemática|Geometria plana|Classificação de triângulos, Ângulos, Remo|s|Tipo de triângulo formado pelo remador e os remos numa técnica de remo|Remo Brasil|Artigos
-156|Matemática|Probabilidade|Mediana, Probabilidade, Horário do ônibus|n|Probabilidade máxima de o rapaz ter pego o ônibus antes de 6h21 dada a mediana||
-157|Matemática|Grandezas e medidas|Escala, Mapas, Conversão de unidades|n|Distância real entre um navio e o tesouro num mapa em escala|Blog|Artigos
-158|Matemática|Aritmética|Proporção, Produtividade agrícola, Milho|n|Área mínima de terra a comprar para atingir uma meta de produção de milho||
+139|Matemática|Geometria plana|Comprimento de arco, Coordenadas polares, Menor caminho|s|Menor percurso numa malha de circunferências e semirretas||
+140|Matemática|Geometria espacial|Volume, Cilindros, Empacotamento|s|Caixa organizadora que comporta mais potes cilíndricos de tinta||
+141|Matemática|Sequências e progressões|Progressão aritmética, Iluminação pública|s|Gasto máximo com postes colocados em progressão aritmética numa estrada||
+142|Matemática|Funções|Proporcionalidade inversa, Gravitação, Gráfico|s|Comparação das forças gravitacionais sobre satélites a partir de um gráfico||
+143|Matemática|Aritmética|Porcentagem, Misturas, Ligas de prata|s|Gramas de prata e cobre para obter prata 950 a partir da prata 925||
+144|Matemática|Estatística|Leitura de gráfico, Tempo de espera, Aeroporto|s|Máquina de raio-X com menor tempo de espera no aeroporto||
+145|Matemática|Estatística|Média ponderada, Tabela de frequência, Acidentes de trabalho|s|Média de acidentes por funcionário numa amostra da CIPA||
+146|Matemática|Funções|Velocidade, Leitura de gráfico, Distâncias|s|Ordem das distâncias percorridas por três equipes a partir de gráficos de velocidade||
+147|Matemática|Aritmética|Porcentagem, Descontos sucessivos, Colesterol|s|Classificação do LDL de um paciente após duas reduções percentuais|Minha Vida|Artigos
+148|Matemática|Funções|Função afim, Publicidade, Expressão algébrica|s|Expressão do número de pessoas alcançadas por anúncios em rádio e panfletos||
+149|Matemática|Aritmética|Porcentagem, Inclinação, Rampas|s|Mudança no nível da garagem para a rampa atender à inclinação máxima||
+150|Matemática|Probabilidade|Probabilidade, Urnas, Sem reposição|s|Opção de transferência entre urnas com maior chance de tirar duas bolas pretas||
+151|Matemática|Geometria plana|Área do círculo, Semelhança, Fonte Ecofont|s|Tamanho da fonte Ecofont para economizar tinta com furos circulares|Goo.gl|Artigos
+152|Matemática|Geometria analítica|Inequações, Região do plano, Logotipo|s|Conjunto de pontos que forma um logotipo triangular no plano cartesiano||
+153|Matemática|Geometria plana|Coroa circular, Teorema de Pitágoras, Praça|s|Área do passeio ao redor de um chafariz a partir da medida de uma corda||
+154|Matemática|Probabilidade|Probabilidade, Tabuleiro, Inequação|s|Dimensão mínima de um tabuleiro para que a probabilidade de combate seja menor que 1/5||
+155|Matemática|Geometria plana|Classificação de triângulos, Ângulos, Remo|n|Tipo de triângulo formado pelo remador e os remos numa técnica de remo|Remo Brasil|Artigos
+156|Matemática|Probabilidade|Mediana, Probabilidade, Horário do ônibus|s|Probabilidade máxima de o rapaz ter pego o ônibus antes de 6h21 dada a mediana||
+157|Matemática|Grandezas e medidas|Escala, Mapas, Conversão de unidades|s|Distância real entre um navio e o tesouro num mapa em escala|Blog|Artigos
+158|Matemática|Aritmética|Proporção, Produtividade agrícola, Milho|s|Área mínima de terra a comprar para atingir uma meta de produção de milho||
 159|Matemática|Geometria espacial|Visualização espacial, Cubos, Minecraft|n|Peça que completa um cubo 4×4×4 no jogo Minecraft||
-160|Matemática|Estatística|Média, Leitura de gráfico, Carros elétricos|n|Média anual de carros elétricos vendidos por uma marca|Tecmundo|Notícias
-161|Matemática|Geometria analítica|Circunferência de Apolônio, Distância, Bombeiros|n|Maior distância entre bombeiros posicionados a uma razão de distâncias de dois focos||
-162|Matemática|Sequências e progressões|Progressão geométrica, Torneio eliminatório|n|Número de partidas num torneio de tênis eliminatório com 128 tenistas||
+160|Matemática|Estatística|Média, Leitura de gráfico, Carros elétricos|s|Média anual de carros elétricos vendidos por uma marca|Tecmundo|Notícias
+161|Matemática|Geometria analítica|Circunferência de Apolônio, Distância, Bombeiros|s|Maior distância entre bombeiros posicionados a uma razão de distâncias de dois focos||
+162|Matemática|Sequências e progressões|Progressão geométrica, Torneio eliminatório|s|Número de partidas num torneio de tênis eliminatório com 128 tenistas||
 163|Matemática|Aritmética|Frações, Redução de pena, Lei de drogas|s|Faixa de pena de um réu primário com o benefício de redução da lei de drogas||
-164|Matemática|Aritmética|Sequências, Elevador, Raciocínio lógico|n|Último andar de um prédio a partir do trajeto do elevador feito por uma criança||
+164|Matemática|Aritmética|Sequências, Elevador, Raciocínio lógico|s|Último andar de um prédio a partir do trajeto do elevador feito por uma criança||
 165|Matemática|Análise combinatória|Combinação, Salão do Automóvel|s|Maneiras de compor os estandes do Salão do Automóvel de São Paulo|G1|Notícias
-166|Matemática|Estatística|Média ponderada, Avaliações|n|Nota mínima na quarta avaliação para aprovação por média ponderada||
-167|Matemática|Probabilidade|Probabilidade, Urna, Equação|n|Perguntas fáceis a acrescentar à urna para que a chance de tirar uma seja 75%||
+166|Matemática|Estatística|Média ponderada, Avaliações|s|Nota mínima na quarta avaliação para aprovação por média ponderada||
+167|Matemática|Probabilidade|Probabilidade, Urna, Equação|s|Perguntas fáceis a acrescentar à urna para que a chance de tirar uma seja 75%||
 168|Matemática|Funções|Função afim, Interpolação, Vacinação antirrábica|s|Cobertura da vacinação antirrábica em 2014 supondo variação linear|DataSUS|Artigos
-169|Matemática|Grandezas e medidas|Escala, Inequações, Desenho|n|Valores possíveis de escala para desenhar um navio com guindaste e esteira||
-170|Matemática|Trigonometria|Função cosseno, Roda-gigante, Periodicidade|n|Função trigonométrica da altura de um ponto na roda-gigante High Roller|Wikipedia|Artigos
-171|Matemática|Geometria plana|Ângulos, Rosa dos ventos, Rotação|n|Rotação de uma câmera de vigilância para apontar para o noroeste||
-172|Matemática|Estatística|Método de Borda, Votação, Ranking|n|Poesia vencedora de um concurso pelo método de Borda||
+169|Matemática|Grandezas e medidas|Escala, Inequações, Desenho|s|Valores possíveis de escala para desenhar um navio com guindaste e esteira||
+170|Matemática|Trigonometria|Função cosseno, Roda-gigante, Periodicidade|s|Função trigonométrica da altura de um ponto na roda-gigante High Roller|Wikipedia|Artigos
+171|Matemática|Geometria plana|Ângulos, Rosa dos ventos, Rotação|s|Rotação de uma câmera de vigilância para apontar para o noroeste||
+172|Matemática|Estatística|Método de Borda, Votação, Ranking|s|Poesia vencedora de um concurso pelo método de Borda||
 173|Matemática|Funções|Gráficos, Distância, Guindaste|n|Gráfico da distância do ponto médio de uma viga içada por um guindaste||
-174|Matemática|Funções|Logaritmo, Lei de Moore, Transistores|n|Ano em que uma empresa atinge 100 bilhões de transistores pela lei de Moore|Pocket-lint|Artigos
-175|Matemática|Álgebra|Equação do 2º grau, Parcelamento|n|Número de parcelas de um financiamento sem juros a partir de uma condição de prazo||
-176|Matemática|Probabilidade|Probabilidade, Salto ornamental, Notas|n|Tipo de salto com maior probabilidade de garantir o primeiro lugar||
+174|Matemática|Funções|Logaritmo, Lei de Moore, Transistores|s|Ano em que uma empresa atinge 100 bilhões de transistores pela lei de Moore|Pocket-lint|Artigos
+175|Matemática|Álgebra|Equação do 2º grau, Parcelamento|s|Número de parcelas de um financiamento sem juros a partir de uma condição de prazo||
+176|Matemática|Probabilidade|Probabilidade, Salto ornamental, Notas|s|Tipo de salto com maior probabilidade de garantir o primeiro lugar||
 177|Matemática|Aritmética|Porcentagem, Vacinação, Gripe H1N1|s|Porcentagem de vacinados nos grupos de risco da campanha contra a gripe|Portal da Saúde|Artigos
-178|Matemática|Álgebra|Sistemas de equações, Rifa|n|Número de alunos que compraram um único bilhete de rifa||
-179|Matemática|Geometria plana|Triângulo retângulo isósceles, Quebra-cabeça, Teorema de Pitágoras|n|Lado de um quadrado montado com triângulos retângulos isósceles||
-180|Matemática|Geometria espacial|Cilindro, Hélice, Trigonometria|n|Altura de um cilindro decorado com uma faixa que forma uma hélice||
+178|Matemática|Álgebra|Sistemas de equações, Rifa|s|Número de alunos que compraram um único bilhete de rifa||
+179|Matemática|Geometria plana|Triângulo retângulo isósceles, Quebra-cabeça, Teorema de Pitágoras|s|Lado de um quadrado montado com triângulos retângulos isósceles||
+180|Matemática|Geometria espacial|Cilindro, Hélice, Trigonometria|s|Altura de um cilindro decorado com uma faixa que forma uma hélice||

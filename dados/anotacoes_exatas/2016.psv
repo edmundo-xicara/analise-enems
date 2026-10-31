@@ -1,91 +1,91 @@
-Questão|Disciplina|Matéria|Assuntos|Brasil|Abordagem|Fonte|Tipo de Fonte
+Questão|Disciplina|Matéria|Assuntos|Cálculo|Abordagem|Fonte|Tipo de Fonte
 46|Química|Química geral|Polaridade, Solubilidade, Spray de pimenta, Capsaicina|n|Lavar com água é ineficaz contra o spray de pimenta porque a capsaicina é apolar|HowStuffWorks|Artigos
 47|Física|Energia|Usina hidrelétrica, Potência, Itaipu|s|Potência não aproveitada em cada unidade geradora da usina de Itaipu|Itaipu Binacional|Artigos
 48|Química|Química ambiental|Biodigestor, Gás metano, Resíduos|n|Projeto que transforma fezes de animais em biogás para iluminar um parque|Park Spark Project|Artigos
 49|Física|Ondulatória|Efeito Doppler, Som, Frequência|n|Gráfico da frequência da sirene de uma ambulância percebida antes e depois de passar pelo observador||
-50|Química|Termoquímica|Entalpia, Lei de Hess, Benzeno|n|Variação de entalpia da trimerização do acetileno em benzeno pela lei de Hess||
-51|Química|Química geral|Precipitação, Sulfato de bário, Caso Celobar|s|Teste de íons bário solúveis inspirado no caso Celobar, que matou pessoas no Brasil|Química Nova|Revistas
+50|Química|Termoquímica|Entalpia, Lei de Hess, Benzeno|s|Variação de entalpia da trimerização do acetileno em benzeno pela lei de Hess||
+51|Química|Química geral|Precipitação, Sulfato de bário, Caso Celobar|n|Teste de íons bário solúveis inspirado no caso Celobar, que matou pessoas no Brasil|Química Nova|Revistas
 52|Química|Química orgânica|Isomeria geométrica, Feromônios, Controle de pragas|n|Tipo de isomeria do feromônio bombicol presente em feromônios usados contra pragas|Química Nova na Escola|Revistas
 53|Química|Química orgânica|Hidrólise do amido, Fermentação, Etanol de milho|n|Hidrólise do amido do milho para liberar a glicose fermentada em etanol||
-54|Física|Termologia|Calor específico, Refrigeração, Usina, Impacto ambiental|n|Fluxo mínimo de água para refrigerar uma usina sem aquecer demais o rio||
+54|Física|Termologia|Calor específico, Refrigeração, Usina, Impacto ambiental|s|Fluxo mínimo de água para refrigerar uma usina sem aquecer demais o rio||
 55|Física|Ondulatória|Intensidade sonora, Decibéis, Frequência|n|Efeito da distância do microfone sobre a intensidade sonora percebida em cada frequência|Batera, Som SC|Artigos, Artigos
 56|Biologia|Citologia|Peptídeo sinal, Organelas, Nanopartículas|n|Organela-alvo de nanopartículas para destruir células com uma proteína bloqueadora||
 57|Física|Ondulatória|Ecolocalização, Ultrassom, Efeito Doppler|n|Alterações nos pulsos ultrassônicos do morcego que indicam a posição e velocidade de uma mariposa||
-58|Química|Estequiometria|Rendimento, Reação química, Metanol|n|Rendimento molar da produção de metanol a partir de brometo de metila||
-59|Física|Eletricidade|Resistência elétrica, Grafite, Resistores|n|Razão entre resistências de traços de grafite desenhados no papel||
+58|Química|Estequiometria|Rendimento, Reação química, Metanol|s|Rendimento molar da produção de metanol a partir de brometo de metila||
+59|Física|Eletricidade|Resistência elétrica, Grafite, Resistores|s|Razão entre resistências de traços de grafite desenhados no papel||
 60|Química|Química geral|Forças intermoleculares, Adsorção, Carvão ativado|n|Interação entre carvão ativado e benzeno por forças de dispersão||
 61|Biologia|Ecologia|Predação, Espécies exóticas, Costão rochoso|n|Experimento que mostra o controle de populações de presas por peixes predadores||
 62|Biologia|Ecologia|Ciclo do carbono, Fotossíntese, Cadeia alimentar|n|Transição do carbono inorgânico para orgânico no fitoplâncton||
 63|Física|Mecânica|Movimento uniformemente variado, Frenagem, Gráficos|n|Gráfico da velocidade de um carro em função da distância até parar||
-64|Química|Eletroquímica|Biocélula combustível, Pilhas, Diferença de potencial|n|Número mínimo de biocélulas de acetato em série para obter 4,4 V|Preparação e caracterização de bioanodos - S. Aquino Neto|Livros
+64|Química|Eletroquímica|Biocélula combustível, Pilhas, Diferença de potencial|s|Número mínimo de biocélulas de acetato em série para obter 4,4 V|Preparação e caracterização de bioanodos - S. Aquino Neto|Livros
 65|Biologia|Zoologia|Anticoagulantes, Hábitos alimentares, Toxinas animais|n|Morcegos hematófagos como fonte de toxinas anticoagulantes para pesquisa||
-66|Física|Mecânica|Engrenagens, Frequência, Movimento circular|n|Frequência do ponteiro de um relógio movido por engrenagens acopladas||
+66|Física|Mecânica|Engrenagens, Frequência, Movimento circular|s|Frequência do ponteiro de um relógio movido por engrenagens acopladas||
 67|Química|Química geral|Estados físicos, Mudanças de estado, Platão|n|Texto de Platão sobre a água e as mudanças de estado ligadas à agregação das moléculas|Timeu - Platão|Livros
 68|Química|Estequiometria|Vinhaça, Fósforo, Etanol, Concentração|s|Quantidade de fósforo disponível na vinhaça gerada na produção de etanol|Revista Brasileira de Engenharia Agrícola e Ambiental|Revistas
 69|Biologia|Botânica|Nitrato, CO2, Nutrição vegetal, Trigo|n|Excesso de CO2 que reduz a absorção de nitrato e o teor de proteínas do trigo|Nature Climate Change|Revistas
 70|Química|Radioatividade|Carbono-14, Datação, Mamute|n|Datação de ossos de mamute pela proporção conhecida entre carbono-14 e carbono-12|Fapesp|Notícias
-71|Biologia|Ecologia|Manguezal, Adaptações vegetais, Biomas|s|Adaptações de raízes e folhas típicas da vegetação do manguezal||
+71|Biologia|Ecologia|Manguezal, Adaptações vegetais, Biomas|n|Adaptações de raízes e folhas típicas da vegetação do manguezal||
 72|Química|Química geral|Separação de misturas, Arraste a vapor, Óleos essenciais|n|Aromatização de uma sauna pela extração de óleos das folhas por arraste a vapor||
-73|Biologia|Ecologia|Sistemas agroflorestais, Recuperação ambiental, Biodiversidade|s|Sistemas agroflorestais como forma de recuperar áreas degradadas e produzir alimentos|Embrapa|Artigos
+73|Biologia|Ecologia|Sistemas agroflorestais, Recuperação ambiental, Biodiversidade|n|Sistemas agroflorestais como forma de recuperar áreas degradadas e produzir alimentos|Embrapa|Artigos
 74|Física|Eletricidade|Circuitos, Corrente elétrica, Lâmpadas|n|Correntes iguais em diferentes pontos de um circuito com três lâmpadas||
 75|Biologia|Botânica|Seiva bruta, Xilema, Transpiração|n|Transporte da seiva xilêmica garantido pela transpiração das folhas|Revista de Ciência Elementar|Revistas
 76|Química|Química orgânica|Substituição nucleofílica, Éter, Haletos|n|Produto da reação entre metóxido de sódio e brometo de metila pertencente à função éter||
-77|Física|Mecânica|Quantidade de movimento, Colisões, Trilho de ar|n|Massa de um carrinho obtida pela conservação da quantidade de movimento em uma colisão||
+77|Física|Mecânica|Quantidade de movimento, Colisões, Trilho de ar|s|Massa de um carrinho obtida pela conservação da quantidade de movimento em uma colisão||
 78|Química|Físico-química|Ácidos e bases, Gases poluentes, Pneus|n|Substância básica mais eficiente para remover gases ácidos da queima de pneus||
-79|Biologia|Saúde e doenças|Probióticos, Vacinas, Imunidade|n|Probióticos que estimulam o sistema imune de forma semelhante às vacinas|Canadian Journal of Animal Science|Revistas
+79|Biologia|Saúde e doenças|Probióticos, Vacinas, Imunidade|s|Probióticos que estimulam o sistema imune de forma semelhante às vacinas|Canadian Journal of Animal Science|Revistas
 80|Biologia|Ecologia|Mudanças climáticas, IPCC, Adaptação|n|Estratégia de adaptação às mudanças climáticas proposta pelo IPCC|IPCC|Artigos
 81|Química|Química orgânica|Lipofilia, Fármacos, Coeficiente de partição|n|Comparação da lipofilia de derivados da testosterona pelo coeficiente de partição|Revista Virtual de Química|Revistas
-82|Física|Mecânica|Polias, Arquimedes, Força|n|Número mínimo de polias móveis que Arquimedes teria usado para mover um navio|Unicamp|Artigos
-83|Biologia|Genética|Crossing-over, Meiose, Variabilidade genética, Biodiversidade|s|Permutação na meiose como fonte de variabilidade genética da biodiversidade brasileira|Biodiversidade e diversidade química e genética - A. R. R. Sandes; G. Blasi|Artigos
+82|Física|Mecânica|Polias, Arquimedes, Força|s|Número mínimo de polias móveis que Arquimedes teria usado para mover um navio|Unicamp|Artigos
+83|Biologia|Genética|Crossing-over, Meiose, Variabilidade genética, Biodiversidade|n|Permutação na meiose como fonte de variabilidade genética da biodiversidade brasileira|Biodiversidade e diversidade química e genética - A. R. R. Sandes; G. Blasi|Artigos
 84|Física|Termologia|Condutividade térmica, Gelo, Trocas de calor|n|Gelo derrete mais rápido na bandeja de alumínio por sua maior condutividade térmica||
 85|Química|Química orgânica|Tensoativos, Polaridade, Micelas|n|Arranjo das moléculas de tensoativo na superfície da água||
 86|Física|Ondulatória|Ondas estacionárias, Micro-ondas, Comprimento de onda|n|Pontos de manteiga derretida no forno de micro-ondas como ventres de uma onda estacionária||
 87|Biologia|Fisiologia humana|Diabetes insipidus, ADH, Rins|n|Sintoma clássico do diabetes insipidus pela falta do hormônio antidiurético||
 88|Física|Eletromagnetismo|Magnetohipertermia, Indução, Tumores|n|Aquecimento de células tumorais por nanopartículas agitadas por campo magnético alternado||
-89|Química|Química geral|Polaridade, Micro-ondas, Solventes|n|Solvente apolar com taxa de aquecimento quase nula no micro-ondas|Química Nova|Revistas
+89|Química|Química geral|Polaridade, Micro-ondas, Solventes|s|Solvente apolar com taxa de aquecimento quase nula no micro-ondas|Química Nova|Revistas
 90|Biologia|Evolução|Origem da vida, Código genético, Ancestral comum|n|Código genético universal como evidência de uma origem comum da vida||
 136|Matemática|Geometria espacial|Volume do cilindro, Volume do cone, Silo|s|Número de viagens para transportar os grãos de um silo formado por cilindro e cone||
-137|Matemática|Grandezas e medidas|Escala, Redução percentual, Desenho técnico|n|Medidas de um desenho de guarda-roupa impresso com redução de 20%||
-138|Matemática|Grandezas e medidas|Conversão de unidades, Polegadas, London Eye|n|Diâmetro da roda-gigante London Eye convertido de polegadas para metros|Mapa de Londres|Artigos
-139|Matemática|Funções|Função afim, Vazão, Leitura de gráfico|n|Vazão de uma segunda bomba a partir do gráfico de esvaziamento de uma cisterna||
-140|Matemática|Estatística|Média, Desvio padrão, Lutas|n|Escolha da primeira luta pelos atletas com pesagens mais regulares (desvio padrão)||
-141|Matemática|Aritmética|Porcentagem, Medidas de pneus|n|Pneu de menor altura a partir da marcação que combina largura e porcentagem||
-142|Matemática|Geometria analítica|Distância, Malha de ruas, Localização|n|Ponto de uma malha de ruas equidistante do trabalho e da escola||
-143|Matemática|Álgebra|Equação do 2º grau, Área do retângulo, Terrenos|n|Dimensões de um terreno retangular com a mesma área de outro já demarcado||
-144|Matemática|Estatística|Média aritmética, Lucro mensal|n|Mês cujo lucro mais se aproximou da média dos últimos sete meses||
+137|Matemática|Grandezas e medidas|Escala, Redução percentual, Desenho técnico|s|Medidas de um desenho de guarda-roupa impresso com redução de 20%||
+138|Matemática|Grandezas e medidas|Conversão de unidades, Polegadas, London Eye|s|Diâmetro da roda-gigante London Eye convertido de polegadas para metros|Mapa de Londres|Artigos
+139|Matemática|Funções|Função afim, Vazão, Leitura de gráfico|s|Vazão de uma segunda bomba a partir do gráfico de esvaziamento de uma cisterna||
+140|Matemática|Estatística|Média, Desvio padrão, Lutas|s|Escolha da primeira luta pelos atletas com pesagens mais regulares (desvio padrão)||
+141|Matemática|Aritmética|Porcentagem, Medidas de pneus|s|Pneu de menor altura a partir da marcação que combina largura e porcentagem||
+142|Matemática|Geometria analítica|Distância, Malha de ruas, Localização|s|Ponto de uma malha de ruas equidistante do trabalho e da escola||
+143|Matemática|Álgebra|Equação do 2º grau, Área do retângulo, Terrenos|s|Dimensões de um terreno retangular com a mesma área de outro já demarcado||
+144|Matemática|Estatística|Média aritmética, Lucro mensal|s|Mês cujo lucro mais se aproximou da média dos últimos sete meses||
 145|Matemática|Aritmética|Porcentagem, Lei de cotas, Pessoas com deficiência|s|Número mínimo de contratações de pessoas com deficiência exigido pela lei de cotas|Planalto|Artigos
-146|Matemática|Aritmética|Lucro, Preço de venda, Proporção|n|Preço de venda do picolé para manter o lucro do dia anterior||
-147|Matemática|Análise combinatória|Combinação, Tenistas canhotos|n|Número de duplas de tenistas possíveis sem que ambos sejam canhotos||
-148|Matemática|Aritmética|Sistema de numeração decimal, Ábaco|n|Número representado num ábaco com as ordens fora da posição usual||
-149|Matemática|Geometria analítica|Equação da reta, Coeficiente angular, Foguetes|n|Ajuste do coeficiente angular da trajetória de um foguete para atingir o alvo||
-150|Matemática|Funções|Grandezas proporcionais, Custo, Isolamento acústico|n|Expressão do custo de isolamento acústico proporcional à área e ao quadrado da distância||
+146|Matemática|Aritmética|Lucro, Preço de venda, Proporção|s|Preço de venda do picolé para manter o lucro do dia anterior||
+147|Matemática|Análise combinatória|Combinação, Tenistas canhotos|s|Número de duplas de tenistas possíveis sem que ambos sejam canhotos||
+148|Matemática|Aritmética|Sistema de numeração decimal, Ábaco|s|Número representado num ábaco com as ordens fora da posição usual||
+149|Matemática|Geometria analítica|Equação da reta, Coeficiente angular, Foguetes|s|Ajuste do coeficiente angular da trajetória de um foguete para atingir o alvo||
+150|Matemática|Funções|Grandezas proporcionais, Custo, Isolamento acústico|s|Expressão do custo de isolamento acústico proporcional à área e ao quadrado da distância||
 151|Matemática|Aritmética|Porcentagem, Curvas de crescimento, OMS|s|Aumento percentual da altura de uma menina na curva de crescimento da OMS|A Procura|Artigos
-152|Matemática|Probabilidade|Probabilidade condicional, Parque de diversões|n|Probabilidade de chegar a uma área do parque sem passar por outras||
-153|Matemática|Estatística|Média, Dengue, Planejamento|n|Número de funcionários contratados contra a dengue conforme a média de casos por região||
+152|Matemática|Probabilidade|Probabilidade condicional, Parque de diversões|s|Probabilidade de chegar a uma área do parque sem passar por outras||
+153|Matemática|Estatística|Média, Dengue, Planejamento|s|Número de funcionários contratados contra a dengue conforme a média de casos por região||
 154|Matemática|Aritmética|Razão, Concentração, Fibras alimentares|s|Pão integral com maior concentração de fibras entre cinco marcas|Blog da Saúde - Ministério da Saúde|Artigos
 155|Matemática|Geometria espacial|Vistas, Projeção, Cadeira dobrável|n|Vista lateral de uma cadeira dobrável depois de fechada||
-156|Matemática|Funções|Taxa de variação, Segurança de eventos|n|Número de policiais necessários pela quantidade de público no início de um evento||
-157|Matemática|Estatística|Média aritmética, Lucro, Meta|n|Lucro mínimo em junho para a média semestral atingir a meta do gerente||
+156|Matemática|Funções|Taxa de variação, Segurança de eventos|s|Número de policiais necessários pela quantidade de público no início de um evento||
+157|Matemática|Estatística|Média aritmética, Lucro, Meta|s|Lucro mínimo em junho para a média semestral atingir a meta do gerente||
 158|Matemática|Funções|Função afim, Recursos hídricos, Reservatório|s|Tempo até um reservatório esvaziar, projetado a partir de um gráfico de nível||
 159|Matemática|Estatística|Média, Vacinação, Febre amarela|s|Quantidade de vacinas contra febre amarela a comprar com base na média mensal||
-160|Matemática|Funções|Logaritmo, Função exponencial, Resfriamento|n|Tempo para uma liga metálica esfriar de 3 000 °C para 30 °C usando logaritmos||
-161|Matemática|Geometria espacial|Volume, Paralelepípedo, Vazamento de petróleo|n|Volume de petróleo derramado de um compartimento furado de um navio||
+160|Matemática|Funções|Logaritmo, Função exponencial, Resfriamento|s|Tempo para uma liga metálica esfriar de 3 000 °C para 30 °C usando logaritmos||
+161|Matemática|Geometria espacial|Volume, Paralelepípedo, Vazamento de petróleo|s|Volume de petróleo derramado de um compartimento furado de um navio||
 162|Matemática|Estatística|Leitura de gráfico, Clima, Floricultura|n|Mês de plantio de uma flor rara a partir de gráficos de chuva e temperatura||
-163|Matemática|Aritmética|Razão, Densidade, Porcentagem|n|Ordem das densidades de três corpos a partir de relações de massa e volume||
-164|Matemática|Aritmética|Proporção, Consumo de combustível, Viagem|n|Distância máxima até reabastecer considerando os postos na estrada||
-165|Matemática|Aritmética|Múltiplos, MMC, Sequências|n|Número de andares de um prédio a partir de reparos em andares múltiplos||
-166|Matemática|Geometria plana|Comprimento da circunferência, Teorema de Pitágoras, Obras|n|Menor tempo para construir uma galeria subterrânea entre uma fonte e um bairro||
-167|Matemática|Geometria plana|Área da parábola, Túnel|n|Área da tampa de concreto de um túnel em forma de arco de parábola||
-168|Matemática|Análise combinatória|Princípio multiplicativo, Senhas, Permutação|n|Número de senhas possíveis com dois algarismos e duas letras|Infowester|Artigos
+163|Matemática|Aritmética|Razão, Densidade, Porcentagem|s|Ordem das densidades de três corpos a partir de relações de massa e volume||
+164|Matemática|Aritmética|Proporção, Consumo de combustível, Viagem|s|Distância máxima até reabastecer considerando os postos na estrada||
+165|Matemática|Aritmética|Múltiplos, MMC, Sequências|s|Número de andares de um prédio a partir de reparos em andares múltiplos||
+166|Matemática|Geometria plana|Comprimento da circunferência, Teorema de Pitágoras, Obras|s|Menor tempo para construir uma galeria subterrânea entre uma fonte e um bairro||
+167|Matemática|Geometria plana|Área da parábola, Túnel|s|Área da tampa de concreto de um túnel em forma de arco de parábola||
+168|Matemática|Análise combinatória|Princípio multiplicativo, Senhas, Permutação|s|Número de senhas possíveis com dois algarismos e duas letras|Infowester|Artigos
 169|Matemática|Aritmética|Porcentagem, Desigualdade salarial|s|Percentual da massa salarial paga aos 10% mais bem pagos para atingir uma meta|Ipea|Artigos
-170|Matemática|Estatística|Moda, Elevador|n|Moda do número de pessoas no elevador entre o térreo e o quinto andar||
+170|Matemática|Estatística|Moda, Elevador|s|Moda do número de pessoas no elevador entre o térreo e o quinto andar||
 171|Matemática|Aritmética|Porcentagem, Crescimento populacional, Censo|s|Aumento percentual da população das capitais do Nordeste entre os censos de 1940 e 2000|IBGE|Artigos
-172|Matemática|Geometria plana|Polígonos inscritos, Circunferência, Marcenaria|n|Escolha da serra copo que corta peças de diferentes formas geométricas||
-173|Matemática|Funções|Leitura de gráfico, Exames de sangue, Periodicidade|n|Parâmetro de uma dieta semanal a partir do gráfico de duas substâncias no sangue||
-174|Matemática|Aritmética|Regra de três, Gotejamento, Soro|n|Número de gotas por minuto de soro após as quatro primeiras horas||
+172|Matemática|Geometria plana|Polígonos inscritos, Circunferência, Marcenaria|s|Escolha da serra copo que corta peças de diferentes formas geométricas||
+173|Matemática|Funções|Leitura de gráfico, Exames de sangue, Periodicidade|s|Parâmetro de uma dieta semanal a partir do gráfico de duas substâncias no sangue||
+174|Matemática|Aritmética|Regra de três, Gotejamento, Soro|s|Número de gotas por minuto de soro após as quatro primeiras horas||
 175|Matemática|Geometria espacial|Secções planas, Pirâmide, Polígonos|n|Polígonos obtidos pelo corte de uma pirâmide de base quadrada por um plano||
-176|Matemática|Funções|Leitura de gráfico, Vazão, Reservatório|n|Intervalo em que um reservatório enche com vazão constante a partir dos gráficos||
+176|Matemática|Funções|Leitura de gráfico, Vazão, Reservatório|s|Intervalo em que um reservatório enche com vazão constante a partir dos gráficos||
 177|Matemática|Aritmética|Porcentagem, LIRAa, Aedes aegypti|s|Bairro com maior índice de infestação do Aedes aegypti pelo LIRAa|Biblioteca Virtual em Saúde|Artigos
 178|Matemática|Geometria espacial|Projeção ortogonal, Globo terrestre, Paralelos e meridianos|n|Projeção ortogonal de um caminho traçado sobre o globo terrestre||
 179|Matemática|Estatística|Leitura de tabela, Filtros de água, Volume morto|s|Filtro de água de pior desempenho testado na água do volume morto|Rede Brasil Atual|Notícias
-180|Matemática|Funções|Logaritmo, Escala Richter, Terremotos|n|Relação entre as energias de terremotos no Japão e na China pela escala logarítmica|Terra|Notícias
+180|Matemática|Funções|Logaritmo, Escala Richter, Terremotos|s|Relação entre as energias de terremotos no Japão e na China pela escala logarítmica|Terra|Notícias

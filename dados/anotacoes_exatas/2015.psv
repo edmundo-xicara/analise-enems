@@ -1,14 +1,14 @@
-Questão|Disciplina|Matéria|Assuntos|Brasil|Abordagem|Fonte|Tipo de Fonte
+Questão|Disciplina|Matéria|Assuntos|Cálculo|Abordagem|Fonte|Tipo de Fonte
 46|Biologia|Fisiologia humana|Hipóxia, Hemoglobina, Equilíbrio químico, Altitude|n|Mal das alturas explicado pela queda da hemoglobina oxigenada com a menor pressão de O2|PUCRS|Artigos
 47|Biologia|Ecologia|Poluição da água, Corantes têxteis, Fotossíntese|n|Escurecimento dos rios por corantes que inibe a fotossíntese no ecossistema aquático||
 48|Biologia|Citologia|Síntese de proteínas, Organelas, Radioatividade|n|Gráfico do trajeto de proteínas marcadas radioativamente em uma célula secretora||
-49|Física|Energia|Energia solar, Potência, Rendimento, Cinemática|n|Tempo para um carro solar atingir 108 km/h a partir da potência do painel e do rendimento|Universidade de Hong Kong|Artigos
+49|Física|Energia|Energia solar, Potência, Rendimento, Cinemática|s|Tempo para um carro solar atingir 108 km/h a partir da potência do painel e do rendimento|Universidade de Hong Kong|Artigos
 50|Física|Ondulatória|Radiação ultravioleta, Espectro eletromagnético, Filtro solar|n|Escolha do filtro solar a partir da faixa de frequência da radiação UV|  |
-51|Química|Química geral|Separação de misturas, Petróleo, Plástico de mamona|s|Remoção de petróleo da água com plástico de mamona por flotação e decantação|Faperj|Notícias
+51|Química|Química geral|Separação de misturas, Petróleo, Plástico de mamona|n|Remoção de petróleo da água com plástico de mamona por flotação e decantação|Faperj|Notícias
 52|Química|Química geral|Higroscopia, Hidróxido de sódio, Soda cáustica|n|Aspecto derretido da soda cáustica explicado pela absorção da umidade do ar||
-53|Física|Óptica|Iridescência, Interferência, Películas finas|n|Espessura mínima de uma película para gerar iridescência por interferência|iGEM|Artigos
+53|Física|Óptica|Iridescência, Interferência, Películas finas|s|Espessura mínima de uma película para gerar iridescência por interferência|iGEM|Artigos
 54|Biologia|Genética|Microquimerismo fetal, Embriologia, Células maternas|n|Descoberta do microquimerismo fetal contestando a ideia de que cada indivíduo vem de uma única célula|G1|Notícias
-55|Química|Estequiometria|Hidroponia, Solução nutritiva, Concentração|n|Volume de solução nutritiva para uma plantação hidropônica a partir das massas molares||
+55|Química|Estequiometria|Hidroponia, Solução nutritiva, Concentração|s|Volume de solução nutritiva para uma plantação hidropônica a partir das massas molares||
 56|Biologia|Evolução|Especiação, Raças de cães, Fluxo gênico|n|Raças de cães que não copulam entre si mas não formam espécies novas por manterem fluxo gênico||
 57|Física|Termologia|Armazenamento de energia, Ar líquido, Mudança de estado|n|Armazenamento do excedente de energia elétrica pela liquefação e expansão do ar|Correio Braziliense|Notícias
 58|Química|Eletroquímica|Folha de flandres, Corrosão, Latas de conserva|n|Lata amassada desaconselhada porque expõe o ferro à corrosão|Cadernos PDE|Artigos
@@ -17,75 +17,75 @@ Questão|Disciplina|Matéria|Assuntos|Brasil|Abordagem|Fonte|Tipo de Fonte
 61|Biologia|Ecologia|Ciclo do nitrogênio, Ciclos biogeoquímicos, Cadeia alimentar|n|Animais obtêm nitrogênio ingerindo moléculas orgânicas de outros seres vivos|Os grandes ciclos biogeoquímicos do planeta - R. E. Aduan et al.|Livros
 62|Química|Físico-química|Óxidos ácidos, Indicador ácido-base, Fenolftaleína|n|Desaparecimento da cor rosa da fenolftaleína pelos óxidos ácidos da combustão de um fósforo|Química na cabeça - A. L. Mateus|Livros
 63|Física|Termologia|Gases, Pressão, Geladeira|n|Dificuldade de reabrir a geladeira porque o ar resfriado reduz a pressão interna||
-64|Física|Mecânica|Trabalho, Energia cinética, Usain Bolt|n|Trabalho realizado por Usain Bolt nas primeiras passadas dos 100 metros rasos|UOL|Notícias
+64|Física|Mecânica|Trabalho, Energia cinética, Usain Bolt|s|Trabalho realizado por Usain Bolt nas primeiras passadas dos 100 metros rasos|UOL|Notícias
 65|Física|Termologia|Garrafa térmica, Trocas de calor, Isolamento térmico|n|Classificação de uma garrafa térmica pela perda de calor em seis horas||
 66|Biologia|Genética|Cariótipo, Aneuploidia, Síndrome de Edwards|n|Classificação da alteração cromossômica 47,XY,+18 como numérica do tipo aneuploidia||
 67|Biologia|Fisiologia humana|Sistema excretor, Desidratação, Reabsorção de água|n|Aumento da reabsorção de água nos rins de estudantes perdidos sem água||
 68|Física|Eletricidade|Circuitos elétricos, Associação em paralelo, Instalação residencial|n|Circuito residencial com tomadas e lâmpada controlada por interruptor independente||
-69|Biologia|Bioquímica|Respiração aeróbica, Fermentação, ATP, Glicose|n|Consumo de glicose de uma célula que passa de condição anaeróbica para aeróbica||
-70|Física|Mecânica|Energia potencial elástica, Lançamento oblíquo, Estilingue|n|Razão entre os alcances de estilingues com constantes elásticas diferentes||
-71|Química|Físico-química|Equilíbrio químico, Constante de equilíbrio, Efluentes ácidos|n|Constante de equilíbrio de uma reação de neutralização a partir de outras reações||
-72|Biologia|Saúde e doenças|Febre amarela, Dengue, Vacinação, Arbovírus|s|Existência de vacina para a febre amarela e não para a dengue pelos quatro sorotipos do vírus da dengue|Ministério da Saúde|Artigos
-73|Química|Radioatividade|Bomba atômica, Fissão nuclear, Reação em cadeia|s|Reação em cadeia da fissão do urânio citada em poema de Carlos Drummond de Andrade|Poesia completa e prosa - Carlos Drummond de Andrade|Poemas
+69|Biologia|Bioquímica|Respiração aeróbica, Fermentação, ATP, Glicose|s|Consumo de glicose de uma célula que passa de condição anaeróbica para aeróbica||
+70|Física|Mecânica|Energia potencial elástica, Lançamento oblíquo, Estilingue|s|Razão entre os alcances de estilingues com constantes elásticas diferentes||
+71|Química|Físico-química|Equilíbrio químico, Constante de equilíbrio, Efluentes ácidos|s|Constante de equilíbrio de uma reação de neutralização a partir de outras reações||
+72|Biologia|Saúde e doenças|Febre amarela, Dengue, Vacinação, Arbovírus|n|Existência de vacina para a febre amarela e não para a dengue pelos quatro sorotipos do vírus da dengue|Ministério da Saúde|Artigos
+73|Química|Radioatividade|Bomba atômica, Fissão nuclear, Reação em cadeia|n|Reação em cadeia da fissão do urânio citada em poema de Carlos Drummond de Andrade|Poesia completa e prosa - Carlos Drummond de Andrade|Poemas
 74|Biologia|Biotecnologia|Transgênicos, Insulina, DNA recombinante|n|Bactérias que produzem insulina humana por receberem o gene codificante da insulina|Portal Brasil|Artigos
 75|Física|Óptica|Refração, Miragem, Titanic|n|Miragem Fata Morgana causada pela refração da luz, que pode ter ajudado a afundar o Titanic|Nasa|Artigos
-76|Química|Estequiometria|Galvanização, Zinco, Esfalerita, Rendimento|n|Massa de zinco obtida a partir da esfalerita para galvanização do aço||
+76|Química|Estequiometria|Galvanização, Zinco, Esfalerita, Rendimento|s|Massa de zinco obtida a partir da esfalerita para galvanização do aço||
 77|Química|Química orgânica|Eletrossíntese de Kolbe, Hidrocarbonetos, Nomenclatura|n|Hidrocarboneto produzido pela eletrólise do ácido 3,3-dimetil-butanoico|Química Nova|Revistas
-78|Biologia|Fisiologia humana|Queimaduras, Primeiros socorros, Pele|s|Procedimento de primeiros socorros para queimadura com bolha|Corpo de Bombeiros RS|Artigos
+78|Biologia|Fisiologia humana|Queimaduras, Primeiros socorros, Pele|n|Procedimento de primeiros socorros para queimadura com bolha|Corpo de Bombeiros RS|Artigos
 79|Física|Termologia|Calor específico, Arrefecimento, Motores|n|Fluido de arrefecimento de motores precisa ter alto calor específico||
 80|Química|Química ambiental|Pesticidas organoclorados, Bioacumulação, Polaridade|n|Acúmulo de pesticidas organoclorados nos tecidos lipídicos dos peixes pela baixa polaridade||
 81|Química|Eletroquímica|Calda bordalesa, Potencial de redução, Oxirredução|s|Reação de formação da mancha avermelhada no teste da calda bordalesa|Embrapa|Artigos
-82|Física|Mecânica|Equilíbrio, Torque, Alavanca|n|Massa de uma barra de ferro obtida pelo equilíbrio com um saco de arroz||
+82|Física|Mecânica|Equilíbrio, Torque, Alavanca|s|Massa de uma barra de ferro obtida pelo equilíbrio com um saco de arroz||
 83|Biologia|Zoologia|Anfíbios, Reprodução, Ambiente aquático|n|Anfíbios restritos a ambientes úmidos pela fecundação e desenvolvimento dependentes da água||
-84|Química|Termoquímica|Entalpia, Bio-óleo, Biomassa, Lei de Hess|n|Variação de entalpia na queima de 5 g de bio-óleo de resíduos florestais||
+84|Química|Termoquímica|Entalpia, Bio-óleo, Biomassa, Lei de Hess|s|Variação de entalpia na queima de 5 g de bio-óleo de resíduos florestais||
 85|Física|Óptica|Câmara escura, Olho humano, Alhazen|n|Analogia entre a câmara escura de Alhazen e a retina do olho humano|Philosophical Transactions of the Royal Society A|Revistas
 86|Física|Ondulatória|Timbre, Som, Instrumentos musicais|n|Diferença entre o som de uma flauta e de um piano explicada pelo timbre||
 87|Biologia|Citologia|Diferenciação celular, Expressão gênica, Tipos de células|n|Diferenciação das células de um organismo pela expressão de genes diferentes||
 88|Física|Ondulatória|Triangulação, Ondas de rádio, Telefone celular|n|Número mínimo de torres necessárias para localizar um celular por triangulação||
-89|Biologia|Saúde e doenças|Esquistossomose, Moluscicida, Coroa-de-cristo|s|Látex da coroa-de-cristo como moluscicida no controle da esquistossomose|Revista Eletrônica de Farmácia|Revistas
+89|Biologia|Saúde e doenças|Esquistossomose, Moluscicida, Coroa-de-cristo|n|Látex da coroa-de-cristo como moluscicida no controle da esquistossomose|Revista Eletrônica de Farmácia|Revistas
 90|Química|Química ambiental|Química verde, Rotas de síntese, Resíduos|n|Rota de síntese mais verde por ter etapa única e menos resíduos|Química Nova|Revistas
-136|Matemática|Funções|Leitura de gráfico, Mercado de ações, Variação|n|Contagem das operações de um investidor a partir do gráfico do valor da ação ao longo do dia||
-137|Matemática|Geometria plana|Triângulo equilátero, Circunferência circunscrita, Raio|n|Raio mínimo do tampo circular que cobre a base triangular de uma mesa||
-138|Matemática|Funções|Função afim, Comparação de planos, Inequações|n|Intervalos de distância em que uma locadora de carros é mais barata que a outra|Sempre Tops|Artigos
-139|Matemática|Aritmética|Frações, Porcentagem, Números decimais|n|Jogo de cartas que pareia frações, decimais e porcentagens equivalentes||
+136|Matemática|Funções|Leitura de gráfico, Mercado de ações, Variação|s|Contagem das operações de um investidor a partir do gráfico do valor da ação ao longo do dia||
+137|Matemática|Geometria plana|Triângulo equilátero, Circunferência circunscrita, Raio|s|Raio mínimo do tampo circular que cobre a base triangular de uma mesa||
+138|Matemática|Funções|Função afim, Comparação de planos, Inequações|s|Intervalos de distância em que uma locadora de carros é mais barata que a outra|Sempre Tops|Artigos
+139|Matemática|Aritmética|Frações, Porcentagem, Números decimais|s|Jogo de cartas que pareia frações, decimais e porcentagens equivalentes||
 140|Matemática|Estatística|Leitura de tabela, Pesquisa de mercado, Classes sociais|n|Escolha do meio de promoção com mais alcance por classe social a partir de uma pesquisa||
-141|Matemática|Geometria espacial|Volume, Paralelepípedo, Dilatação|n|Volume máximo de mistura de sorvete que cabe na embalagem após o congelamento||
-142|Matemática|Probabilidade|Probabilidade simples, Sorteio|n|Probabilidade de uma senha sorteada estar entre 1 e 20||
-143|Matemática|Estatística|Mediana, Natação|n|Mediana dos tempos de nadadores numa seletiva olímpica||
-144|Matemática|Geometria plana|Área do trapézio, Quadra de basquete|n|Variação da área do garrafão da quadra de basquete após a mudança de regra||
-145|Matemática|Aritmética|MDC, Divisibilidade, Ingressos|n|Número mínimo de escolas para dividir ingressos de cinema igualmente (MDC)||
-146|Matemática|Geometria espacial|Volume do cilindro, Cisterna|n|Aumento do raio de uma cisterna cilíndrica para atingir o volume desejado||
+141|Matemática|Geometria espacial|Volume, Paralelepípedo, Dilatação|s|Volume máximo de mistura de sorvete que cabe na embalagem após o congelamento||
+142|Matemática|Probabilidade|Probabilidade simples, Sorteio|s|Probabilidade de uma senha sorteada estar entre 1 e 20||
+143|Matemática|Estatística|Mediana, Natação|s|Mediana dos tempos de nadadores numa seletiva olímpica||
+144|Matemática|Geometria plana|Área do trapézio, Quadra de basquete|s|Variação da área do garrafão da quadra de basquete após a mudança de regra||
+145|Matemática|Aritmética|MDC, Divisibilidade, Ingressos|s|Número mínimo de escolas para dividir ingressos de cinema igualmente (MDC)||
+146|Matemática|Geometria espacial|Volume do cilindro, Cisterna|s|Aumento do raio de uma cisterna cilíndrica para atingir o volume desejado||
 147|Matemática|Análise combinatória|Princípio multiplicativo, Carnaval, Escolas de samba|s|Configurações de notas de um jurado que tornariam campeã uma escola de samba||
-148|Matemática|Geometria espacial|Empilhamento, Contêineres, Volume|n|Altura mínima de uma pilha de contêineres numa área retangular do porto||
-149|Matemática|Geometria espacial|Poliedros, Truncamento do cubo, Faces|n|Número de faces de um poliedro obtido pelo corte dos vértices de um cubo||
-150|Matemática|Funções|Função afim, Arrecadação, Preço e demanda|n|Faixa de preço do pão especial que maximiza vendas sem reduzir a arrecadação||
+148|Matemática|Geometria espacial|Empilhamento, Contêineres, Volume|s|Altura mínima de uma pilha de contêineres numa área retangular do porto||
+149|Matemática|Geometria espacial|Poliedros, Truncamento do cubo, Faces|s|Número de faces de um poliedro obtido pelo corte dos vértices de um cubo||
+150|Matemática|Funções|Função afim, Arrecadação, Preço e demanda|s|Faixa de preço do pão especial que maximiza vendas sem reduzir a arrecadação||
 151|Matemática|Aritmética|Porcentagem, Vacinação, HPV|s|Escolha da proposta de vacinação contra o HPV que atinge a meta vacinando menos pessoas|Vírus HPV|Artigos
-152|Matemática|Sequências e progressões|Progressão geométrica, Produção industrial|n|Expressão da produção anual de uma indústria que cresce em progressão||
-153|Matemática|Geometria plana|Polígonos, Ângulos, Alimentação saudável|n|Polígono que representa as proporções de carboidratos, proteínas e gorduras||
-154|Matemática|Funções|Logaritmo, Função exponencial, Projeto de automóvel|n|Altura do vidro de um carro a partir de uma curva definida por exponenciais e logaritmos||
-155|Matemática|Geometria plana|Área do círculo, Circunferências tangentes, Antenas|n|Ampliação da área de cobertura de uma nova antena de telefonia||
-156|Matemática|Matemática financeira|Juros, Financiamento imobiliário, Sistema SAC|n|Valor da décima prestação de um financiamento imobiliário pelo sistema de amortização constante||
+152|Matemática|Sequências e progressões|Progressão geométrica, Produção industrial|s|Expressão da produção anual de uma indústria que cresce em progressão||
+153|Matemática|Geometria plana|Polígonos, Ângulos, Alimentação saudável|s|Polígono que representa as proporções de carboidratos, proteínas e gorduras||
+154|Matemática|Funções|Logaritmo, Função exponencial, Projeto de automóvel|s|Altura do vidro de um carro a partir de uma curva definida por exponenciais e logaritmos||
+155|Matemática|Geometria plana|Área do círculo, Circunferências tangentes, Antenas|s|Ampliação da área de cobertura de uma nova antena de telefonia||
+156|Matemática|Matemática financeira|Juros, Financiamento imobiliário, Sistema SAC|s|Valor da décima prestação de um financiamento imobiliário pelo sistema de amortização constante||
 157|Matemática|Grandezas e medidas|Notação científica, Unidades de massa, Exportação de soja|s|Conversão das exportações brasileiras de soja de toneladas para quilogramas|Notícias Agrícolas|Notícias
-158|Matemática|Aritmética|Razão e proporção, Dosagem de medicamentos, Fórmula de Young|n|Dose infantil de um medicamento calculada pela fórmula de Young||
+158|Matemática|Aritmética|Razão e proporção, Dosagem de medicamentos, Fórmula de Young|s|Dose infantil de um medicamento calculada pela fórmula de Young||
 159|Matemática|Estatística|Renda média, Desigualdade, Censo 2010|s|Diferença de renda entre os 10% mais ricos e os 10% mais pobres do Brasil no Censo 2010|Estadão|Notícias
-160|Matemática|Grandezas e medidas|Escala, Proporção, Fotografia|n|Dimensões reais de uma pegada a partir da escala de uma caneta na fotografia||
-161|Matemática|Geometria plana|Área, Taxa de cobertura, Malha|n|Largura das fitas de uma malha de proteção solar para cobrir 75% do vidro||
-162|Matemática|Aritmética|MDC, Divisores, Reaproveitamento de madeira|n|Número de peças obtidas ao cortar tábuas no maior tamanho possível (MDC)||
-163|Matemática|Aritmética|Divisão, Insulina, Dosagem|n|Número máximo de aplicações por refil de uma caneta de insulina||
-164|Matemática|Análise combinatória|Arranjo, Combinação, Assentos de avião|n|Formas de acomodar uma família nos assentos disponíveis de um voo|GEBH|Artigos
-165|Matemática|Geometria plana|Área do setor circular, Piscina|n|Maior raio possível para uma piscina formada por setores circulares||
-166|Matemática|Grandezas e medidas|Volume, Unidades de capacidade, Hidratação|n|Escolha do tipo de garrafa para ingerir a água recomendada antes de um exame||
+160|Matemática|Grandezas e medidas|Escala, Proporção, Fotografia|s|Dimensões reais de uma pegada a partir da escala de uma caneta na fotografia||
+161|Matemática|Geometria plana|Área, Taxa de cobertura, Malha|s|Largura das fitas de uma malha de proteção solar para cobrir 75% do vidro||
+162|Matemática|Aritmética|MDC, Divisores, Reaproveitamento de madeira|s|Número de peças obtidas ao cortar tábuas no maior tamanho possível (MDC)||
+163|Matemática|Aritmética|Divisão, Insulina, Dosagem|s|Número máximo de aplicações por refil de uma caneta de insulina||
+164|Matemática|Análise combinatória|Arranjo, Combinação, Assentos de avião|s|Formas de acomodar uma família nos assentos disponíveis de um voo|GEBH|Artigos
+165|Matemática|Geometria plana|Área do setor circular, Piscina|s|Maior raio possível para uma piscina formada por setores circulares||
+166|Matemática|Grandezas e medidas|Volume, Unidades de capacidade, Hidratação|s|Escolha do tipo de garrafa para ingerir a água recomendada antes de um exame||
 167|Matemática|Geometria plana|Simetria, Dobradura, Recorte|n|Forma da bandeirinha de festa obtida após dobrar e recortar o papel||
-168|Matemática|Probabilidade|Probabilidade do evento complementar, Intercâmbio|n|Probabilidade de pelo menos um de três alunos entender e responder em inglês||
+168|Matemática|Probabilidade|Probabilidade do evento complementar, Intercâmbio|s|Probabilidade de pelo menos um de três alunos entender e responder em inglês||
 169|Matemática|Estatística|Porcentagem, Gráfico de setores, Reciclagem de PET|s|Quantidade de PET reciclado destinada a tecidos a partir de gráficos de setores|Abipet|Artigos
-170|Matemática|Estatística|Média aritmética, Classificação, Concurso|n|Ordem de classificação de um concurso pela média das cinco etapas||
-171|Matemática|Geometria espacial|Volume do cilindro, Índice pluviométrico|n|Índice pluviométrico calculado pelo volume de chuva em um reservatório cilíndrico||
-172|Matemática|Geometria analítica|Plano cartesiano, Ponto médio, Distância|n|Coordenadas de um novo ponto de ônibus equidistante de dois pontos existentes||
-173|Matemática|Aritmética|Números decimais, Comparação, Lentes|n|Espessura de lente mais próxima de 3 mm entre opções decimais||
-174|Matemática|Funções|Função quadrática, Vértice, Bactérias|n|Temperatura que maximiza o número de bactérias, dada por uma função quadrática||
-175|Matemática|Geometria espacial|Elipsoide, Volume, Bola de futebol americano|n|Volume de uma bola de futebol americano em função de um único parâmetro||
+170|Matemática|Estatística|Média aritmética, Classificação, Concurso|s|Ordem de classificação de um concurso pela média das cinco etapas||
+171|Matemática|Geometria espacial|Volume do cilindro, Índice pluviométrico|s|Índice pluviométrico calculado pelo volume de chuva em um reservatório cilíndrico||
+172|Matemática|Geometria analítica|Plano cartesiano, Ponto médio, Distância|s|Coordenadas de um novo ponto de ônibus equidistante de dois pontos existentes||
+173|Matemática|Aritmética|Números decimais, Comparação, Lentes|s|Espessura de lente mais próxima de 3 mm entre opções decimais||
+174|Matemática|Funções|Função quadrática, Vértice, Bactérias|s|Temperatura que maximiza o número de bactérias, dada por uma função quadrática||
+175|Matemática|Geometria espacial|Elipsoide, Volume, Bola de futebol americano|s|Volume de uma bola de futebol americano em função de um único parâmetro||
 176|Matemática|Funções|Função definida por partes, Plano de telefonia|n|Gráfico do valor pago num plano de celular com tarifa fixa e por ligação||
-177|Matemática|Funções|Interpolação, Tabela, Dosagem veterinária|n|Dose de medicamento para um gato calculada pela superfície corporal em tabela|O paciente felino - G. D. Norsworthy|Livros
-178|Matemática|Grandezas e medidas|Volume, Unidades, Captação de água da chuva|n|Capacidade mínima de um reservatório de água da chuva para uma família||
-179|Matemática|Probabilidade|Probabilidade, Sorteio, Doping|n|Comparação da probabilidade de sortear um atleta dopado em três modos de sorteio||
+177|Matemática|Funções|Interpolação, Tabela, Dosagem veterinária|s|Dose de medicamento para um gato calculada pela superfície corporal em tabela|O paciente felino - G. D. Norsworthy|Livros
+178|Matemática|Grandezas e medidas|Volume, Unidades, Captação de água da chuva|s|Capacidade mínima de um reservatório de água da chuva para uma família||
+179|Matemática|Probabilidade|Probabilidade, Sorteio, Doping|s|Comparação da probabilidade de sortear um atleta dopado em três modos de sorteio||
 180|Matemática|Trigonometria|Função cosseno, Sazonalidade, Produção agrícola|s|Mês de produção máxima de um produto sazonal modelado por função trigonométrica|IBGE|Artigos

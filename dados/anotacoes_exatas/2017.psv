@@ -1,91 +1,91 @@
-Questão|Disciplina|Matéria|Assuntos|Brasil|Abordagem|Fonte|Tipo de Fonte
+Questão|Disciplina|Matéria|Assuntos|Cálculo|Abordagem|Fonte|Tipo de Fonte
 91|Química|Química ambiental|Toxicidade, Dose letal, Agrotóxicos|n|Grupos de ratos com mortalidade mínima a partir da dose letal (DL50) de agrotóxicos||
 92|Biologia|Saúde e doenças|Antibióticos, Bactérias, Parede celular|n|Mecanismo de ação de antibióticos que interferem na parede celular bacteriana||
-93|Física|Eletricidade|Resistência elétrica, Lei de Ohm, Sensores de amônia|n|Resistência de um polímero semicondutor na presença de amônia a partir de um gráfico||
+93|Física|Eletricidade|Resistência elétrica, Lei de Ohm, Sensores de amônia|s|Resistência de um polímero semicondutor na presença de amônia a partir de um gráfico||
 94|Biologia|Botânica|Fotossíntese, Nanotubos de carbono, Cloroplastos|n|Nanotubos de carbono que aumentam a absorção de fótons nos cloroplastos|Unicamp|Artigos
 95|Química|Eletroquímica|Eletrólise, Cloro, Hidróxido de sódio|n|Produto secundário da eletrólise da salmoura na produção de cloro e soda|Indústrias de processos químicos - R. N. Shreve; J. A. Brink Jr.|Livros
 96|Biologia|Ecologia|Ciclo do nitrogênio, Fertilizantes, Fixação biológica|n|Fixação biológica de nitrogênio como equivalente natural aos fertilizantes industriais|Planeta Orgânico|Artigos
 97|Química|Química geral|Teste de chama, Modelo atômico, Sódio|n|Chama amarela ao derramar água de arroz explicada pela emissão de luz dos íons sódio||
 98|Biologia|Evolução|Classificação dos seres vivos, Domínios, Filogenia|n|Classificação em três domínios baseada em relações filogenéticas moleculares||
-99|Física|Mecânica|Aceleração, Segunda lei de Newton, Cinto de segurança|n|Modelo de cinto de segurança com menor risco de lesão pelo gráfico de aceleração||
+99|Física|Mecânica|Aceleração, Segunda lei de Newton, Cinto de segurança|s|Modelo de cinto de segurança com menor risco de lesão pelo gráfico de aceleração||
 100|Biologia|Fisiologia humana|Coagulação, Plaquetas artificiais, Hemofilia|n|Plaqueta artificial que acelera a coagulação e beneficiaria pacientes com hemofilia|Ciência Hoje|Revistas
 101|Física|Ondulatória|Espectro eletromagnético, Lâmpadas, Radiação infravermelha|n|Tipo de lâmpada que emite luz visível sem radiação UV e infravermelha|Zeiss|Artigos
 102|Química|Química geral|Forças intermoleculares, Condensação, Chuva|n|Fixação do vapor de água nos núcleos de condensação por interações dipolo-íon|Química Nova na Escola|Revistas
-103|Física|Ondulatória|Fibra óptica, Atenuação, Decibéis|n|Distância máxima de transmissão por fibra óptica antes de o sinal precisar ser retransmitido|UFRJ|Artigos
-104|Química|Radioatividade|Carbono-14, Meia-vida, Datação de fósseis|n|Idade de um fóssil calculada pelas emissões beta do carbono-14|Terra|Notícias
+103|Física|Ondulatória|Fibra óptica, Atenuação, Decibéis|s|Distância máxima de transmissão por fibra óptica antes de o sinal precisar ser retransmitido|UFRJ|Artigos
+104|Química|Radioatividade|Carbono-14, Meia-vida, Datação de fósseis|s|Idade de um fóssil calculada pelas emissões beta do carbono-14|Terra|Notícias
 105|Física|Energia|Energia eólica, Biogás, Hidrogênio, Usina híbrida|n|Usina híbrida eólica e de biogás que armazena energia na forma de hidrogênio|Enertrag|Artigos
 106|Química|Química orgânica|Óleos essenciais, Volatilidade, Plantas medicinais|n|Coleta de plantas ao raiar do dia para evitar a volatilização dos óleos essenciais||
 107|Física|Ondulatória|Laser, Comprimento de onda, Absorção da luz|s|Comprimento de onda ideal do laser para a epilação pela absorção da melanina|Revista Brasileira de Medicina|Revistas
 108|Física|Mecânica|Energia cinética, Energia potencial, Cama elástica|n|Gráfico da energia cinética de uma criança pulando numa cama elástica||
-109|Biologia|Ecologia|Piracema, Barragens, Peixes migratórios|s|Barragens hidrelétricas que prejudicam a piracema ao interromper o percurso de migração|Futurambiental|Artigos
-110|Física|Eletricidade|Associação de resistores, Fusível, Corrente elétrica|n|Tensão máxima de um circuito para que o fusível não queime||
-111|Biologia|Ecologia|Bioacumulação, Boto-cinza, Poluição marinha|s|Botos-cinza que acumulam poluentes por estarem no topo da cadeia alimentar|Ciência Hoje|Revistas
-112|Física|Ondulatória|Interferência, Som, Trombone de Quincke|n|Frequência do som obtida pela interferência destrutiva no trombone de Quincke||
-113|Química|Química geral|Separação de misturas, Destilação, Óleo de linhaça|n|Fração em que se obtém o óleo de linhaça num esquema de separação de misturas||
-114|Química|Química orgânica|Biodiesel, Transesterificação, Funções orgânicas|s|Função éster presente no biodiesel obtido por transesterificação||
+109|Biologia|Ecologia|Piracema, Barragens, Peixes migratórios|n|Barragens hidrelétricas que prejudicam a piracema ao interromper o percurso de migração|Futurambiental|Artigos
+110|Física|Eletricidade|Associação de resistores, Fusível, Corrente elétrica|s|Tensão máxima de um circuito para que o fusível não queime||
+111|Biologia|Ecologia|Bioacumulação, Boto-cinza, Poluição marinha|n|Botos-cinza que acumulam poluentes por estarem no topo da cadeia alimentar|Ciência Hoje|Revistas
+112|Física|Ondulatória|Interferência, Som, Trombone de Quincke|s|Frequência do som obtida pela interferência destrutiva no trombone de Quincke||
+113|Química|Química geral|Separação de misturas, Destilação, Óleo de linhaça|s|Fração em que se obtém o óleo de linhaça num esquema de separação de misturas||
+114|Química|Química orgânica|Biodiesel, Transesterificação, Funções orgânicas|n|Função éster presente no biodiesel obtido por transesterificação||
 115|Física|Mecânica|Centrífuga, Movimento circular, Densidade|n|Separação de substâncias numa centrífuga em função das diferentes densidades|Dicionário Houaiss de física - I. Roditi|Livros
 116|Biologia|Citologia|Membrana plasmática, Mosaico fluido, Proteínas|n|Experimento com células híbridas que mostra a fluidez das proteínas da membrana|Biologia molecular da célula - B. Alberts et al.|Livros
 117|Biologia|Genética|Herança ligada ao X, Distrofia de Duchenne, Inativação do X|n|Gêmeas idênticas com manifestação diferente da distrofia de Duchenne pela inativação do X|The American Journal of Human Genetics|Revistas
 118|Biologia|Ecologia|Piso drenante, Infiltração, Impermeabilização do solo|n|Piso permeável usado em obras para evitar a impermeabilização do solo|UFRJ|Artigos
-119|Química|Química orgânica|Acidez, Extração, Lapachol, Ipê|s|Extração do lapachol do ipê com solução básica que forma um sal solúvel|Ácidos e bases em química orgânica - P. R. R. Costa et al.|Livros
+119|Química|Química orgânica|Acidez, Extração, Lapachol, Ipê|n|Extração do lapachol do ipê com solução básica que forma um sal solúvel|Ácidos e bases em química orgânica - P. R. R. Costa et al.|Livros
 120|Química|Físico-química|Osmose reversa, Pressão osmótica, Dessalinização|n|Condição de pressões para a osmose reversa em dessalinizadores||
 121|Química|Eletroquímica|Pilhas, Potencial de redução, LED azul|n|Associação de pilhas com diferença de potencial suficiente para acender um LED azul||
-122|Química|Estequiometria|Massa molar, Rendimento, Ácido acetilsalicílico|n|Massa de ácido salicílico necessária para fabricar um lote de comprimidos de AAS||
-123|Biologia|Botânica|Epífitas, Bromélias, Mata Atlântica|s|Bromélias epífitas da Mata Atlântica que captam água da chuva e da umidade do ar|USP|Artigos
-124|Química|Termoquímica|Lei de Hess, Siderurgia, Minérios de ferro|n|Entalpia da redução do FeO na siderurgia pela lei de Hess||
+122|Química|Estequiometria|Massa molar, Rendimento, Ácido acetilsalicílico|s|Massa de ácido salicílico necessária para fabricar um lote de comprimidos de AAS||
+123|Biologia|Botânica|Epífitas, Bromélias, Mata Atlântica|n|Bromélias epífitas da Mata Atlântica que captam água da chuva e da umidade do ar|USP|Artigos
+124|Química|Termoquímica|Lei de Hess, Siderurgia, Minérios de ferro|s|Entalpia da redução do FeO na siderurgia pela lei de Hess||
 125|Biologia|Genética|PCR, DNA, Pontes de hidrogênio|n|Segmento de DNA que desnatura primeiro na PCR por ter menos pares C-G||
 126|Química|Química geral|Gases nobres, Eletronegatividade, Flúor|n|Uso do flúor para reagir com gases nobres por sua alta eletronegatividade|A tabela periódica - Primo Levi|Livros
-127|Física|Eletricidade|Potência elétrica, Chuveiro, Calorimetria|n|Fração da potência do chuveiro na posição morno em relação à superquente||
+127|Física|Eletricidade|Potência elétrica, Chuveiro, Calorimetria|s|Fração da potência do chuveiro na posição morno em relação à superquente||
 128|Biologia|Fisiologia humana|Retina, Cones, Visão em cores|n|Degeneração dos cones da retina que compromete a visão em cores|Portal da Retina|Artigos
 129|Física|Eletricidade|Resistência interna, Gerador, Cerca elétrica|n|Resistência interna do gerador de uma cerca elétrica para a corrente não ser letal||
 130|Química|Química geral|Cromatografia, Polaridade, Pigmentos|n|Pigmento do pimentão que migra mais devagar na cromatografia em papel|Química Nova na Escola|Revistas
-131|Física|Mecânica|Movimento uniformemente variado, Tempo de reação, Celular ao volante|n|Distância a mais percorrida até parar por um motorista distraído com o celular||
-132|Biologia|Citologia|Osmose, Conservação de alimentos, Salga|s|Desidratação das células por osmose na carne salgada por tropeiros e sertanejos||
+131|Física|Mecânica|Movimento uniformemente variado, Tempo de reação, Celular ao volante|s|Distância a mais percorrida até parar por um motorista distraído com o celular||
+132|Biologia|Citologia|Osmose, Conservação de alimentos, Salga|n|Desidratação das células por osmose na carne salgada por tropeiros e sertanejos||
 133|Física|Eletromagnetismo|Indução eletromagnética, Gerador, Lei de Faraday|n|Como dobrar a tensão máxima de um pequeno gerador mantendo a corrente||
 134|Química|Química orgânica|Ozonólise, Aldeídos, Cetonas|n|Produtos da ozonólise do 1-fenil-2-metilprop-1-eno|Química, a ciência global - A. Martino|Livros
 135|Biologia|Fisiologia humana|Terapia celular, Transfusão de sangue|n|Transfusão de sangue como forma de terapia celular já usada em hospitais||
-136|Matemática|Matemática financeira|Juros compostos, Valor presente, Quitação de empréstimo|n|Valor pago para quitar antecipadamente um empréstimo em parcelas fixas||
-137|Matemática|Matemática financeira|Logaritmo, Financiamento, Número de parcelas|n|Menor número de parcelas de um empréstimo que cabe no orçamento, usando logaritmos||
-138|Matemática|Trigonometria|Seno, Intensidade luminosa, Ângulo de incidência|n|Percentual da intensidade luminosa num lago quando o sol incide a 30°||
+136|Matemática|Matemática financeira|Juros compostos, Valor presente, Quitação de empréstimo|s|Valor pago para quitar antecipadamente um empréstimo em parcelas fixas||
+137|Matemática|Matemática financeira|Logaritmo, Financiamento, Número de parcelas|s|Menor número de parcelas de um empréstimo que cabe no orçamento, usando logaritmos||
+138|Matemática|Trigonometria|Seno, Intensidade luminosa, Ângulo de incidência|s|Percentual da intensidade luminosa num lago quando o sol incide a 30°||
 139|Matemática|Funções|Leitura de gráfico, Velocidade, Congestionamento|s|Tempo em que um carro ficou parado num congestionamento, lido no gráfico de velocidade||
-140|Matemática|Geometria plana|Área do retângulo, Circunferências, Bandeja|n|Área mínima de uma bandeja para quatro taças em fileira||
-141|Matemática|Aritmética|Proporção, Preço, Frações|n|Redução no preço da polpa de morango para baratear um suco||
-142|Matemática|Geometria espacial|Volume, Cubo, Paralelepípedo|n|Caixa de papelão em que um objeto cúbico cabe com menor espaço livre||
-143|Matemática|Análise combinatória|Combinação, Arranjo com repetição, Brinquedos|n|Número de modelos de um caminhão-cegonha de brinquedo com carrinhos coloridos||
-144|Matemática|Geometria espacial|Volume, Proporção, Piscina|n|Quantidade de produto de tratamento para o volume de água de uma piscina||
-145|Matemática|Estatística|Margem de erro, Pesquisa eleitoral, Amostra|n|Escolha da pesquisa eleitoral que atende à margem de erro máxima||
-146|Matemática|Aritmética|Velocidade, Tempo, Teleférico|n|Defasagem entre as partidas de dois bondinhos de teleférico que se cruzam||
-147|Matemática|Aritmética|Porcentagem, Leitura de gráfico, Profundidade de rio|n|Profundidade de um rio após diminuir 10% numa tempestade||
+140|Matemática|Geometria plana|Área do retângulo, Circunferências, Bandeja|s|Área mínima de uma bandeja para quatro taças em fileira||
+141|Matemática|Aritmética|Proporção, Preço, Frações|s|Redução no preço da polpa de morango para baratear um suco||
+142|Matemática|Geometria espacial|Volume, Cubo, Paralelepípedo|s|Caixa de papelão em que um objeto cúbico cabe com menor espaço livre||
+143|Matemática|Análise combinatória|Combinação, Arranjo com repetição, Brinquedos|s|Número de modelos de um caminhão-cegonha de brinquedo com carrinhos coloridos||
+144|Matemática|Geometria espacial|Volume, Proporção, Piscina|s|Quantidade de produto de tratamento para o volume de água de uma piscina||
+145|Matemática|Estatística|Margem de erro, Pesquisa eleitoral, Amostra|s|Escolha da pesquisa eleitoral que atende à margem de erro máxima||
+146|Matemática|Aritmética|Velocidade, Tempo, Teleférico|s|Defasagem entre as partidas de dois bondinhos de teleférico que se cruzam||
+147|Matemática|Aritmética|Porcentagem, Leitura de gráfico, Profundidade de rio|s|Profundidade de um rio após diminuir 10% numa tempestade||
 148|Matemática|Geometria espacial|Poliedros, Tronco de pirâmide, Arquitetura|n|Forma geométrica da estrutura de cabanas na ilha sueca de Gotland|Superinteressante|Revistas
-149|Matemática|Probabilidade|Probabilidade, Campo Minado|n|Quadrado com menor probabilidade de ter mina num jogo de Campo Minado||
-150|Matemática|Geometria plana|Rotação, Ângulos, Simetria|n|Ângulo de rotação para recolocar um quadro na posição original||
-151|Matemática|Estatística|Média ponderada, Rendimento acadêmico|n|Nota mínima numa disciplina para atingir a média ponderada desejada||
+149|Matemática|Probabilidade|Probabilidade, Campo Minado|s|Quadrado com menor probabilidade de ter mina num jogo de Campo Minado||
+150|Matemática|Geometria plana|Rotação, Ângulos, Simetria|s|Ângulo de rotação para recolocar um quadro na posição original||
+151|Matemática|Estatística|Média ponderada, Rendimento acadêmico|s|Nota mínima numa disciplina para atingir a média ponderada desejada||
 152|Matemática|Funções|Gráficos, Vasos comunicantes, Reservatórios|n|Gráfico da altura da água num reservatório ligado a outro por um cano||
-153|Matemática|Trigonometria|Triângulo retângulo, Altura, Caminhão em viaduto|n|Altura mínima de um viaduto para um caminhão passar com a carga inclinada|Caminhões e Carretas|Artigos
-154|Matemática|Geometria plana|Localização, Rosa dos ventos, Mapas|n|Localização da padaria num mapa a partir de instruções de direção||
-155|Matemática|Estatística|Média, Mediana, Moda, Aprovação|n|Alunos reprovados num curso pelos critérios de média, mediana e moda||
-156|Matemática|Geometria plana|Triângulo, Circunferência, Compasso|n|Tipo de material da tampa de panela pelo raio desenhado com um compasso||
-157|Matemática|Aritmética|Números decimais, Comparação, Joias|n|Pérola com diâmetro mais próximo das originais de uma pulseira||
-158|Matemática|Grandezas e medidas|Escala, Volume, Razão de semelhança|n|Volume real de um monumento a partir de uma miniatura em escala 1:400||
-159|Matemática|Aritmética|Razão, Engrenagens, Bicicleta|n|Combinação de marchas da bicicleta para um passeio com menos esforço||
+153|Matemática|Trigonometria|Triângulo retângulo, Altura, Caminhão em viaduto|s|Altura mínima de um viaduto para um caminhão passar com a carga inclinada|Caminhões e Carretas|Artigos
+154|Matemática|Geometria plana|Localização, Rosa dos ventos, Mapas|s|Localização da padaria num mapa a partir de instruções de direção||
+155|Matemática|Estatística|Média, Mediana, Moda, Aprovação|s|Alunos reprovados num curso pelos critérios de média, mediana e moda||
+156|Matemática|Geometria plana|Triângulo, Circunferência, Compasso|s|Tipo de material da tampa de panela pelo raio desenhado com um compasso||
+157|Matemática|Aritmética|Números decimais, Comparação, Joias|s|Pérola com diâmetro mais próximo das originais de uma pulseira||
+158|Matemática|Grandezas e medidas|Escala, Volume, Razão de semelhança|s|Volume real de um monumento a partir de uma miniatura em escala 1:400||
+159|Matemática|Aritmética|Razão, Engrenagens, Bicicleta|s|Combinação de marchas da bicicleta para um passeio com menos esforço||
 160|Matemática|Análise combinatória|Princípio multiplicativo, Colorações, Copa do Mundo 2014|s|Maneiras de pintar a logomarca da Copa do Mundo de 2014|Fifa|Artigos
-161|Matemática|Funções|Função quadrática, Área máxima, Viveiros de lagosta|n|Dimensões que maximizam a área da base de um viveiro de lagostas||
+161|Matemática|Funções|Função quadrática, Área máxima, Viveiros de lagosta|s|Dimensões que maximizam a área da base de um viveiro de lagostas||
 162|Matemática|Funções|Hipérbole, Fisiologia muscular, Gráfico|n|Tipo de gráfico da equação de Hill para a contração muscular|Proceedings of the Royal Society B|Revistas
-163|Matemática|Aritmética|Custo mínimo, Comparação de trajetos, Mirantes|n|Menor custo para visitar os topos de dois mirantes e voltar ao solo||
-164|Matemática|Aritmética|Razão, Velocidade, Celular ao volante|n|Razão entre as distâncias percorridas às cegas por dois motoristas digitando no celular|G1|Notícias
-165|Matemática|Estatística|Gráficos de barras, Distorção visual, Pesquisa eleitoral|n|Distorção visual de um gráfico de pesquisa eleitoral publicado num jornal||
-166|Matemática|Trigonometria|Função cosseno, Pressão arterial, Batimentos|n|Função trigonométrica que modela a pressão arterial de uma pessoa||
-167|Matemática|Geometria espacial|Esfera, Calota esférica, Teorema de Pitágoras|n|Altura do corte de um melão esférico para apoiá-lo na mesa||
+163|Matemática|Aritmética|Custo mínimo, Comparação de trajetos, Mirantes|s|Menor custo para visitar os topos de dois mirantes e voltar ao solo||
+164|Matemática|Aritmética|Razão, Velocidade, Celular ao volante|s|Razão entre as distâncias percorridas às cegas por dois motoristas digitando no celular|G1|Notícias
+165|Matemática|Estatística|Gráficos de barras, Distorção visual, Pesquisa eleitoral|s|Distorção visual de um gráfico de pesquisa eleitoral publicado num jornal||
+166|Matemática|Trigonometria|Função cosseno, Pressão arterial, Batimentos|s|Função trigonométrica que modela a pressão arterial de uma pessoa||
+167|Matemática|Geometria espacial|Esfera, Calota esférica, Teorema de Pitágoras|s|Altura do corte de um melão esférico para apoiá-lo na mesa||
 168|Matemática|Funções|Função quadrática, Parábola, Oscar Niemeyer|s|Altura de uma abóbada parabólica da Igreja da Pampulha, de Oscar Niemeyer||
-169|Matemática|Estatística|Taxa de variação, Leitura de gráfico, Internet|n|Site com maior aumento no tempo de acesso de sexta para sábado||
-170|Matemática|Grandezas e medidas|Leitura de escala, Termômetro|n|Temperatura máxima lida num termômetro de máxima e mínima|UFRGS|Artigos
-171|Matemática|Geometria plana|Comprimento da circunferência, Velocidade, Pivô central|n|Velocidades das torres de um pivô central de irrigação para uma volta em 25 horas||
-172|Matemática|Funções|Leitura de gráfico, Interseção, Reservatórios|n|Momentos em que dois reservatórios têm a mesma quantidade de água||
-173|Matemática|Grandezas e medidas|Densidade, Conversão de unidades, Fórmula 1|n|Litros de gasolina usados no reabastecimento de um carro de Fórmula 1|Super Danilo F1 Page|Artigos
+169|Matemática|Estatística|Taxa de variação, Leitura de gráfico, Internet|s|Site com maior aumento no tempo de acesso de sexta para sábado||
+170|Matemática|Grandezas e medidas|Leitura de escala, Termômetro|s|Temperatura máxima lida num termômetro de máxima e mínima|UFRGS|Artigos
+171|Matemática|Geometria plana|Comprimento da circunferência, Velocidade, Pivô central|s|Velocidades das torres de um pivô central de irrigação para uma volta em 25 horas||
+172|Matemática|Funções|Leitura de gráfico, Interseção, Reservatórios|s|Momentos em que dois reservatórios têm a mesma quantidade de água||
+173|Matemática|Grandezas e medidas|Densidade, Conversão de unidades, Fórmula 1|s|Litros de gasolina usados no reabastecimento de um carro de Fórmula 1|Super Danilo F1 Page|Artigos
 174|Matemática|Estatística|Mediana, Desemprego, Leitura de gráfico|s|Mediana da taxa de desemprego nas regiões metropolitanas entre 2008 e 2009|IBGE|Artigos
-175|Matemática|Probabilidade|Distribuição binomial, Semáforos|n|Probabilidade de observar exatamente um semáforo verde entre dez||
+175|Matemática|Probabilidade|Distribuição binomial, Semáforos|s|Probabilidade de observar exatamente um semáforo verde entre dez||
 176|Matemática|Aritmética|Proporção, Energia solar, Área|s|Área de painéis solares para dobrar a energia economizada num campus universitário|Agência Brasil|Notícias
-177|Matemática|Análise combinatória|Princípio multiplicativo, Senhas, Estimativa|n|Formato de senha cujo total de combinações atende ao número de clientes esperado||
-178|Matemática|Análise combinatória|Combinação, Torneio, Partidas|n|Número de partidas num torneio de videogame em que todos jogam contra todos||
-179|Matemática|Probabilidade|Probabilidade total, Chuva, Atraso|n|Probabilidade de um morador se atrasar dada a previsão de chuva||
-180|Matemática|Funções|Taxa de variação, Vazão, Piscina|n|Horário em que uma piscina termina de esvaziar após uma chuva||
+177|Matemática|Análise combinatória|Princípio multiplicativo, Senhas, Estimativa|s|Formato de senha cujo total de combinações atende ao número de clientes esperado||
+178|Matemática|Análise combinatória|Combinação, Torneio, Partidas|s|Número de partidas num torneio de videogame em que todos jogam contra todos||
+179|Matemática|Probabilidade|Probabilidade total, Chuva, Atraso|s|Probabilidade de um morador se atrasar dada a previsão de chuva||
+180|Matemática|Funções|Taxa de variação, Vazão, Piscina|s|Horário em que uma piscina termina de esvaziar após uma chuva||

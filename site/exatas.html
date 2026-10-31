@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Exatas no ENEM</title>
-  <meta name="description" content="Análise aberta das questões de Matemática e Ciências da Natureza do ENEM de 2015 a 2025: disciplinas, matérias, assuntos, fontes e questões ambientadas no Brasil.">
+  <meta name="description" content="Análise aberta das questões de Matemática e Ciências da Natureza do ENEM de 2015 a 2025: disciplinas, matérias, assuntos, fontes e questões de cálculo × conceituais.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
@@ -27,7 +27,7 @@
       <div class="kpis" id="kpis"></div>
       <nav class="toc">
         <a href="#disciplinas">Disciplinas</a>
-        <a href="#brasil">Ambientadas no Brasil</a>
+        <a href="#brasil">Cálculo × conceitual</a>
         <a href="#materias">Matérias, assuntos e questões</a>
         <a href="#fontes">Fontes</a>
         <a href="#metodologia">Metodologia</a>
@@ -65,26 +65,26 @@
 
     <section id="brasil">
       <p class="group-num">2</p>
-      <h2>Questões ambientadas no Brasil</h2>
-      <p class="section-lede">Quantas questões têm recorte brasileiro, em quais disciplinas e em quais matérias. <strong>Clique numa barra de disciplina</strong> para isolá-la; o seletor ao lado filtra as matérias pelo recorte.</p>
+      <h2>Cálculo × conceitual</h2>
+      <p class="section-lede">Quantas questões exigem fazer conta e quantas cobram só o entendimento de um conceito, por disciplina e por matéria. <strong>Clique numa barra de disciplina</strong> para isolá-la; o seletor ao lado filtra as matérias pelo recorte.</p>
       <div class="group-filters" id="gf-brasil">
         <div class="seg" role="group" aria-label="Recorte" data-key="brasil">
           <button type="button" data-v="todos" aria-pressed="true">Todas</button>
-          <button type="button" data-v="sim" aria-pressed="false">No Brasil</button>
-          <button type="button" data-v="nao" aria-pressed="false">Fora do Brasil</button>
+          <button type="button" data-v="sim" aria-pressed="false">Exige cálculo</button>
+          <button type="button" data-v="nao" aria-pressed="false">Conceitual</button>
         </div>
       </div>
       <div class="grid g2">
         <figure class="card">
-          <figcaption>Questões ambientadas no Brasil por ano</figcaption>
+          <figcaption>Questões de cálculo e conceituais por ano</figcaption>
           <div class="chart" id="c-brasil-ano"></div>
         </figure>
         <figure class="card">
-          <figcaption>Média de questões ambientadas no Brasil por disciplina <span class="hint" data-scope></span></figcaption>
+          <figcaption>Média de questões de cálculo e conceituais por disciplina <span class="hint" data-scope></span></figcaption>
           <div class="chart" id="c-brasil-disc"></div>
         </figure>
         <figure class="card span2">
-          <figcaption>Proporção de questões ambientadas no Brasil por matéria <span class="hint" data-scope></span></figcaption>
+          <figcaption>Proporção de questões de cálculo por matéria <span class="hint" data-scope></span></figcaption>
           <div class="chart xtall" id="c-materias-brasil"></div>
         </figure>
       </div>
@@ -99,8 +99,8 @@
         <label class="field">Assunto <select id="f-assunto"></select></label>
         <div class="seg" role="group" aria-label="Recorte" data-key="brasilM">
           <button type="button" data-v="todos" aria-pressed="true">Todas</button>
-          <button type="button" data-v="sim" aria-pressed="false">No Brasil</button>
-          <button type="button" data-v="nao" aria-pressed="false">Fora do Brasil</button>
+          <button type="button" data-v="sim" aria-pressed="false">Exige cálculo</button>
+          <button type="button" data-v="nao" aria-pressed="false">Conceitual</button>
         </div>
         <button type="button" class="clear" data-clear="materias">Limpar filtros</button>
       </div>
@@ -121,7 +121,7 @@
           </div>
           <div class="table-wrap tall-table">
             <table class="data questions" id="t-questoes">
-              <thead><tr><th>Ano</th><th>Q.</th><th>Disciplina</th><th>Matéria</th><th>Abordagem</th><th>Fonte</th><th>BR</th></tr></thead>
+              <thead><tr><th>Ano</th><th>Q.</th><th>Disciplina</th><th>Matéria</th><th>Abordagem</th><th>Fonte</th><th>Cálc.</th></tr></thead>
               <tbody></tbody>
             </table>
           </div>
@@ -163,14 +163,14 @@
       <h2>Metodologia</h2>
       <h3>Como foi feito</h3>
       <p>Esta aba aplica o mesmo esquema da análise de Ciências Humanas às questões de Matemática (Q136–180) e de Ciências da Natureza (Q91–135; em 2015 e 2016, Q46–90 do 1º dia) do caderno azul de cada ano, de 2015 a 2025. São 990 questões.</p>
-      <p>O texto das questões foi extraído dos cadernos oficiais do INEP, e cada uma foi classificada pelo Claude (IA da Anthropic) com as mesmas colunas: disciplina, matéria, assuntos, ambientada no Brasil, abordagem, fonte e tipo de fonte. <strong>Todas as linhas desta aba estão marcadas como “IA”</strong> e ainda passarão por uma revisão humana.</p>
+      <p>O texto das questões foi extraído dos cadernos oficiais do INEP, e cada uma foi classificada pelo Claude (IA da Anthropic) com as colunas de Humanas (disciplina, matéria, assuntos, abordagem, fonte e tipo de fonte). A exceção é “ambientada no Brasil”, que pouco diz sobre uma prova de Exatas e foi trocada por <strong>cálculo × conceitual</strong>. <strong>Todas as linhas desta aba estão marcadas como “IA”</strong> e ainda passarão por uma revisão humana.</p>
       <h3>Critérios específicos de Exatas</h3>
       <ul>
         <li><strong>Matérias de Matemática</strong>: Aritmética, Estatística, Probabilidade, Análise combinatória, Funções, Álgebra, Geometria plana, espacial e analítica, Trigonometria, Sequências e progressões, Matemática financeira e Grandezas e medidas.</li>
         <li><strong>Matérias de Física</strong>: Mecânica, Ondulatória, Eletricidade, Eletromagnetismo, Termologia, Óptica, Hidrostática, Energia, Física moderna e Astronomia.</li>
         <li><strong>Matérias de Química</strong>: Química geral, Físico-química, Química orgânica, Estequiometria, Eletroquímica, Termoquímica, Radioatividade e Química ambiental.</li>
         <li><strong>Matérias de Biologia</strong>: Ecologia, Genética, Evolução, Citologia, Bioquímica, Botânica, Zoologia, Fisiologia humana, Saúde e doenças e Biotecnologia.</li>
-        <li><strong>Brasil</strong>: marcado só quando a questão trata explicitamente de um lugar, dado ou fato brasileiro. Valores em reais, sozinhos, não contam.</li>
+        <li><strong>Exige cálculo</strong>: a resposta depende de uma operação numérica ou algébrica, mesmo que a alternativa seja um nome ou uma opção (ex.: “qual loja é mais barata”). <strong>Conceitual</strong>: a resposta sai da interpretação de um fenômeno, de um conceito, de um gráfico sem contas ou da visualização espacial (projeções, planificações). A classificação foi pré-feita automaticamente pelas alternativas e pelo enunciado, e os 183 casos ambíguos foram revisados um a um.</li>
         <li><strong>Fonte</strong>: fica em branco quando o enunciado não cita nenhuma.</li>
       </ul>
       <h3>Limitações</h3>

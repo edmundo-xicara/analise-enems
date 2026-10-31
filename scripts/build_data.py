@@ -20,12 +20,16 @@ COLUNAS = {
 }
 
 
-def limpar(df: pd.DataFrame, metodo: str) -> pd.DataFrame:
-    df = df.rename(columns=COLUNAS)[list(COLUNAS.values())].copy()
+def limpar(df: pd.DataFrame, metodo: str, marcador: tuple[str, str] = ("Brasil", "brasil")) -> pd.DataFrame:
+    """`marcador` é a coluna s/n da área: "Brasil" em Humanas, "Cálculo" em Exatas."""
+    origem, destino = marcador
+    colunas = {**COLUNAS, origem: destino}
+    colunas.pop("Brasil") if origem != "Brasil" else None
+    df = df.rename(columns=colunas)[list(colunas.values())].copy()
     for c in ["disciplina", "materia", "assuntos", "abordagem", "fonte", "tipo_fonte"]:
         df[c] = df[c].fillna("").astype(str).str.strip()
     df["materia"] = df["materia"].replace({"Idade antiga": "Idade Antiga"})
-    df["brasil"] = df["brasil"].astype(str).str.strip().str.lower().eq("s")
+    df[destino] = df[destino].astype(str).str.strip().str.lower().eq("s")
     df["metodo"] = metodo
     return df
 
@@ -87,18 +91,18 @@ def exatas() -> None:
         df = pd.read_csv(arq, sep="|", dtype=str, keep_default_na=False)
         df["Ano"] = int(arq.stem)
         df["Questão"] = df["Questão"].astype(int)
-        frames.append(limpar(df, "ia"))
+        frames.append(limpar(df, "ia", ("Cálculo", "calculo")))
     questoes = pd.concat(frames).sort_values(["ano", "questao"]).reset_index(drop=True)
     questoes.to_csv(DADOS / "questoes_exatas.csv", index=False, quoting=csv.QUOTE_NONNUMERIC)
 
     anual = [{
         "ano": int(ano), "fonte": "ia",
         "disciplinas": g["disciplina"].value_counts().to_dict(),
-        "brasil": int(g["brasil"].sum()), "total": len(g),
+        "calculo": int(g["calculo"].sum()), "total": len(g),
     } for ano, g in questoes.groupby("ano")]
     registros = [{
         "ano": int(q.ano), "q": int(q.questao), "disciplina": q.disciplina,
-        "materia": q.materia, "assuntos": separar(q.assuntos), "brasil": bool(q.brasil),
+        "materia": q.materia, "assuntos": separar(q.assuntos), "calculo": bool(q.calculo),
         "abordagem": q.abordagem, "fonte": q.fonte, "tipos": separar(q.tipo_fonte),
         "metodo": q.metodo,
     } for q in questoes.itertuples()]

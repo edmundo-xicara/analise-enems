@@ -25,7 +25,7 @@ Em 2025, com *vibe coding* (o Claude, da Anthropic, como assistente de programa�
 | `dados/resumo_2009_2014_powerbi.csv` | Totais de 2009–2014, transcritos da apresentação original |
 | `dados/questoes.csv` | **Base consolidada**: 495 questões de 2015 a 2025 |
 | `dados/anotacoes_exatas/2015.psv` … `2025.psv` | Matemática e Natureza, classificadas com ajuda de IA (separador `\|`) |
-| `dados/questoes_exatas.csv` | **Base consolidada de Exatas**: 990 questões de 2015 a 2025 (mesmas colunas) |
+| `dados/questoes_exatas.csv` | **Base consolidada de Exatas**: 990 questões de 2015 a 2025. Mesmas colunas de Humanas, mas `brasil` é trocada por `calculo` (`True` se a questão exige conta) |
 | `scripts/build_data.py` | Gera `dados/questoes.csv`, `dados/questoes_exatas.csv` e os JSON do site |
 | `site/` | Site estático (HTML + CSS + JS + Apache ECharts) |
 

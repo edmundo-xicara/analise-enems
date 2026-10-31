@@ -5,17 +5,21 @@ const AREAS = {
     cores: { "História": "--hist", "Geografia": "--geo", "Filosofia": "--filo", "Sociologia": "--soc" },
     dados: ["data/questoes.json", "data/anual.json"],
     provas: "provas (2009–2025)",
+    marcador: { campo: "brasil", sim: "No Brasil", nao: "Fora do Brasil", kpi: "ambientadas no Brasil (2015–2025)", icone: "🇧🇷" },
   },
   exatas: {
     disciplinas: ["Matemática", "Física", "Química", "Biologia"],
     cores: { "Matemática": "--mat", "Física": "--fis", "Química": "--qui", "Biologia": "--bio" },
     dados: ["data/questoes_exatas.json", "data/anual_exatas.json"],
     provas: "provas (2015–2025)",
+    marcador: { campo: "calculo", sim: "Exige cálculo", nao: "Conceitual", kpi: "exigem cálculo (2015–2025)", icone: "✓" },
   },
 };
 const AREA = AREAS[document.body.dataset.area] || AREAS.humanas;
 const DISCIPLINAS = AREA.disciplinas;
 const COR_VAR = AREA.cores;
+// Coluna s/n que o bloco 2 analisa: "ambientada no Brasil" em Humanas, "exige cálculo" em Exatas.
+const M = AREA.marcador;
 const TIPOS = ["Livros", "Notícias", "Revistas", "Artigos", "Imagens", "Músicas", "Poemas"];
 const LIMITE = 40;
 
@@ -34,7 +38,7 @@ const fmt = (n, c = 1) => n.toLocaleString("pt-BR", { maximumFractionDigits: c, 
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const norm = (s) => s.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
 const tag = (d) => `<span class="tag" style="--c:var(${COR_VAR[d]})">${d}</span>`;
-const recorte = (q, v) => v === "todos" || q.brasil === (v === "sim");
+const recorte = (q, v) => v === "todos" || q[M.campo] === (v === "sim");
 
 // [2016, 2017, 2018, 2021] → "2016–2018, 2021"
 function faixas(anos) {
@@ -102,12 +106,12 @@ function isolarDisciplina(d) {
 function renderKpis() {
   const anotadas = QUESTOES.length;
   const total = ANUAL.reduce((s, a) => s + a.total, 0);
-  const brasil = QUESTOES.filter((q) => q.brasil).length / anotadas;
+  const brasil = QUESTOES.filter((q) => q[M.campo]).length / anotadas;
   const fontes = new Set(QUESTOES.map((q) => q.fonte).filter(Boolean)).size;
   document.getElementById("kpis").innerHTML = [
     [ANUAL.length, AREA.provas],
     [total === anotadas ? anotadas : total, total === anotadas ? "questões anotadas uma a uma" : `questões contadas, ${anotadas} anotadas uma a uma`],
-    [`${fmt(brasil * 100, 0)}%`, "ambientadas no Brasil (2015–2025)"],
+    [`${fmt(brasil * 100, 0)}%`, M.kpi],
     [fontes, "fontes diferentes citadas"],
   ].map(([v, t]) => `<div class="kpi"><b>${v}</b><span>${t}</span></div>`).join("");
 }
@@ -206,7 +210,7 @@ function renderBrasil() {
   const todas = estado.disc.size === DISCIPLINAS.length;
   const linhas = todas ? ANUAL : ANUAL.filter((a) => a.fonte !== "powerbi").map((a) => {
     const qs = QUESTOES.filter((q) => q.ano === a.ano && estado.disc.has(q.disciplina));
-    return { ano: a.ano, brasil: qs.filter((q) => q.brasil).length, total: qs.length };
+    return { ano: a.ano, [M.campo]: qs.filter((q) => q[M.campo]).length, total: qs.length };
   });
   const mostra = (v) => estado.brasil === "todos" || estado.brasil === v;
   grafico("c-brasil-ano", {
@@ -214,14 +218,14 @@ function renderBrasil() {
     xAxis: eixo({ type: "category", data: linhas.map((l) => l.ano), splitLine: { show: false } }),
     yAxis: eixo({ type: "value", minInterval: 1 }),
     series: [
-      mostra("sim") && { name: "No Brasil", type: "line", color: css("--br-yes"), symbolSize: 6, lineStyle: { width: 2.5 }, data: linhas.map((l) => l.brasil) },
-      mostra("nao") && { name: "Fora do Brasil", type: "line", color: css("--br-no"), symbolSize: 6, lineStyle: { width: 2.5 }, data: linhas.map((l) => l.total - l.brasil) },
+      mostra("sim") && { name: M.sim, type: "line", color: css("--br-yes"), symbolSize: 6, lineStyle: { width: 2.5 }, data: linhas.map((l) => l[M.campo]) },
+      mostra("nao") && { name: M.nao, type: "line", color: css("--br-no"), symbolSize: 6, lineStyle: { width: 2.5 }, data: linhas.map((l) => l.total - l[M.campo]) },
     ].filter(Boolean),
   });
 
   const qs = base(), n = anosNoEscopo();
   const discs = DISCIPLINAS.filter((d) => estado.disc.has(d));
-  const media = (d, b) => +(qs.filter((q) => q.disciplina === d && q.brasil === b).length / n).toFixed(1);
+  const media = (d, b) => +(qs.filter((q) => q.disciplina === d && q[M.campo] === b).length / n).toFixed(1);
   const rotulo = { show: true, position: "top", color: css("--muted"), formatter: (p) => fmt(p.value) };
   grafico("c-brasil-disc", {
     ...baseOpcoes(),
@@ -229,8 +233,8 @@ function renderBrasil() {
     xAxis: eixo({ type: "category", data: discs, splitLine: { show: false }, triggerEvent: true }),
     yAxis: eixo({ type: "value" }),
     series: [
-      mostra("nao") && { name: "Fora do Brasil", type: "bar", color: css("--br-no"), barMaxWidth: 36, cursor: "pointer", data: discs.map((d) => media(d, false)), label: rotulo },
-      mostra("sim") && { name: "No Brasil", type: "bar", color: css("--br-yes"), barMaxWidth: 36, cursor: "pointer", data: discs.map((d) => media(d, true)), label: rotulo },
+      mostra("nao") && { name: M.nao, type: "bar", color: css("--br-no"), barMaxWidth: 36, cursor: "pointer", data: discs.map((d) => media(d, false)), label: rotulo },
+      mostra("sim") && { name: M.sim, type: "bar", color: css("--br-yes"), barMaxWidth: 36, cursor: "pointer", data: discs.map((d) => media(d, true)), label: rotulo },
     ].filter(Boolean),
   }, (p) => isolarDisciplina(p.name ?? p.value));
 
@@ -239,7 +243,7 @@ function renderBrasil() {
     const minimo = estado.ano === "todos" ? 4 : 1;
     const props = contar(qs.map((q) => q.materia).filter(Boolean))
       .filter(([, c]) => c >= minimo)
-      .map(([m, c]) => ({ m, p: qs.filter((q) => q.materia === m && q.brasil).length / c }))
+      .map(([m, c]) => ({ m, p: qs.filter((q) => q.materia === m && q[M.campo]).length / c }))
       .sort((a, b) => b.p - a.p).slice(0, 20).reverse();
     grafico("c-materias-brasil", {
       ...baseOpcoes(),
@@ -247,8 +251,8 @@ function renderBrasil() {
       xAxis: eixo({ type: "value", max: 100, axisLabel: { color: css("--muted"), formatter: "{value}%" } }),
       yAxis: eixo({ type: "category", data: props.map((x) => x.m), splitLine: { show: false }, axisLabel: { color: css("--ink"), width: 150, overflow: "truncate" } }),
       series: [
-        { name: "No Brasil", type: "bar", stack: "p", color: css("--br-yes"), barMaxWidth: 18, data: props.map((x) => +(x.p * 100).toFixed(1)), label: { show: true, color: "#fff", fontSize: 11, formatter: (p) => (p.value >= 12 ? `${fmt(p.value, 0)}%` : "") } },
-        { name: "Fora do Brasil", type: "bar", stack: "p", color: css("--br-no"), barMaxWidth: 18, data: props.map((x) => +((1 - x.p) * 100).toFixed(1)), label: { show: true, color: "#fff", fontSize: 11, formatter: (p) => (p.value >= 12 ? `${fmt(p.value, 0)}%` : "") } },
+        { name: M.sim, type: "bar", stack: "p", color: css("--br-yes"), barMaxWidth: 18, data: props.map((x) => +(x.p * 100).toFixed(1)), label: { show: true, color: "#fff", fontSize: 11, formatter: (p) => (p.value >= 12 ? `${fmt(p.value, 0)}%` : "") } },
+        { name: M.nao, type: "bar", stack: "p", color: css("--br-no"), barMaxWidth: 18, data: props.map((x) => +((1 - x.p) * 100).toFixed(1)), label: { show: true, color: "#fff", fontSize: 11, formatter: (p) => (p.value >= 12 ? `${fmt(p.value, 0)}%` : "") } },
       ],
     });
   } else {
@@ -261,7 +265,7 @@ function renderBrasil() {
       xAxis: eixo({ type: "value" }),
       yAxis: eixo({ type: "category", data: top.map(([m]) => m), splitLine: { show: false }, axisLabel: { color: css("--ink"), width: 150, overflow: "truncate" } }),
       series: [{
-        name: estado.brasil === "sim" ? "No Brasil" : "Fora do Brasil", type: "bar", barMaxWidth: 18,
+        name: estado.brasil === "sim" ? M.sim : M.nao, type: "bar", barMaxWidth: 18,
         color: css(estado.brasil === "sim" ? "--br-yes" : "--br-no"),
         data: top.map(([, c]) => +(c / n).toFixed(2)),
         label: { show: true, position: "right", color: css("--muted"), formatter: (p) => fmt(p.value, 2) },
@@ -349,7 +353,7 @@ function renderQuestoes() {
   const qs = bloco3().filter(temMateria).filter(temAssunto).filter((q) => !termo ||
     norm([q.materia, q.abordagem, q.fonte, q.assuntos.join(" ")].join(" ")).includes(termo))
     .sort((a, b) => b.ano - a.ano || a.q - b.q);
-  const partes = [estado.materia, estado.assunto, estado.brasilM !== "todos" && (estado.brasilM === "sim" ? "no Brasil" : "fora do Brasil")].filter(Boolean);
+  const partes = [estado.materia, estado.assunto, estado.brasilM !== "todos" && (estado.brasilM === "sim" ? M.sim : M.nao).toLowerCase()].filter(Boolean);
   document.getElementById("h-questoes").textContent = partes.length ? `· ${partes.join(" · ")}` : escopoTexto();
   document.getElementById("busca-count").textContent = `${qs.length} questões`;
   document.querySelector("#t-questoes tbody").innerHTML = qs.length ? qs.slice(0, estado.limite).map((q) => `
@@ -360,7 +364,7 @@ function renderQuestoes() {
       <td>${esc(q.materia)}</td>
       <td>${esc(q.abordagem || "—")}<div class="assuntos">${esc(q.assuntos.join(" · "))}</div></td>
       <td>${esc(q.fonte || "—")}</td>
-      <td>${q.brasil ? "🇧🇷" : ""}</td>
+      <td>${q[M.campo] ? M.icone : ""}</td>
     </tr>`).join("") : `<tr><td colspan="7" class="empty">Nenhuma questão neste filtro.</td></tr>`;
   document.getElementById("mais").hidden = qs.length <= estado.limite;
 }

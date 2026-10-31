@@ -1,91 +1,91 @@
-Questão|Disciplina|Matéria|Assuntos|Brasil|Abordagem|Fonte|Tipo de Fonte
+Questão|Disciplina|Matéria|Assuntos|Cálculo|Abordagem|Fonte|Tipo de Fonte
 91|Química|Físico-química|pH, Hidroponia, Ácidos e bases|n|Substância para corrigir o pH de uma solução nutritiva hidropônica|Introdução à química da água - E. Lenzi et al.|Livros
-92|Física|Ondulatória|Frequência fundamental, Velocidade do som, Sino dos ventos|n|Relação entre frequência e velocidade do som em barras de comprimentos diferentes||
+92|Física|Ondulatória|Frequência fundamental, Velocidade do som, Sino dos ventos|s|Relação entre frequência e velocidade do som em barras de comprimentos diferentes||
 93|Biologia|Evolução|Mimetismo, Seleção natural, Polvo|n|Mimetismo do polvo que se estabeleceu por seleção natural|Proceedings of the Royal Society B|Revistas
-94|Física|Mecânica|Lançamento oblíquo, Alcance, Jogo de computador|n|Velocidade mínima de disparo para um canhão atingir o outro num jogo antigo|Butzke|Artigos
-95|Química|Radioatividade|Meia-vida, Pesticidas organoclorados, Persistência ambiental|n|Massa de pesticida que resta no solo após 35 anos pela meia-vida||
+94|Física|Mecânica|Lançamento oblíquo, Alcance, Jogo de computador|s|Velocidade mínima de disparo para um canhão atingir o outro num jogo antigo|Butzke|Artigos
+95|Química|Radioatividade|Meia-vida, Pesticidas organoclorados, Persistência ambiental|s|Massa de pesticida que resta no solo após 35 anos pela meia-vida||
 96|Biologia|Genética|Mutação, Códon de parada, Tradução|n|Mutação que gera a menor proteína ao criar um códon de parada antecipado||
 97|Química|Química orgânica|Saponificação, Óleo de cozinha, Sabão|n|Reaproveitamento do óleo de cozinha usado na produção de sabão por saponificação|Ministério Público Federal|Artigos
 98|Biologia|Fisiologia humana|Circulação fetal, Forame oval, Anfíbios|n|Circulação fetal com mistura de sangue semelhante à dos anfíbios||
-99|Física|Termologia|Ilhas de calor, Convecção, Irradiação|s|Ilhas de calor de São Paulo que desviam a brisa marítima por irradiação e convecção|Unesp|Artigos
+99|Física|Termologia|Ilhas de calor, Convecção, Irradiação|n|Ilhas de calor de São Paulo que desviam a brisa marítima por irradiação e convecção|Unesp|Artigos
 100|Física|Mecânica|Queda dos corpos, Resistência do ar, Aristóteles e Galileu|n|Resistência do ar como explicação para a diferença de queda entre corpos|Caderno Brasileiro de Ensino de Física|Revistas
 101|Química|Estequiometria|Fermentação, Etanol, Cana-de-açúcar|s|Volume de etanol produzido pela fermentação da glicose do melaço da cana||
 102|Física|Eletricidade|Pilhas, Circuito equivalente, Associação em série|n|Circuito equivalente a uma montagem de pilhas com papel umedecido||
-103|Química|Química orgânica|Ácido acetilsalicílico, Titulação, Controle de qualidade|n|Teste que reprovou um lote de analgésicos com pouco ácido acetilsalicílico||
-104|Biologia|Ecologia|Bioacumulação, Mariana, Rio Doce, Metais pesados|s|Golfinhos com mais metais tóxicos após o rompimento da barragem de Mariana|International Whaling Commission|Artigos
+103|Química|Química orgânica|Ácido acetilsalicílico, Titulação, Controle de qualidade|s|Teste que reprovou um lote de analgésicos com pouco ácido acetilsalicílico||
+104|Biologia|Ecologia|Bioacumulação, Mariana, Rio Doce, Metais pesados|n|Golfinhos com mais metais tóxicos após o rompimento da barragem de Mariana|International Whaling Commission|Artigos
 105|Física|Eletromagnetismo|Força magnética, Cargas elétricas, Haltere|n|Forças magnéticas sobre cargas opostas de um haltere que entra num campo magnético||
 106|Química|Química orgânica|Isomeria geométrica, Icterícia, Fototerapia|n|Fototerapia que converte a bilirrubina num isômero geométrico mais fácil de excretar|Experimental and Therapeutic Medicine|Revistas
-107|Física|Mecânica|Potência, Aceleração, Automóveis|s|Versão de um carro popular com maior potência pelo tempo de aceleração||
-108|Física|Astronomia|Sistema Solar, Planetas, Literatura de cordel|s|Planeta Saturno citado num cordel a partir das características dos planetas|A astronomia na literatura de cordel - A. Medeiros; J. T. M. Agra|Poemas
-109|Física|Eletricidade|Segunda lei de Ohm, Resistividade, Nanofios|n|Ordem das resistências de fios finíssimos pela segunda lei de Ohm|Science|Revistas
+107|Física|Mecânica|Potência, Aceleração, Automóveis|n|Versão de um carro popular com maior potência pelo tempo de aceleração||
+108|Física|Astronomia|Sistema Solar, Planetas, Literatura de cordel|n|Planeta Saturno citado num cordel a partir das características dos planetas|A astronomia na literatura de cordel - A. Medeiros; J. T. M. Agra|Poemas
+109|Física|Eletricidade|Segunda lei de Ohm, Resistividade, Nanofios|s|Ordem das resistências de fios finíssimos pela segunda lei de Ohm|Science|Revistas
 110|Biologia|Bioquímica|Fermentação, Ciclos biogeoquímicos, Combustíveis|n|Fermentação que gera subprodutos usados como combustíveis ambientais||
 111|Biologia|Ecologia|Coleta seletiva, Reciclagem, Educação ambiental|n|Destinação correta dos recicláveis como etapa que falta numa coleta seletiva escolar||
-112|Biologia|Genética|Consanguinidade, Búfalos, Exame genético|s|Teste genético de reprodutores para evitar doenças pela consanguinidade em búfalos|Pesquisa Veterinária Brasileira|Revistas
+112|Biologia|Genética|Consanguinidade, Búfalos, Exame genético|n|Teste genético de reprodutores para evitar doenças pela consanguinidade em búfalos|Pesquisa Veterinária Brasileira|Revistas
 113|Química|Eletroquímica|Ciclo do cobre, Oxirredução, Reações químicas|n|Etapa de redução do cobre num ciclo de reações didático||
 114|Biologia|Fisiologia humana|Arco reflexo, Medula espinal, Reflexo patelar|n|Reflexo patelar coordenado pela medula espinal||
 115|Física|Termologia|Condutividade térmica, Panelas, Economia de energia|n|Ordem de economia de panelas de diferentes metais pela condutividade térmica||
 116|Química|Físico-química|Ácidos e bases de Brønsted-Lowry, Pesticidas, Águas subterrâneas|n|Pesticida identificado por um teste de reação ácido-base||
-117|Química|Química ambiental|Biogás, Dejetos suínos, Biodigestores|s|Biogás produzido a partir dos dejetos da suinocultura brasileira|Anais ENEGEP|Artigos
-118|Biologia|Saúde e doenças|Dengue, Curcumina, Controle do vetor|s|Curcumina do açafrão que mata larvas do mosquito da dengue|Fapesp|Notícias
-119|Biologia|Botânica|Anatomia vegetal, Madeira, Lignina|n|Espécie de madeira mais resistente pelas estruturas anatômicas analisadas||
+117|Química|Química ambiental|Biogás, Dejetos suínos, Biodigestores|n|Biogás produzido a partir dos dejetos da suinocultura brasileira|Anais ENEGEP|Artigos
+118|Biologia|Saúde e doenças|Dengue, Curcumina, Controle do vetor|n|Curcumina do açafrão que mata larvas do mosquito da dengue|Fapesp|Notícias
+119|Biologia|Botânica|Anatomia vegetal, Madeira, Lignina|s|Espécie de madeira mais resistente pelas estruturas anatômicas analisadas||
 120|Química|Química geral|Pigmentos, Espectro de absorção, Carotenos|n|Faixa do espectro visível absorvida pelos carotenos das folhas no outono|Vida Universo y Demás|Artigos
 121|Biologia|Evolução|Coevolução, Vírus, Período de incubação|n|Vírus que infecta humanos há mais tempo, pela relação patógeno-hospedeiro|OMS|Artigos
-122|Química|Química ambiental|Tratamento de esgoto, Decantação, Reúso de água|n|Etapa de decantação do lodo numa estação individual de tratamento de esgoto|Extra|Notícias
+122|Química|Química ambiental|Tratamento de esgoto, Decantação, Reúso de água|s|Etapa de decantação do lodo numa estação individual de tratamento de esgoto|Extra|Notícias
 123|Biologia|Botânica|Estaquia, Auxinas, Hormônios vegetais|n|Auxinas que estimulam a formação de raízes na estaquia de roseiras||
 124|Química|Eletroquímica|Célula de combustível, Hidrogênio, Veículos|n|Tipo de célula de combustível mais adequado para veículos|Los Alamos National Laboratory|Artigos
 125|Física|Termologia|Evaporação, Umidade do ar, Suor|n|Desconforto em dias úmidos porque o suor evapora mais devagar|Calvin e Haroldo - Bill Watterson|Imagens
 126|Física|Eletricidade|Circuitos, Interruptores, Lâmpadas|n|Circuito com dois interruptores que acende uma lâmpada de cada vez||
-127|Biologia|Ecologia|Dispersão de sementes, Megafauna, Pantanal|s|Extinção das preguiças-gigantes que reduziu a dispersão de sementes no Pantanal|Pesquisa Fapesp|Revistas
-128|Física|Eletricidade|Potência elétrica, Energia, Carro elétrico|n|Tempo de recarga de um carro elétrico após um percurso||
+127|Biologia|Ecologia|Dispersão de sementes, Megafauna, Pantanal|n|Extinção das preguiças-gigantes que reduziu a dispersão de sementes no Pantanal|Pesquisa Fapesp|Revistas
+128|Física|Eletricidade|Potência elétrica, Energia, Carro elétrico|s|Tempo de recarga de um carro elétrico após um percurso||
 129|Biologia|Botânica|Dupla fecundação, Angiospermas, Endosperma|n|Endosperma triploide como tecido de reserva para o embrião das angiospermas||
 130|Química|Química orgânica|Ésteres, Flavorizantes, Nomenclatura|n|Flavorizante derivado do ácido etanoico com cadeia saturada (aroma de banana)||
-131|Física|Ondulatória|Frequência, Eletrocardiograma, Período|n|Batimentos por minuto lidos num eletrocardiograma||
+131|Física|Ondulatória|Frequência, Eletrocardiograma, Período|s|Batimentos por minuto lidos num eletrocardiograma||
 132|Biologia|Genética|Herança autossômica recessiva, Doenças hereditárias|n|Deficiência de lipase ácida lisossômica como doença de herança recessiva|Genomics|Revistas
 133|Química|Eletroquímica|Bateria de lítio-iodo, Força eletromotriz, Dispositivos|n|Dispositivo eletrônico adequado à força eletromotriz de uma bateria de lítio-iodo||
 134|Química|Química geral|Densidade, Dilatação, Alcoolômetro|n|Correção do alcoolômetro porque a temperatura altera a densidade da mistura|Incoterm|Artigos
 135|Química|Química orgânica|Polímeros condutores, Ligações conjugadas, Prêmio Nobel|n|Estrutura de um polímero condutor com ligações duplas conjugadas|Química Nova na Escola|Revistas
-136|Matemática|Álgebra|Proporção áurea, Potências, Sequência de Fibonacci|n|Potência do número de ouro escrita na forma a·φ + b, ligada à sequência de Fibonacci||
+136|Matemática|Álgebra|Proporção áurea, Potências, Sequência de Fibonacci|s|Potência do número de ouro escrita na forma a·φ + b, ligada à sequência de Fibonacci||
 137|Matemática|Geometria espacial|Projeção ortogonal, Cubo, Atomium|n|Projeção no solo do trajeto de um visitante pelas arestas e diagonais do Atomium|Trupe da Trip|Artigos
 138|Matemática|Análise combinatória|Permutação com repetição, Copa do Brasil, Futebol|s|Quantidade de painéis possíveis com os escudos dos campeões da Copa do Brasil|Campeões do Futebol|Artigos
-139|Matemática|Estatística|Média, Mediana, Comparação de dados|n|Novo lanche incluído no cardápio de uma hamburgueria pelas vendas nas franquias||
-140|Matemática|Estatística|Média ponderada, Faturamento|n|Tipo de comissão de um supermercado pela média de faturamento mensal||
-141|Matemática|Funções|Expressão algébrica, Porcentagem, Hospedagem|n|Expressão do preço pago a um aplicativo de hospedagem por n diárias||
-142|Matemática|Probabilidade|Probabilidade do evento complementar, Dardos|n|Quantidade mínima de dardos para tornar uma competição mais atrativa||
+139|Matemática|Estatística|Média, Mediana, Comparação de dados|s|Novo lanche incluído no cardápio de uma hamburgueria pelas vendas nas franquias||
+140|Matemática|Estatística|Média ponderada, Faturamento|s|Tipo de comissão de um supermercado pela média de faturamento mensal||
+141|Matemática|Funções|Expressão algébrica, Porcentagem, Hospedagem|s|Expressão do preço pago a um aplicativo de hospedagem por n diárias||
+142|Matemática|Probabilidade|Probabilidade do evento complementar, Dardos|s|Quantidade mínima de dardos para tornar uma competição mais atrativa||
 143|Matemática|Aritmética|Porcentagem, Leitura de gráfico, Reservatórios|s|Reservatório com maior volume de água na crise hídrica de 2015||
-144|Matemática|Estatística|Média ponderada, Gráfico de frequência, Idades|n|Média das idades de alunos a partir de um gráfico de frequência||
+144|Matemática|Estatística|Média ponderada, Gráfico de frequência, Idades|s|Média das idades de alunos a partir de um gráfico de frequência||
 145|Matemática|Estatística|Média, Tempo de leitura, Pesquisa IBGE|s|Valores de tempo de leitura por faixa etária a partir da média de uma pesquisa do IBGE|O Globo|Notícias
-146|Matemática|Estatística|Média, Desvio padrão, Ração de coelhos|n|Média mínima de massa dos coelhos para substituir uma ração||
+146|Matemática|Estatística|Média, Desvio padrão, Ração de coelhos|s|Média mínima de massa dos coelhos para substituir uma ração||
 147|Matemática|Aritmética|Criptografia, Cifra de César, Frequência de letras|n|Letras mais frequentes de um texto codificado pela cifra de César|Domínio Público|Artigos
-148|Matemática|Estatística|Mediana, Terremotos|n|Número anual típico de terremotos de magnitude 7 ou mais pela mediana|USGS|Artigos
-149|Matemática|Estatística|Leitura de gráfico, Lucro, Receita e despesa|n|Mês com o maior lucro até maio a partir do gráfico de receitas e despesas||
-150|Matemática|Aritmética|Porcentagem, Antidepressivos, Vendas|n|Aumento percentual nas vendas de antidepressivos entre 2005 e 2009|Veja|Revistas
-151|Matemática|Estatística|Mediana, Histograma, Preço de imóveis|n|Menor preço tal que metade dos apartamentos custa menos, lido num histograma||
-152|Matemática|Álgebra|Operações, Codificação, Funções compostas|n|Valor recebido por um navio numa mensagem codificada por operações numéricas||
+148|Matemática|Estatística|Mediana, Terremotos|s|Número anual típico de terremotos de magnitude 7 ou mais pela mediana|USGS|Artigos
+149|Matemática|Estatística|Leitura de gráfico, Lucro, Receita e despesa|s|Mês com o maior lucro até maio a partir do gráfico de receitas e despesas||
+150|Matemática|Aritmética|Porcentagem, Antidepressivos, Vendas|s|Aumento percentual nas vendas de antidepressivos entre 2005 e 2009|Veja|Revistas
+151|Matemática|Estatística|Mediana, Histograma, Preço de imóveis|s|Menor preço tal que metade dos apartamentos custa menos, lido num histograma||
+152|Matemática|Álgebra|Operações, Codificação, Funções compostas|s|Valor recebido por um navio numa mensagem codificada por operações numéricas||
 153|Matemática|Grandezas e medidas|Escala, Réplica, Castelo de Liechtenstein|s|Escala usada para construir a réplica de um castelo num parque temático brasileiro||
 154|Matemática|Funções|Função afim, Projeção, Demografia médica|s|Número de médicos por mil habitantes no Brasil em 2020 projetado|Cremesp|Artigos
-155|Matemática|Aritmética|Porcentagem, Custo de refeição|n|Redução percentual de frango para manter o custo de uma refeição após alta de preços||
-156|Matemática|Trigonometria|Função cosseno, Movimento harmônico, Mola|n|Função trigonométrica da posição de uma massa presa a uma mola||
-157|Matemática|Álgebra|Matrizes, Migração interna, Investimento imobiliário|n|Região escolhida para investimento pela matriz de mudanças de famílias||
-158|Matemática|Aritmética|Porcentagem, Consumo de combustível, Aeronaves|n|Comparação percentual do consumo de combustível entre dois modelos de avião||
-159|Matemática|Aritmética|Proporção inversa, Trabalho em equipe, Pit stop|n|Tempo de troca dos pneus quando uma das equipes do pit stop ficou reduzida||
-160|Matemática|Aritmética|Proporção, Suplementos, Custo mínimo|n|Suplemento mais barato que supre a falta de minerais na dieta||
-161|Matemática|Funções|Função quadrática, Arrecadação, Desconto|n|Gráfico parabólico da arrecadação de um teatro em função do desconto||
-162|Matemática|Funções|Função definida por partes, Imposto|n|Gráfico do imposto devido em faixas de preço||
-163|Matemática|Grandezas e medidas|Análise dimensional, Unidades do SI, Velocidade do som|n|Unidade do módulo volumétrico pela relação de Newton-Laplace||
-164|Matemática|Álgebra|Sistemas de equações, Bagagem, Massa|n|Número máximo de camisetas numa mala de até 10 kg a partir de duas pesagens||
-165|Matemática|Aritmética|Razão, Consumo de combustível, Motor|n|Novo desempenho médio de um carro com um motor mais econômico||
-166|Matemática|Geometria espacial|Área lateral, Paralelepípedo, Pintura|n|Fornecedor que calculou corretamente a tinta para pintar um contêiner||
-167|Matemática|Geometria espacial|Volume do cilindro, Reservatório, Seca|n|Altura mínima de um reservatório cilíndrico para abastecer um povoado na seca||
-168|Matemática|Geometria espacial|Octaedro, Planificação, Faces opostas|n|Face oposta à face cinza de um octaedro reconstruído a partir da planificação||
-169|Matemática|Geometria plana|Triângulo equilátero, Perímetro, Instrumento musical|n|Comprimento da barra de aço de um triângulo musical||
-170|Matemática|Geometria espacial|Volume do tronco de cone, Caneca|n|Capacidade de uma caneca de sopa em forma de tronco de cone||
-171|Matemática|Geometria plana|Áreas de figuras planas, Custo, Cartões imantados|n|Modelo de cartão imantado com maior área de impressão pelo mesmo custo||
-172|Matemática|Funções|Porcentagem, Frequência cardíaca, Faixas|n|Trechos em que um ciclista fica na faixa aeróbica ideal de frequência cardíaca||
-173|Matemática|Álgebra|Inequações, Receita mínima, Lava-rápido|n|Menor número de lavagens diárias para um lava-rápido não ter prejuízo||
-174|Matemática|Aritmética|Custo mínimo, Comparação de preços, Medicamentos|n|Combinação de farmácias que minimiza o gasto com três medicamentos||
+155|Matemática|Aritmética|Porcentagem, Custo de refeição|s|Redução percentual de frango para manter o custo de uma refeição após alta de preços||
+156|Matemática|Trigonometria|Função cosseno, Movimento harmônico, Mola|s|Função trigonométrica da posição de uma massa presa a uma mola||
+157|Matemática|Álgebra|Matrizes, Migração interna, Investimento imobiliário|s|Região escolhida para investimento pela matriz de mudanças de famílias||
+158|Matemática|Aritmética|Porcentagem, Consumo de combustível, Aeronaves|s|Comparação percentual do consumo de combustível entre dois modelos de avião||
+159|Matemática|Aritmética|Proporção inversa, Trabalho em equipe, Pit stop|s|Tempo de troca dos pneus quando uma das equipes do pit stop ficou reduzida||
+160|Matemática|Aritmética|Proporção, Suplementos, Custo mínimo|s|Suplemento mais barato que supre a falta de minerais na dieta||
+161|Matemática|Funções|Função quadrática, Arrecadação, Desconto|s|Gráfico parabólico da arrecadação de um teatro em função do desconto||
+162|Matemática|Funções|Função definida por partes, Imposto|s|Gráfico do imposto devido em faixas de preço||
+163|Matemática|Grandezas e medidas|Análise dimensional, Unidades do SI, Velocidade do som|s|Unidade do módulo volumétrico pela relação de Newton-Laplace||
+164|Matemática|Álgebra|Sistemas de equações, Bagagem, Massa|s|Número máximo de camisetas numa mala de até 10 kg a partir de duas pesagens||
+165|Matemática|Aritmética|Razão, Consumo de combustível, Motor|s|Novo desempenho médio de um carro com um motor mais econômico||
+166|Matemática|Geometria espacial|Área lateral, Paralelepípedo, Pintura|s|Fornecedor que calculou corretamente a tinta para pintar um contêiner||
+167|Matemática|Geometria espacial|Volume do cilindro, Reservatório, Seca|s|Altura mínima de um reservatório cilíndrico para abastecer um povoado na seca||
+168|Matemática|Geometria espacial|Octaedro, Planificação, Faces opostas|s|Face oposta à face cinza de um octaedro reconstruído a partir da planificação||
+169|Matemática|Geometria plana|Triângulo equilátero, Perímetro, Instrumento musical|s|Comprimento da barra de aço de um triângulo musical||
+170|Matemática|Geometria espacial|Volume do tronco de cone, Caneca|s|Capacidade de uma caneca de sopa em forma de tronco de cone||
+171|Matemática|Geometria plana|Áreas de figuras planas, Custo, Cartões imantados|s|Modelo de cartão imantado com maior área de impressão pelo mesmo custo||
+172|Matemática|Funções|Porcentagem, Frequência cardíaca, Faixas|s|Trechos em que um ciclista fica na faixa aeróbica ideal de frequência cardíaca||
+173|Matemática|Álgebra|Inequações, Receita mínima, Lava-rápido|s|Menor número de lavagens diárias para um lava-rápido não ter prejuízo||
+174|Matemática|Aritmética|Custo mínimo, Comparação de preços, Medicamentos|s|Combinação de farmácias que minimiza o gasto com três medicamentos||
 175|Matemática|Geometria espacial|Poliedros, Figuras planas, Brinquedos de praça|n|Quantidade de trapézios e quadrados formados pelas hastes de um brinquedo||
-176|Matemática|Aritmética|Sistema de numeração romano, Datas|n|Anos de fundação de uma cidade em 2050 a partir de um número romano||
-177|Matemática|Aritmética|Sistema binário, Bases numéricas|n|Representação em base binária da soma 9 + 12||
-178|Matemática|Grandezas e medidas|Hectare, Área, Loteamento|n|Valor total obtido com a venda de lotes de uma fazenda medida em hectares||
-179|Matemática|Análise combinatória|Combinação, Princípio multiplicativo, Fantasias|n|Quantidade de fantasias com 2 tecidos e 5 pedras escolhidos entre as opções||
-180|Matemática|Aritmética|Custo por usuário, Comparação, Laboratórios|n|Economia por usuário em quatro anos ao escolher um tipo de laboratório||
+176|Matemática|Aritmética|Sistema de numeração romano, Datas|s|Anos de fundação de uma cidade em 2050 a partir de um número romano||
+177|Matemática|Aritmética|Sistema binário, Bases numéricas|s|Representação em base binária da soma 9 + 12||
+178|Matemática|Grandezas e medidas|Hectare, Área, Loteamento|s|Valor total obtido com a venda de lotes de uma fazenda medida em hectares||
+179|Matemática|Análise combinatória|Combinação, Princípio multiplicativo, Fantasias|s|Quantidade de fantasias com 2 tecidos e 5 pedras escolhidos entre as opções||
+180|Matemática|Aritmética|Custo por usuário, Comparação, Laboratórios|s|Economia por usuário em quatro anos ao escolher um tipo de laboratório||
