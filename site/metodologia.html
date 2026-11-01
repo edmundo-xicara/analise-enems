@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Metodologia</title>
+  <meta name="description" content="Como a análise das questões do ENEM foi feita: a anotação manual de 2022, a continuação com IA, os critérios de classificação, o simulado e os dados abertos.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body data-area="metodologia">
+  <header class="hero hero-compact">
+    <div class="wrap">
+      <nav class="tabs" aria-label="Áreas">
+        <a href="index.html">Ciências Humanas</a>
+        <a href="exatas.html">Matemática e Natureza</a>
+        <a href="simulado.html">Simulado</a>
+        <a href="metodologia.html" aria-current="page">Metodologia</a>
+      </nav>
+      <p class="eyebrow">Como foi feito</p>
+      <h1>Metodologia</h1>
+      <p class="lede">De uma planilha preenchida à mão em 2022 a um site aberto em 2026: como as questões foram lidas, classificadas e transformadas em gráficos e simulado.</p>
+      <nav class="toc">
+        <a href="#humanas">Ciências Humanas</a>
+        <a href="#exatas">Matemática e Natureza</a>
+        <a href="#simulado">Simulado</a>
+        <a href="#ferramentas">Ferramentas</a>
+        <a href="#dados">Dados abertos e direitos</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap prose metodologia">
+    <section id="humanas">
+      <h2>Ciências Humanas</h2>
+      <h4>Como a análise foi feita</h4>
+      <p>Entre o fim de 2022 e o início de 2023, antes da popularização da IA generativa, abri as provas do 1º dia do ENEM e li uma a uma as 45 questões de Ciências Humanas de cada ano. Para cada questão, anotei numa planilha:</p>
+      <ul>
+        <li><strong>Disciplina</strong>: História, Geografia, Filosofia ou Sociologia.</li>
+        <li><strong>Matéria</strong>: o recorte dentro da disciplina (ex.: Brasil República, Climatologia, Ética).</li>
+        <li><strong>Assuntos</strong>: de 2 a 6 palavras-chave do conteúdo cobrado.</li>
+        <li><strong>Brasil</strong>: se a questão é ambientada no Brasil (s/n).</li>
+        <li><strong>Abordagem</strong>: uma frase que resume o que a questão discute.</li>
+        <li><strong>Fonte</strong> e <strong>Tipo de fonte</strong>: de onde vem o texto-base (livro, notícia, revista, artigo, imagem, música, poema).</li>
+      </ul>
+      <p>Depois, organizei tudo em Python (tabelas de assuntos, fontes e autores) e montei uma apresentação no Power BI. Este site substitui essa apresentação por uma versão aberta, que qualquer pessoa pode consultar e reaproveitar.</p>
+      <h4>A continuação (2023–2025)</h4>
+      <p>Em 2026, com o Claude (IA da Anthropic) trabalhando como assistente de programação, segui o mesmo esquema nas provas de 2023, 2024 e 2025. O texto das questões foi extraído dos cadernos oficiais do INEP (caderno azul do 1º dia), e cada questão foi classificada com o mesmo vocabulário de matérias da análise original. <strong>Essas linhas estão marcadas como “IA” no explorador</strong> e ainda passarão por uma revisão humana.</p>
+      <h4>Limitações</h4>
+      <ul>
+        <li>De <strong>2009 a 2014</strong> só existem os totais por disciplina e o número de questões ambientadas no Brasil (transcritos da apresentação original). A anotação questão a questão cobre <strong>2015–2025</strong>.</li>
+        <li>Em 2015 e 2016, parte das questões tem só disciplina, matéria e fonte, sem assuntos nem abordagem.</li>
+        <li>A classificação de matéria e de “ambientada no Brasil” envolve julgamento; outra pessoa poderia classificar diferente.</li>
+        <li>A numeração das questões segue o caderno azul de cada ano.</li>
+      </ul>
+    </section>
+
+    <section id="exatas">
+      <h2>Matemática e Natureza</h2>
+      <h4>Como foi feito</h4>
+      <p>A aba de Matemática e Natureza aplica o mesmo esquema da análise de Ciências Humanas às questões de Matemática (Q136–180) e de Ciências da Natureza (Q91–135; em 2015 e 2016, Q46–90 do 1º dia) do caderno azul de cada ano, de 2015 a 2025. São 990 questões.</p>
+      <p>O texto das questões foi extraído dos cadernos oficiais do INEP, e cada uma foi classificada pelo Claude (IA da Anthropic) com as colunas de Humanas (disciplina, matéria, assuntos, abordagem, fonte e tipo de fonte). A exceção é “ambientada no Brasil”, que pouco diz sobre uma prova de Exatas e foi trocada por <strong>cálculo × conceitual</strong>. <strong>Todas essas questões estão marcadas como “IA”</strong> e ainda passarão por uma revisão humana.</p>
+      <h4>Critérios específicos de Exatas</h4>
+      <ul>
+        <li><strong>Matérias de Matemática</strong>: Aritmética, Estatística, Probabilidade, Análise combinatória, Funções, Álgebra, Geometria plana, espacial e analítica, Trigonometria, Sequências e progressões, Matemática financeira e Grandezas e medidas.</li>
+        <li><strong>Matérias de Física</strong>: Mecânica, Ondulatória, Eletricidade, Eletromagnetismo, Termologia, Óptica, Hidrostática, Energia, Física moderna e Astronomia.</li>
+        <li><strong>Matérias de Química</strong>: Química geral, Físico-química, Química orgânica, Estequiometria, Eletroquímica, Termoquímica, Radioatividade e Química ambiental.</li>
+        <li><strong>Matérias de Biologia</strong>: Ecologia, Genética, Evolução, Citologia, Bioquímica, Botânica, Zoologia, Fisiologia humana, Saúde e doenças e Biotecnologia.</li>
+        <li><strong>Exige cálculo</strong>: a resposta depende de uma operação numérica ou algébrica, mesmo que a alternativa seja um nome ou uma opção (ex.: “qual loja é mais barata”). <strong>Conceitual</strong>: a resposta sai da interpretação de um fenômeno, de um conceito, de um gráfico sem contas ou da visualização espacial (projeções, planificações). A classificação foi pré-feita automaticamente pelas alternativas e pelo enunciado, e os 183 casos ambíguos foram revisados um a um.</li>
+        <li><strong>Fonte</strong>: fica em branco quando o enunciado não cita nenhuma.</li>
+      </ul>
+      <h4>Limitações</h4>
+      <ul>
+        <li>Não há dados de 2009 a 2014 para Exatas.</li>
+        <li>Em questões com imagens ou gráficos, a classificação se baseou no texto extraído do PDF, que não descreve a figura.</li>
+        <li>O PDF de 2021 usa uma fonte codificada; o texto foi decodificado automaticamente e alguns símbolos se perderam.</li>
+      </ul>
+    </section>
+
+    <section id="simulado">
+      <h2>Simulado</h2>
+      <p>O simulado usa as mesmas 1 485 questões classificadas nas duas áreas (2015–2025), com o filtro de disciplina, matéria e ano aplicado sobre essa classificação.</p>
+      <ul>
+        <li><strong>Questões</strong>: cada uma foi recortada, como imagem, do caderno azul oficial do INEP, sem nenhuma alteração. O recorte acompanha questões que continuam na outra coluna ou na página seguinte, e uma checagem automática confirma que nenhuma imagem inclui pedaço de outra questão ou deixa linhas de fora.</li>
+        <li><strong>Correção</strong>: pelo gabarito oficial do caderno azul de cada ano, lido dos PDFs do INEP. As questões anuladas ficam fora do sorteio.</li>
+        <li><strong>Sorteio</strong>: as questões que passam pelos filtros são embaralhadas a cada simulado, então os anos se misturam.</li>
+        <li><strong>Histórico</strong>: o total de acertos fica salvo só no seu navegador. O site não coleta nenhum dado pessoal.</li>
+      </ul>
+    </section>
+
+    <section id="ferramentas">
+      <h2>Ferramentas open source usadas</h2>
+      
+      <ul>
+        <li><a href="https://github.com/Hugoberry/pbixray" target="_blank" rel="noopener">pbixray</a>: leu o modelo de dados do arquivo do Power BI.</li>
+        <li><a href="https://enem.dev" target="_blank" rel="noopener">enem.dev</a>: API aberta com as questões do ENEM até 2023, usada para conferir o texto de 2023.</li>
+        <li><a href="https://pymupdf.readthedocs.io" target="_blank" rel="noopener">PyMuPDF</a>: recorte das questões e leitura dos gabaritos.</li>
+        <li><a href="https://pypdf.readthedocs.io" target="_blank" rel="noopener">pypdf</a> e <a href="https://pandas.pydata.org" target="_blank" rel="noopener">pandas</a>: extração dos textos e montagem dos dados.</li>
+        <li><a href="https://echarts.apache.org" target="_blank" rel="noopener">Apache ECharts</a>: os gráficos deste site.</li>
+      </ul>
+    </section>
+
+    <section id="dados">
+      <h2>Dados abertos e direitos</h2>
+      <p>Tudo está no <a href="https://github.com/edmundo-xicara/analise-enems" target="_blank" rel="noopener">repositório no GitHub</a>: as planilhas e o Power BI originais, as classificações de cada ano, as bases consolidadas (<code>dados/questoes.csv</code> e <code>dados/questoes_exatas.csv</code>), os gabaritos e os scripts que geram o site.</p>
+      <ul>
+        <li><strong>Código</strong>: licença MIT.</li>
+        <li><strong>Classificações e dados derivados</strong>: <a href="https://creativecommons.org/licenses/by/4.0/deed.pt_BR" target="_blank" rel="noopener">CC BY 4.0</a>. Cite o projeto ao reutilizar.</li>
+        <li><strong>Provas, gabaritos e imagens das questões</strong>: pertencem ao INEP e aos autores dos textos citados, e não estão sob as licenças acima.</li>
+      </ul>
+      <p>Achou um erro de classificação ou um recorte com problema? <a href="https://github.com/edmundo-xicara/analise-enems/issues" target="_blank" rel="noopener">Abra uma issue</a>.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <p>Feito por <a href="https://github.com/edmundo-xicara" target="_blank" rel="noopener">Edmundo</a> · código e dados abertos no <a href="https://github.com/edmundo-xicara/analise-enems" target="_blank" rel="noopener">GitHub</a></p>
+      <p class="aviso">Projeto independente e sem fins lucrativos, sem vínculo com o INEP ou o MEC. As provas e os gabaritos são publicações do INEP (<a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos" target="_blank" rel="noopener">provas e gabaritos oficiais</a>), reproduzidas sem alteração e com indicação de fonte, para fins de estudo. Os textos e imagens citados em cada questão pertencem aos seus autores, indicados na própria questão. Se você é titular de algum conteúdo e quer que ele seja retirado, <a href="https://github.com/edmundo-xicara/analise-enems/issues" target="_blank" rel="noopener">abra uma issue</a>.</p>
+    </div>
+  </footer>
+</body>
+</html>

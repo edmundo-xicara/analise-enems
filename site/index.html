@@ -19,6 +19,7 @@
         <a href="index.html" aria-current="page">Ciências Humanas</a>
         <a href="exatas.html">Matemática e Natureza</a>
         <a href="simulado.html">Simulado</a>
+        <a href="metodologia.html">Metodologia</a>
       </nav>
     </div>
     <div class="wrap">
@@ -31,7 +32,7 @@
         <a href="#brasil">Ambientadas no Brasil</a>
         <a href="#materias">Matérias, assuntos e questões</a>
         <a href="#fontes">Fontes</a>
-        <a href="#metodologia">Metodologia</a>
+        <a href="metodologia.html">Metodologia</a>
         <a href="https://github.com/edmundo-xicara/analise-enems" target="_blank" rel="noopener">GitHub ↗</a>
       </nav>
     </div>
@@ -160,38 +161,6 @@
       </div>
     </section>
 
-    <section id="metodologia" class="prose">
-      <h2>Metodologia</h2>
-      <h3>Como a análise foi feita</h3>
-      <p>Entre o fim de 2022 e o início de 2023, antes da popularização da IA generativa, abri as provas do 1º dia do ENEM e li uma a uma as 45 questões de Ciências Humanas de cada ano. Para cada questão, anotei numa planilha:</p>
-      <ul>
-        <li><strong>Disciplina</strong>: História, Geografia, Filosofia ou Sociologia.</li>
-        <li><strong>Matéria</strong>: o recorte dentro da disciplina (ex.: Brasil República, Climatologia, Ética).</li>
-        <li><strong>Assuntos</strong>: de 2 a 6 palavras-chave do conteúdo cobrado.</li>
-        <li><strong>Brasil</strong>: se a questão é ambientada no Brasil (s/n).</li>
-        <li><strong>Abordagem</strong>: uma frase que resume o que a questão discute.</li>
-        <li><strong>Fonte</strong> e <strong>Tipo de fonte</strong>: de onde vem o texto-base (livro, notícia, revista, artigo, imagem, música, poema).</li>
-      </ul>
-      <p>Depois, organizei tudo em Python (tabelas de assuntos, fontes e autores) e montei uma apresentação no Power BI. Este site substitui essa apresentação por uma versão aberta, que qualquer pessoa pode consultar e reaproveitar.</p>
-      <h3>A continuação (2023–2025)</h3>
-      <p>Em 2026, com o Claude (IA da Anthropic) trabalhando como assistente de programação, segui o mesmo esquema nas provas de 2023, 2024 e 2025. O texto das questões foi extraído dos cadernos oficiais do INEP (caderno azul do 1º dia), e cada questão foi classificada com o mesmo vocabulário de matérias da análise original. <strong>Essas linhas estão marcadas como “IA” no explorador</strong> e ainda passarão por uma revisão humana.</p>
-      <h3>Limitações</h3>
-      <ul>
-        <li>De <strong>2009 a 2014</strong> só existem os totais por disciplina e o número de questões ambientadas no Brasil (transcritos da apresentação original). A anotação questão a questão cobre <strong>2015–2025</strong>.</li>
-        <li>Em 2015 e 2016, parte das questões tem só disciplina, matéria e fonte, sem assuntos nem abordagem.</li>
-        <li>A classificação de matéria e de “ambientada no Brasil” envolve julgamento; outra pessoa poderia classificar diferente.</li>
-        <li>A numeração das questões segue o caderno azul de cada ano.</li>
-      </ul>
-      <h3>Ferramentas open source usadas</h3>
-      <ul>
-        <li><a href="https://github.com/Hugoberry/pbixray" target="_blank" rel="noopener">pbixray</a>: leu o modelo de dados do arquivo do Power BI.</li>
-        <li><a href="https://enem.dev" target="_blank" rel="noopener">enem.dev</a>: API aberta com as questões do ENEM até 2023, usada para conferir o texto de 2023.</li>
-        <li><a href="https://pypdf.readthedocs.io" target="_blank" rel="noopener">pypdf</a> e <a href="https://pandas.pydata.org" target="_blank" rel="noopener">pandas</a>: extração dos textos e montagem dos dados.</li>
-        <li><a href="https://echarts.apache.org" target="_blank" rel="noopener">Apache ECharts</a>: os gráficos deste site.</li>
-      </ul>
-      <h3>Dados abertos</h3>
-      <p>Tudo está no <a href="https://github.com/edmundo-xicara/analise-enems" target="_blank" rel="noopener">repositório no GitHub</a>: as planilhas originais, o <code>questoes.csv</code> consolidado e os scripts. Achou um erro de classificação? Abra uma <em>issue</em>.</p>
-    </section>
   </main>
 
   <footer class="footer">
