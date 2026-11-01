@@ -240,3 +240,17 @@ main.metodologia > section { max-width: 760px; }
 .tabs { overflow-x: auto; scrollbar-width: none; }
 .tabs a { white-space: nowrap; }
 @media (max-width: 860px) { .tabs a { padding: 10px 12px; font-size: 14px; } }
+
+/* Questão original (Explorar questões) */
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+.ver-questao { font: 500 13px Inter, sans-serif; white-space: nowrap; padding: 5px 10px; border-radius: 8px; border: 1px solid var(--line); background: var(--surface); color: var(--accent); cursor: pointer; }
+.ver-questao:hover { border-color: var(--accent); }
+.questao-dlg { width: min(720px, calc(100vw - 32px)); max-height: calc(100vh - 32px); padding: 18px 20px 14px; border: 1px solid var(--line); border-radius: 14px; background: var(--surface); color: var(--ink); }
+.questao-dlg::backdrop { background: rgb(0 0 0 / .55); }
+.qd-topo { display: flex; align-items: center; justify-content: space-between; gap: 12px; }
+.qd-topo h3 { margin: 0; font-size: 16px; }
+.qd-fechar { font-size: 26px; line-height: 1; background: none; border: 0; color: var(--muted); cursor: pointer; padding: 0 4px; }
+.qd-gab { margin: 10px 0 12px; padding: 8px 12px; border-radius: 8px; background: color-mix(in srgb, var(--accent) 14%, transparent); font-size: 15px; }
+.qd-gab strong { color: var(--accent); font-size: 17px; }
+.questao-dlg img { width: 100%; max-width: 640px; display: block; margin: 0 auto; border-radius: 8px; background: #fff; }
+.qd-fonte { margin: 10px 0 0; color: var(--muted); font-size: 12px; }

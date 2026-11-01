@@ -167,6 +167,10 @@ function renderFiltros() {
   const busca = document.getElementById("busca");
   busca.oninput = () => { estado.busca = busca.value; estado.limite = LIMITE; renderQuestoes(); };
   document.getElementById("mais").onclick = () => { estado.limite += 60; renderQuestoes(); };
+  document.getElementById("t-questoes").onclick = (e) => {
+    const b = e.target.closest(".ver-questao");
+    if (b) abrirQuestao(+b.dataset.ano, +b.dataset.q);
+  };
 }
 
 function opcoesSelect(id, rotuloTodos, valores, atual) {
@@ -365,8 +369,37 @@ function renderQuestoes() {
       <td>${esc(q.abordagem || "—")}<div class="assuntos">${esc(q.assuntos.join(" · "))}</div></td>
       <td>${esc(q.fonte || "—")}</td>
       <td>${q[M.campo] ? M.icone : ""}</td>
-    </tr>`).join("") : `<tr><td colspan="7" class="empty">Nenhuma questão neste filtro.</td></tr>`;
+      <td><button type="button" class="ver-questao" data-ano="${q.ano}" data-q="${q.q}">Ver questão</button></td>
+    </tr>`).join("") : `<tr><td colspan="8" class="empty">Nenhuma questão neste filtro.</td></tr>`;
   document.getElementById("mais").hidden = qs.length <= estado.limite;
+}
+
+// Questão original (recorte do caderno azul do INEP) com o gabarito oficial por escrito.
+function abrirQuestao(ano, num) {
+  const q = QUESTOES.find((x) => x.ano === ano && x.q === num);
+  let dlg = document.getElementById("questao-original");
+  if (!dlg) {
+    document.body.insertAdjacentHTML("beforeend", `
+      <dialog id="questao-original" class="questao-dlg" aria-labelledby="qd-titulo">
+        <div class="qd-topo">
+          <h3 id="qd-titulo"></h3>
+          <button type="button" class="qd-fechar" aria-label="Fechar">×</button>
+        </div>
+        <p class="qd-gab" id="qd-gab"></p>
+        <img id="qd-img" alt="" decoding="async">
+        <p class="qd-fonte">Caderno azul do ENEM, publicado pelo INEP.</p>
+      </dialog>`);
+    dlg = document.getElementById("questao-original");
+    dlg.querySelector(".qd-fechar").onclick = () => dlg.close();
+    dlg.onclick = (e) => { if (e.target === dlg) dlg.close(); };  // clique fora do cartão fecha
+  }
+  dlg.querySelector("#qd-titulo").textContent = `ENEM ${ano} · Questão ${num} · ${q.disciplina}`;
+  dlg.querySelector("#qd-gab").innerHTML = q.gab === "X" ? "Questão <strong>anulada</strong> pelo INEP."
+    : q.gab ? `Resposta certa: <strong>${q.gab}</strong>` : "Gabarito indisponível.";
+  const img = dlg.querySelector("#qd-img");
+  img.src = `questoes/${document.body.dataset.area || "humanas"}/${ano}-${num}.webp`;
+  img.alt = `Questão ${num} do ENEM ${ano}`;
+  dlg.showModal();
 }
 
 /* ---------- Bloco 4: fontes ---------- */
