@@ -1,22 +1,28 @@
 const DISC = {
   humanas: ["História", "Geografia", "Filosofia", "Sociologia"],
+  linguagens: ["Português", "Literatura", "Língua Estrangeira", "Artes", "Educação Física"],
   exatas: ["Matemática", "Física", "Química", "Biologia"],
 };
+const TODAS = [...DISC.humanas, ...DISC.linguagens, ...DISC.exatas];
 const COR = {
   "História": "--hist", "Geografia": "--geo", "Filosofia": "--filo", "Sociologia": "--soc",
+  "Português": "--por", "Literatura": "--lit", "Língua Estrangeira": "--le", "Artes": "--art", "Educação Física": "--edf",
   "Matemática": "--mat", "Física": "--fis", "Química": "--qui", "Biologia": "--bio",
 };
 const LETRAS = ["A", "B", "C", "D", "E"];
 const CHAVE_HISTORICO = "simulado-enem-historico";
 
 let BANCO = [];
-const filtro = { area: "todas", disc: new Set([...DISC.humanas, ...DISC.exatas]), de: 2015, ate: 2025, materias: null, qtd: 10 };
+const filtro = { area: "todas", disc: new Set(TODAS), de: 2015, ate: 2025, materias: null, qtd: 10 };
 let sessao = null;
 
 const $ = (id) => document.getElementById(id);
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const tag = (d) => `<span class="tag" style="--c:var(${COR[d]})">${d}</span>`;
 const norm = (s) => s.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
+// As questões de língua estrangeira têm uma imagem para o inglês e outra para o espanhol.
+const imagem = (q) => `questoes/${q.area}/${q.ano}-${q.q}${q.esp ? "-esp" : ""}.webp`;
+const numero = (q) => `questão ${q.q}${q.esp ? " (espanhol)" : ""}`;
 
 function lerHistorico() {
   try { return JSON.parse(localStorage.getItem(CHAVE_HISTORICO)) || { feitas: 0, acertos: 0 }; } catch { return { feitas: 0, acertos: 0 }; }
@@ -37,7 +43,7 @@ function embaralhar(lista) {
 /* ---------- Configuração ---------- */
 
 function disciplinasDaArea() {
-  return filtro.area === "todas" ? [...DISC.humanas, ...DISC.exatas] : DISC[filtro.area];
+  return filtro.area === "todas" ? TODAS : DISC[filtro.area];
 }
 
 // Questões que passam por área, disciplina e anos (antes do filtro de matéria).
@@ -159,9 +165,9 @@ function renderQuestao() {
   const acertos = sessao.respostas.filter((r) => r.certa).length;
   $("p-placar").textContent = sessao.respostas.length ? `${acertos} de ${sessao.respostas.length} certas` : "";
   $("p-barra").style.width = `${(sessao.i / total) * 100}%`;
-  $("p-meta").innerHTML = `ENEM ${q.ano} · questão ${q.q} · ${tag(q.disciplina)} <span class="sim-materia">${esc(q.materia)}</span>`;
+  $("p-meta").innerHTML = `ENEM ${q.ano} · ${numero(q)} · ${tag(q.disciplina)} <span class="sim-materia">${esc(q.materia)}</span>`;
   const img = $("p-img");
-  img.src = `questoes/${q.area}/${q.ano}-${q.q}.webp`;
+  img.src = imagem(q);
   img.alt = `Questão ${q.q} do ENEM ${q.ano} (${q.disciplina}, ${q.materia})`;
   $("p-alts").innerHTML = LETRAS.map((l) => `<button type="button" class="sim-alt" data-l="${l}">${l}</button>`).join("");
   $("p-feedback").hidden = true;
@@ -170,7 +176,7 @@ function renderQuestao() {
   $("p-pular").hidden = false;
   // pré-carrega a próxima imagem
   const prox = sessao.fila[sessao.i + 1];
-  if (prox) new Image().src = `questoes/${prox.area}/${prox.ano}-${prox.q}.webp`;
+  if (prox) new Image().src = imagem(prox);
 }
 
 function escolher(l) {
@@ -238,8 +244,8 @@ function resultado() {
   const erros = rs.filter((r) => !r.certa);
   $("r-erros").innerHTML = erros.length ? erros.map((r) => `
     <details class="sim-erro">
-      <summary>ENEM ${r.q.ano} · questão ${r.q.q} · ${esc(r.q.materia)} — você marcou ${r.escolha}, a certa é ${r.q.gab}</summary>
-      <img src="questoes/${r.q.area}/${r.q.ano}-${r.q.q}.webp" alt="Questão ${r.q.q} do ENEM ${r.q.ano}" loading="lazy">
+      <summary>ENEM ${r.q.ano} · ${numero(r.q)} · ${esc(r.q.materia)} — você marcou ${r.escolha}, a certa é ${r.q.gab}</summary>
+      <img src="${imagem(r.q)}" alt="Questão ${r.q.q} do ENEM ${r.q.ano}" loading="lazy">
       ${r.q.abordagem ? `<p>${esc(r.q.abordagem)}</p>` : ""}
     </details>`).join("") : `<p class="empty">Nenhum erro. Mandou bem!</p>`;
   renderHistorico();
@@ -249,12 +255,13 @@ function resultado() {
 /* ---------- Início ---------- */
 
 async function iniciar() {
-  const [h, e] = await Promise.all([
+  const [h, l, e] = await Promise.all([
     fetch("data/questoes.json").then((r) => r.json()),
+    fetch("data/questoes_linguagens.json").then((r) => r.json()),
     fetch("data/questoes_exatas.json").then((r) => r.json()),
   ]);
   // Questões anuladas ou sem gabarito ficam de fora do simulado.
-  BANCO = [...h.map((q) => ({ ...q, area: "humanas" })), ...e.map((q) => ({ ...q, area: "exatas" }))]
+  BANCO = [...h.map((q) => ({ ...q, area: "humanas" })), ...l.map((q) => ({ ...q, area: "linguagens" })), ...e.map((q) => ({ ...q, area: "exatas" }))]
     .filter((q) => LETRAS.includes(q.gab));
   ligarConfiguracao();
   renderDisciplinas();

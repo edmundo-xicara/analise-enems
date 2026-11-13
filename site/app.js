@@ -14,6 +14,13 @@ const AREAS = {
     provas: "provas (2015–2025)",
     marcador: { campo: "calculo", sim: "Exige cálculo", nao: "Conceitual", kpi: "exigem cálculo (2015–2025)", icone: "✓" },
   },
+  linguagens: {
+    disciplinas: ["Português", "Literatura", "Língua Estrangeira", "Artes", "Educação Física"],
+    cores: { "Português": "--por", "Literatura": "--lit", "Língua Estrangeira": "--le", "Artes": "--art", "Educação Física": "--edf" },
+    dados: ["data/questoes_linguagens.json", "data/anual_linguagens.json"],
+    provas: "provas (2015–2025)",
+    marcador: { campo: "literario", sim: "Texto literário", nao: "Não literário", kpi: "partem de texto literário (2015–2025)", icone: "✓" },
+  },
 };
 const AREA = AREAS[document.body.dataset.area] || AREAS.humanas;
 const DISCIPLINAS = AREA.disciplinas;
@@ -488,6 +495,8 @@ async function iniciar() {
     fetch(AREA.dados[0]).then((r) => r.json()),
     fetch(AREA.dados[1]).then((r) => r.json()),
   ]);
+  // a versão em espanhol das questões de língua estrangeira só entra no simulado
+  QUESTOES = QUESTOES.filter((q) => !q.esp);
   renderKpis();
   renderFiltros();
   atualizar();

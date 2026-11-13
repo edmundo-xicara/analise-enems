@@ -35,11 +35,12 @@ def limpar(df: pd.DataFrame, metodo: str, marcador: tuple[str, str] = ("Brasil",
 
 
 def gabarito() -> dict:
-    """Resposta oficial do caderno azul por (ano, questão); "X" = anulada. Ver scripts/gabaritos.py."""
+    """Resposta oficial do caderno azul por (ano, "questão"); "X" = anulada e "N-esp" é a versão em
+    espanhol das questões de língua estrangeira. Ver scripts/gabaritos.py."""
     arq = DADOS / "gabaritos.json"
     if not arq.exists():
         return {}
-    return {(int(a), int(q)): r for a, qs in json.loads(arq.read_text()).items() for q, r in qs.items()}
+    return {(int(a), q): r for a, qs in json.loads(arq.read_text()).items() for q, r in qs.items()}
 
 
 GABARITO = gabarito()
@@ -84,7 +85,7 @@ def main() -> None:
             "ano": int(q.ano), "q": int(q.questao), "disciplina": q.disciplina,
             "materia": q.materia, "assuntos": separar(q.assuntos), "brasil": bool(q.brasil),
             "abordagem": q.abordagem, "fonte": q.fonte, "tipos": separar(q.tipo_fonte),
-            "metodo": q.metodo, "gab": GABARITO.get((int(q.ano), int(q.questao)), ""),
+            "metodo": q.metodo, "gab": GABARITO.get((int(q.ano), str(q.questao)), ""),
         })
 
     SITE.mkdir(parents=True, exist_ok=True)
@@ -93,6 +94,7 @@ def main() -> None:
     print(f"{len(registros)} questões ({questoes['ano'].min()}–{questoes['ano'].max()}), {len(anual)} anos no resumo")
 
     exatas()
+    linguagens()
 
 
 def exatas() -> None:
@@ -115,12 +117,49 @@ def exatas() -> None:
         "ano": int(q.ano), "q": int(q.questao), "disciplina": q.disciplina,
         "materia": q.materia, "assuntos": separar(q.assuntos), "calculo": bool(q.calculo),
         "abordagem": q.abordagem, "fonte": q.fonte, "tipos": separar(q.tipo_fonte),
-        "metodo": q.metodo, "gab": GABARITO.get((int(q.ano), int(q.questao)), ""),
+        "metodo": q.metodo, "gab": GABARITO.get((int(q.ano), str(q.questao)), ""),
     } for q in questoes.itertuples()]
 
     (SITE / "questoes_exatas.json").write_text(json.dumps(registros, ensure_ascii=False), encoding="utf-8")
     (SITE / "anual_exatas.json").write_text(json.dumps(anual, ensure_ascii=False), encoding="utf-8")
     print(f"Exatas: {len(registros)} questões")
+
+
+
+def linguagens() -> None:
+    """Linguagens (2015–2025), classificadas com ajuda de IA. As questões 1 a 5 (91 a 95 em
+    2015–2016) têm uma versão em inglês e outra em espanhol ("1-esp"): as duas vão para o
+    simulado, mas só a de inglês entra nas contagens, para cada prova somar 45 questões."""
+    frames = []
+    for arq in sorted((DADOS / "anotacoes_linguagens").glob("*.psv")):
+        df = pd.read_csv(arq, sep="|", dtype=str, keep_default_na=False)
+        df["Ano"] = int(arq.stem)
+        df["esp"] = df["Questão"].str.endswith("-esp")
+        df["Questão"] = df["Questão"].str.removesuffix("-esp").astype(int)
+        frames.append(limpar(df, "ia", ("Literário", "literario")).assign(esp=df["esp"].to_numpy()))
+    questoes = pd.concat(frames).sort_values(["ano", "questao", "esp"]).reset_index(drop=True)
+    questoes.to_csv(DADOS / "questoes_linguagens.csv", index=False, quoting=csv.QUOTE_NONNUMERIC)
+
+    prova = questoes[~questoes["esp"]]
+    anual = [{
+        "ano": int(ano), "fonte": "ia",
+        "disciplinas": g["disciplina"].value_counts().to_dict(),
+        "literario": int(g["literario"].sum()), "total": len(g),
+    } for ano, g in prova.groupby("ano")]
+    registros = []
+    for q in questoes.itertuples():
+        chave = f"{q.questao}-esp" if q.esp else str(q.questao)
+        registros.append({
+            "ano": int(q.ano), "q": int(q.questao), "disciplina": q.disciplina,
+            "materia": q.materia, "assuntos": separar(q.assuntos), "literario": bool(q.literario),
+            "abordagem": q.abordagem, "fonte": q.fonte, "tipos": separar(q.tipo_fonte),
+            "metodo": q.metodo, "gab": GABARITO.get((int(q.ano), chave), ""),
+            **({"esp": True} if q.esp else {}),
+        })
+
+    (SITE / "questoes_linguagens.json").write_text(json.dumps(registros, ensure_ascii=False), encoding="utf-8")
+    (SITE / "anual_linguagens.json").write_text(json.dumps(anual, ensure_ascii=False), encoding="utf-8")
+    print(f"Linguagens: {len(prova)} questões + {int(questoes['esp'].sum())} versões em espanhol")
 
 
 if __name__ == "__main__":

@@ -25,6 +25,8 @@ LARGURA_MAX = 760   # px
 def pdf_da_questao(area: str, ano: int, q: int) -> Path:
     if area == "humanas":
         return ENEMS / f"{ano}.pdf"
+    if area == "linguagens":  # 1º dia a partir de 2017; antes, 2º dia (questões 91 a 135)
+        return ENEMS / (f"{ano}.pdf" if ano >= 2017 else f"exatas/{ano}_D2.pdf")
     if q <= 90:  # Natureza no 1º dia (2015 e 2016)
         return ENEMS / f"{ano}.pdf"
     return ENEMS / "exatas" / f"{ano}_D2.pdf"
@@ -41,6 +43,18 @@ def cabecalhos(doc: pymupdf.Document) -> list[tuple[int, int, float, float]]:
             num = [w for w in palavras if abs(w[1] - y0) < 4 and x1 < w[0] < x1 + 40 and re.fullmatch(r"\d{1,3}", w[4])]
             if num:
                 achados.append((int(num[0][4]), pn, x0, y0))
+    return achados
+
+
+def textos_base(doc: pymupdf.Document) -> list[tuple[tuple[int, int], int, float, float]]:
+    """((primeira, última), página, x0, y0) de cada "Texto para as Questões de N a M": o texto
+    que vem depois do aviso é de todas essas questões, não da que vem antes dele."""
+    achados = []
+    for pn, pagina in enumerate(doc):
+        for x0, y0, _, _, txt, *_ in pagina.get_text("blocks"):
+            m = re.match(r"\s*Textos? para as quest\S+ de (\d+) a (\d+)", txt, re.I)
+            if m:
+                achados.append(((int(m[1]), int(m[2])), pn, x0, y0))
     return achados
 
 
@@ -208,30 +222,44 @@ def aparar(img: Image.Image, margem: int = 10) -> Image.Image:
 
 def main() -> None:
     alvos = {}
-    for area, arq in (("humanas", "questoes.json"), ("exatas", "questoes_exatas.json")):
+    for area, arq in (("humanas", "questoes.json"), ("exatas", "questoes_exatas.json"),
+                      ("linguagens", "questoes_linguagens.json")):
         for q in json.loads((RAIZ / "site" / "data" / arq).read_text(encoding="utf-8")):
-            alvos.setdefault(pdf_da_questao(area, q["ano"], q["q"]), []).append((area, q["ano"], q["q"]))
+            alvos.setdefault(pdf_da_questao(area, q["ano"], q["q"]), []).append((area, q["ano"], q["q"], q.get("esp", False)))
 
     falhas = []
     for pdf, lista in sorted(alvos.items()):
         doc = pymupdf.open(pdf)
-        heads = sorted(cabecalhos(doc), key=lambda h: (h[1], 0 if h[2] < doc[h[1]].rect.width * 0.45 else 1, h[3]))
-        # mantém só a primeira ocorrência de cada número (ignora instruções que citam "questão 1")
-        vistos, ordem = set(), []
+        heads = sorted(cabecalhos(doc) + textos_base(doc),
+                       key=lambda h: (h[1], 0 if h[2] < doc[h[1]].rect.width * 0.45 else 1, h[3]))
+        # mantém só a primeira ocorrência de cada número (ignora instruções que citam "questão 1"),
+        # exceto nas questões de língua estrangeira, cuja segunda ocorrência é a versão em espanhol
+        vistos, ordem, pos, texto_de = {}, [], {}, {}
         for h in heads:
-            if h[0] not in vistos:
-                vistos.add(h[0])
+            if isinstance(h[0], tuple):  # aviso de texto-base: também limita a questão anterior
+                texto_de.update({n: len(ordem) for n in range(h[0][0], h[0][1] + 1)})
+                ordem.append(h)
+                continue
+            n = vistos.get(h[0], 0)
+            if n == 0 or (n == 1 and (h[0] - 1) % 90 < 5):
+                vistos[h[0]] = n + 1
+                pos[(h[0], n == 1)] = len(ordem)
                 ordem.append(h)
         layout = Layout(doc, ordem)
-        pos = {h[0]: i for i, h in enumerate(ordem)}
-        for area, ano, q in lista:
-            if q not in pos:
-                falhas.append((ano, q))
+        for area, ano, q, esp in lista:
+            if (q, esp) not in pos:
+                falhas.append((ano, q, esp))
                 continue
-            i = pos[q]
+            i = pos[(q, esp)]
             fim = ordem[i + 1] if i + 1 < len(ordem) else None
-            img = renderizar(doc, recortes(layout, ordem[i], fim))
-            destino = SAIDA / area / f"{ano}-{q}.webp"
+            if area == "linguagens" and q == 45:  # depois dela vem a proposta de redação
+                fim = None
+            pedacos = recortes(layout, ordem[i], fim)
+            if q in texto_de:  # o texto-base compartilhado vai antes de cada uma das questões
+                t = texto_de[q]
+                pedacos = recortes(layout, ordem[t], ordem[t + 1]) + pedacos
+            img = renderizar(doc, pedacos)
+            destino = SAIDA / area / f"{ano}-{q}{'-esp' if esp else ''}.webp"
             destino.parent.mkdir(parents=True, exist_ok=True)
             for tentativa in range(5):  # o OneDrive às vezes segura o arquivo por um instante
                 try:
