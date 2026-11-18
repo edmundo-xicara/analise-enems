@@ -163,6 +163,10 @@ def pagina_area(chave: str, a: dict) -> str:
   <meta name="description" content="{a["descricao"]}">
   <meta name="theme-color" content="#fbfcfe">
   {FONTES}
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="manifest" href="/site.webmanifest">
   <link rel="stylesheet" href="style.css">
   <script src="site.js" defer></script>
   <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js" defer></script>
