@@ -1,9 +1,11 @@
 const DISC = {
   humanas: ["História", "Geografia", "Filosofia", "Sociologia"],
   linguagens: ["Português", "Literatura", "Língua Estrangeira", "Artes", "Educação Física"],
-  exatas: ["Matemática", "Física", "Química", "Biologia"],
+  matematica: ["Matemática"],
+  natureza: ["Biologia", "Química", "Física"],
 };
-const TODAS = [...DISC.humanas, ...DISC.linguagens, ...DISC.exatas];
+const NOME_AREA = { humanas: "Ciências Humanas", linguagens: "Linguagens", matematica: "Matemática", natureza: "Ciências da Natureza" };
+const TODAS = Object.values(DISC).flat();
 const COR = {
   "História": "--hist", "Geografia": "--geo", "Filosofia": "--filo", "Sociologia": "--soc",
   "Português": "--por", "Literatura": "--lit", "Língua Estrangeira": "--le", "Artes": "--art", "Educação Física": "--edf",
@@ -21,7 +23,7 @@ const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&l
 const tag = (d) => `<span class="tag" style="--c:var(${COR[d]})">${d}</span>`;
 const norm = (s) => s.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
 // As questões de língua estrangeira têm uma imagem para o inglês e outra para o espanhol.
-const imagem = (q) => `questoes/${q.area}/${q.ano}-${q.q}${q.esp ? "-esp" : ""}.webp`;
+const imagem = (q) => `questoes/${q.pasta}/${q.ano}-${q.q}${q.esp ? "-esp" : ""}.webp`;
 const numero = (q) => `questão ${q.q}${q.esp ? " (espanhol)" : ""}`;
 
 function lerHistorico() {
@@ -165,7 +167,7 @@ function renderQuestao() {
   const acertos = sessao.respostas.filter((r) => r.certa).length;
   $("p-placar").textContent = sessao.respostas.length ? `${acertos} de ${sessao.respostas.length} certas` : "";
   $("p-barra").style.width = `${(sessao.i / total) * 100}%`;
-  $("p-meta").innerHTML = `ENEM ${q.ano} · ${numero(q)} · ${tag(q.disciplina)} <span class="sim-materia">${esc(q.materia)}</span>`;
+  $("p-meta").innerHTML = `<span class="codigo">ENEM ${q.ano} · Q${q.q}${q.esp ? " (espanhol)" : ""}</span> ${tag(q.disciplina)} <span class="sim-materia">${esc(q.materia)}</span>`;
   const img = $("p-img");
   img.src = imagem(q);
   img.alt = `Questão ${q.q} do ENEM ${q.ano} (${q.disciplina}, ${q.materia})`;
@@ -227,8 +229,8 @@ function resultado() {
   const pct = rs.length ? Math.round((acertos / rs.length) * 100) : 0;
   $("r-titulo").textContent = rs.length ? `Você acertou ${acertos} de ${rs.length} questões (${pct}%)` : "Nenhuma questão respondida";
   $("r-kpis").innerHTML = [
-    [rs.length, "respondidas"], [acertos, "certas"], [rs.length - acertos, "erradas"], [`${pct}%`, "aproveitamento"],
-  ].map(([v, t]) => `<div class="kpi"><b>${v}</b><span>${t}</span></div>`).join("");
+    [rs.length, "respondidas"], [acertos, "certas"], [rs.length - acertos, "erradas"], [`${pct}%`, "de aproveitamento"],
+  ].map(([v, t]) => `<span><b>${v}</b> ${t}</span>`).join("");
 
   const porMateria = new Map();
   for (const r of rs) {
@@ -254,6 +256,25 @@ function resultado() {
 
 /* ---------- Início ---------- */
 
+// As páginas de área abrem o simulado com ?area=humanas&materias=Política|Brasil República
+function lerLink() {
+  const p = new URLSearchParams(location.search);
+  const area = p.get("area");
+  if (!DISC[area]) return;
+  filtro.area = area;
+  document.querySelectorAll("#s-area button").forEach((b) => b.setAttribute("aria-pressed", b.dataset.v === area));
+  const pedidas = (p.get("materias") || "").split("|").filter(Boolean);
+  if (pedidas.length) {
+    const chaves = BANCO.filter((q) => q.area === area && pedidas.includes(q.materia)).map((q) => `${q.disciplina}|${q.materia}`);
+    if (chaves.length) filtro.materias = new Set(chaves);
+  }
+  const aviso = $("s-aviso");
+  aviso.innerHTML = pedidas.length
+    ? `Filtro vindo da página de ${NOME_AREA[area]}: <mark>${pedidas.map(esc).join(", ")}</mark>. Ajuste abaixo se quiser.`
+    : `Filtro vindo da página de ${NOME_AREA[area]}. Ajuste abaixo se quiser.`;
+  aviso.hidden = false;
+}
+
 async function iniciar() {
   const [h, l, e] = await Promise.all([
     fetch("data/questoes.json").then((r) => r.json()),
@@ -261,8 +282,12 @@ async function iniciar() {
     fetch("data/questoes_exatas.json").then((r) => r.json()),
   ]);
   // Questões anuladas ou sem gabarito ficam de fora do simulado.
-  BANCO = [...h.map((q) => ({ ...q, area: "humanas" })), ...l.map((q) => ({ ...q, area: "linguagens" })), ...e.map((q) => ({ ...q, area: "exatas" }))]
-    .filter((q) => LETRAS.includes(q.gab));
+  BANCO = [
+    ...h.map((q) => ({ ...q, area: "humanas", pasta: "humanas" })),
+    ...l.map((q) => ({ ...q, area: "linguagens", pasta: "linguagens" })),
+    ...e.map((q) => ({ ...q, area: q.disciplina === "Matemática" ? "matematica" : "natureza", pasta: "exatas" })),
+  ].filter((q) => LETRAS.includes(q.gab));
+  lerLink();
   ligarConfiguracao();
   renderDisciplinas();
   renderMaterias();

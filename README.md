@@ -14,7 +14,7 @@ Em 2026, com *vibe coding* (o Claude, da Anthropic, como assistente de programa�
 2. continuei a análise para **2023, 2024 e 2025** com o mesmo esquema de classificação;
 3. consolidei tudo em um CSV único;
 4. construí este site para substituir a apresentação do Power BI;
-5. apliquei o mesmo método às **990 questões de Matemática e Ciências da Natureza** de 2015 a 2025 (aba *Matemática e Natureza* do site), também com ajuda de IA;
+5. apliquei o mesmo método às **990 questões de Matemática e Ciências da Natureza** de 2015 a 2025 (abas *Matemática* e *Natureza* do site), também com ajuda de IA;
 6. criei um **simulado**: o usuário filtra disciplinas, matérias e anos e resolve questões reais sorteadas, corrigidas pelo gabarito oficial.
 
 ## O que tem aqui
@@ -29,6 +29,7 @@ Em 2026, com *vibe coding* (o Claude, da Anthropic, como assistente de programa�
 | `dados/questoes_exatas.csv` | **Base consolidada de Exatas**: 990 questões de 2015 a 2025. Mesmas colunas de Humanas, mas `brasil` é trocada por `calculo` (`True` se a questão exige conta) |
 | `dados/anotacoes_linguagens/2015.psv` … `2025.psv` | Linguagens, classificadas com ajuda de IA (separador `\|`). As linhas `1-esp` … `5-esp` são a versão em espanhol das questões de língua estrangeira |
 | `dados/questoes_linguagens.csv` | **Base consolidada de Linguagens**: 495 questões de 2015 a 2025, mais 55 versões em espanhol (coluna `esp`). Mesmas colunas de Humanas, mas `brasil` é trocada por `literario` (`True` se o texto-base é literário) |
+| `scripts/build_pages.py` | Gera as páginas de área do site (`humanas.html`, `linguagens.html`, `matematica.html`, `natureza.html`) a partir de um molde e sincroniza o cabeçalho e o rodapé de todas as páginas |
 | `scripts/build_data.py` | Gera `dados/questoes.csv`, `dados/questoes_linguagens.csv`, `dados/questoes_exatas.csv` e os JSON do site |
 | `dados/gabaritos.json` | Gabarito oficial do caderno azul, 2015–2025 (`X` = anulada) |
 | `scripts/gabaritos.py` | Lê os PDFs de gabarito do INEP e gera `dados/gabaritos.json` |
@@ -67,6 +68,7 @@ Em 2026, com *vibe coding* (o Claude, da Anthropic, como assistente de programa�
 ```bash
 pip install pandas openpyxl
 python scripts/build_data.py
+python scripts/build_pages.py
 python -m http.server 8000 --directory site
 ```
 

@@ -3,34 +3,46 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Metodologia</title>
+  <title>Metodologia · O que cai no ENEM</title>
   <meta name="description" content="Como a análise das questões do ENEM foi feita: a anotação manual de 2022, a continuação com IA, os critérios de classificação, o simulado e os dados abertos.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="site.js" defer></script>
 </head>
 <body data-area="metodologia">
-  <header class="hero hero-compact">
-    <div class="wrap">
-      <nav class="tabs" aria-label="Áreas">
-        <a href="index.html">Ciências Humanas</a>
-        <a href="linguagens.html">Linguagens</a>
-        <a href="exatas.html">Matemática e Natureza</a>
+  <!--topo-->
+  <header class="barra">
+    <div class="wrap barra-inner">
+      <a class="marca" href="index.html">O que cai no <span>ENEM</span></a>
+      <nav class="abas" aria-label="Seções do site">
+        <a href="index.html">Início</a>
+        <a href="humanas.html" data-area="humanas">Humanas</a>
+        <a href="linguagens.html" data-area="linguagens">Linguagens</a>
+        <a href="matematica.html" data-area="matematica">Matemática</a>
+        <a href="natureza.html" data-area="natureza">Natureza</a>
         <a href="simulado.html">Simulado</a>
         <a href="metodologia.html" aria-current="page">Metodologia</a>
       </nav>
-      <p class="eyebrow">Como foi feito</p>
-      <h1>Metodologia</h1>
-      <p class="lede">De uma planilha preenchida à mão em 2022 a um site aberto em 2026: como as questões foram lidas, classificadas e transformadas em gráficos e simulado.</p>
-      <nav class="toc">
-        <a href="#humanas">Ciências Humanas</a>
-        <a href="#linguagens">Linguagens</a>
-        <a href="#exatas">Matemática e Natureza</a>
-        <a href="#simulado">Simulado</a>
-        <a href="#ferramentas">Ferramentas</a>
-        <a href="#dados">Dados abertos e direitos</a>
-      </nav>
+    </div>
+  </header>
+  <!--/topo-->
+
+  <header class="capa capa-compacta">
+    <div class="wrap capa-grid">
+      <div>
+        <h1><mark>Metodologia</mark></h1>
+        <p class="lede">De uma planilha preenchida à mão em 2022 a um site aberto em 2026: como as questões foram lidas, classificadas e transformadas em gráficos e simulado.</p>
+        <nav class="toc" aria-label="Nesta página">
+          <a href="#humanas">Ciências Humanas</a>
+          <a href="#linguagens">Linguagens</a>
+          <a href="#exatas">Matemática e Natureza</a>
+          <a href="#simulado">Simulado</a>
+          <a href="#ferramentas">Ferramentas</a>
+          <a href="#dados">Dados abertos e direitos</a>
+        </nav>
+      </div>
     </div>
   </header>
 
@@ -82,9 +94,9 @@
     </section>
 
     <section id="exatas">
-      <h2>Matemática e Natureza</h2>
+      <h2>Matemática e Ciências da Natureza</h2>
       <h4>Como foi feito</h4>
-      <p>A aba de Matemática e Natureza aplica o mesmo esquema da análise de Ciências Humanas às questões de Matemática (Q136–180) e de Ciências da Natureza (Q91–135; em 2015 e 2016, Q46–90 do 1º dia) do caderno azul de cada ano, de 2015 a 2025. São 990 questões.</p>
+      <p>As abas de Matemática e de Ciências da Natureza aplicam o mesmo esquema da análise de Ciências Humanas às questões de Matemática (Q136–180) e de Ciências da Natureza (Q91–135; em 2015 e 2016, Q46–90 do 1º dia) do caderno azul de cada ano, de 2015 a 2025. São 990 questões.</p>
       <p>O texto das questões foi extraído dos cadernos oficiais do INEP, e cada uma foi classificada pelo Claude (IA da Anthropic) com as colunas de Humanas (disciplina, matéria, assuntos, abordagem, fonte e tipo de fonte). A exceção é “ambientada no Brasil”, que pouco diz sobre uma prova de Exatas e foi trocada por <strong>cálculo × conceitual</strong>. <strong>Todas essas questões estão marcadas como “IA”</strong> e ainda passarão por uma revisão humana.</p>
       <h4>Critérios específicos de Exatas</h4>
       <ul>
@@ -105,7 +117,7 @@
 
     <section id="simulado">
       <h2>Simulado</h2>
-      <p>O simulado usa as mesmas 2 035 questões classificadas nas três áreas (2015–2025), incluindo as versões em espanhol de língua estrangeira, com o filtro de disciplina, matéria e ano aplicado sobre essa classificação.</p>
+      <p>O simulado usa as mesmas 2 035 questões classificadas nas quatro áreas (2015–2025), incluindo as versões em espanhol de língua estrangeira, com o filtro de disciplina, matéria e ano aplicado sobre essa classificação.</p>
       <ul>
         <li><strong>Questões</strong>: cada uma foi recortada, como imagem, do caderno azul oficial do INEP, sem nenhuma alteração. O recorte acompanha questões que continuam na outra coluna ou na página seguinte, e uma checagem automática confirma que nenhuma imagem inclui pedaço de outra questão ou deixa linhas de fora.</li>
         <li><strong>Correção</strong>: pelo gabarito oficial do caderno azul de cada ano, lido dos PDFs do INEP. As questões anuladas ficam fora do sorteio.</li>
@@ -138,11 +150,19 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="wrap">
-      <p>Feito por <a href="https://github.com/edmundo-xicara" target="_blank" rel="noopener">Edmundo</a> · código e dados abertos no <a href="https://github.com/edmundo-xicara/analise-enems" target="_blank" rel="noopener">GitHub</a></p>
+  <!--rodape-->
+  <footer class="rodape">
+    <div class="wrap rodape-inner">
+      <p class="credito">Feito por <a href="https://byedstudio.com/" target="_blank" rel="noopener">Edmundo Pires Neto</a></p>
+      <p class="rodape-links">
+        <a href="https://byedstudio.com/" target="_blank" rel="noopener">Portfólio ↗</a>
+        <a href="https://github.com/edmundo-xicara/analise-enems" target="_blank" rel="noopener">Código e dados no GitHub ↗</a>
+        <a href="metodologia.html">Metodologia</a>
+        <span>Código MIT · dados CC BY 4.0</span>
+      </p>
       <p class="aviso">Projeto independente e sem fins lucrativos, sem vínculo com o INEP ou o MEC. As provas e os gabaritos são publicações do INEP (<a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos" target="_blank" rel="noopener">provas e gabaritos oficiais</a>), reproduzidas sem alteração e com indicação de fonte, para fins de estudo. Os textos e imagens citados em cada questão pertencem aos seus autores, indicados na própria questão. Se você é titular de algum conteúdo e quer que ele seja retirado, <a href="https://github.com/edmundo-xicara/analise-enems/issues" target="_blank" rel="noopener">abra uma issue</a>.</p>
     </div>
   </footer>
+  <!--/rodape-->
 </body>
 </html>

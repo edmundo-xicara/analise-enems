@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Matemática no ENEM · O que cai no ENEM</title>
+  <meta name="description" content="Análise aberta das 45 questões de Matemática de cada prova do ENEM de 2015 a 2025: matérias, assuntos, fontes e questões de cálculo × conceituais.">
+  <meta name="theme-color" content="#fbfcfe">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="site.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.5.1/dist/echarts.min.js" defer></script>
+  <script src="app.js" defer></script>
+</head>
+<!-- Gerado por scripts/build_pages.py: edite o molde lá, não aqui. -->
+<body data-area="matematica">
+  <!--topo-->
+  <header class="barra">
+    <div class="wrap barra-inner">
+      <a class="marca" href="index.html">O que cai no <span>ENEM</span></a>
+      <nav class="abas" aria-label="Seções do site">
+        <a href="index.html">Início</a>
+        <a href="humanas.html" data-area="humanas">Humanas</a>
+        <a href="linguagens.html" data-area="linguagens">Linguagens</a>
+        <a href="matematica.html" aria-current="page" data-area="matematica">Matemática</a>
+        <a href="natureza.html" data-area="natureza">Natureza</a>
+        <a href="simulado.html">Simulado</a>
+        <a href="metodologia.html">Metodologia</a>
+      </nav>
+    </div>
+  </header>
+  <!--/topo-->
+
+  <header class="capa">
+    <div class="wrap capa-grid">
+      <div class="capa-texto">
+        <h1>O que cai em <mark>Matemática</mark></h1>
+        <p class="lede">As 45 questões de Matemática e suas Tecnologias de cada prova de 2015 a 2025, com o mesmo método de Humanas. Esta parte foi classificada com ajuda de IA.</p>
+        <p class="capa-meta" id="capa-meta"></p>
+      </div>
+      <div class="ranking" id="ranking" aria-live="polite">
+        <h2 class="ranking-titulo">As cinco matérias que mais caem</h2>
+        <ol class="ranking-lista" id="ranking-lista"></ol>
+        <a class="btn" id="ranking-treinar" href="simulado.html">Treinar essas matérias</a>
+      </div>
+    </div>
+  </header>
+
+  <div class="filtros" id="filters">
+    <div class="wrap filtros-inner">
+      <label class="field">Ano <select id="f-ano"></select></label>
+      <div class="chips" id="f-disc" role="group" aria-label="Disciplinas" hidden></div>
+      <span class="filter-note" id="f-note"></span>
+      <nav class="sumario" aria-label="Nesta página">
+        <a href="#disciplinas">Matérias por ano</a>
+        <a href="#brasil">Cálculo × conceitual</a>
+        <a href="#materias">Questões</a>
+        <a href="#fontes">Fontes</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="wrap">
+    <section id="disciplinas">
+      <h2>Como as matérias se revezam</h2>
+      <p class="section-lede">Como as matérias de Matemática se revezam de prova em prova: as cinco que mais caem, ano a ano, e o peso médio de cada uma numa prova.</p>
+      <div class="grid g3">
+        <figure class="fig span2">
+          <figcaption>As cinco matérias que mais caem, por ano</figcaption>
+          <div class="chart tall" id="c-disc-ano"></div>
+        </figure>
+        <figure class="fig">
+          <figcaption>Média por prova, por matéria <span class="hint" data-scope></span></figcaption>
+          <div class="chart tall" id="c-disc-media"></div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="brasil">
+      <h2>Cálculo × conceitual</h2>
+      <p class="section-lede">Quase toda questão de Matemática pede conta, mas não todas. Veja quais matérias trazem questões só de interpretação ou de conceito.</p>
+      <div class="group-filters" id="gf-brasil"><div class="seg" role="group" aria-label="Recorte" data-key="brasil"><button type="button" data-v="todos" aria-pressed="true">Todas</button><button type="button" data-v="sim" aria-pressed="false">Exige cálculo</button><button type="button" data-v="nao" aria-pressed="false">Conceitual</button></div></div>
+      <div class="grid g2">
+        <figure class="fig span2">
+          <figcaption>Questões de cálculo e conceituais por ano</figcaption>
+          <div class="chart" id="c-brasil-ano"></div>
+        </figure>
+        <figure class="fig span2">
+          <figcaption>Proporção de questões de cálculo por matéria <span class="hint" data-scope></span></figcaption>
+          <div class="chart xtall" id="c-materias-brasil"></div>
+        </figure>
+      </div>
+    </section>
+
+    <section id="materias">
+      <h2>Matérias, assuntos e questões</h2>
+      <p class="section-lede">Que matérias mais caem, que assuntos aparecem dentro delas e quais foram as questões. <strong>Clique numa matéria ou num assunto</strong> para filtrar o resto do bloco, ou use os seletores.</p>
+      <div class="group-filters" id="gf-materias">
+        <label class="field">Matéria <select id="f-materia"></select></label>
+        <label class="field">Assunto <select id="f-assunto"></select></label>
+        <div class="seg" role="group" aria-label="Recorte" data-key="brasilM"><button type="button" data-v="todos" aria-pressed="true">Todas</button><button type="button" data-v="sim" aria-pressed="false">Exige cálculo</button><button type="button" data-v="nao" aria-pressed="false">Conceitual</button></div>
+        <button type="button" class="clear" data-clear="materias">Limpar filtros</button>
+      </div>
+      <div class="grid g2">
+        <figure class="fig">
+          <figcaption>Média de questões por prova de cada matéria <span class="hint" data-scope></span></figcaption>
+          <div class="chart xtall" id="c-materias"></div>
+        </figure>
+        <figure class="fig">
+          <figcaption>Assuntos abordados <span class="hint" id="h-assuntos"></span></figcaption>
+          <p class="escala" aria-hidden="true">Marca-texto em tamanhos fixos: <span class="f1"></span>1 <span class="f2"></span>2 <span class="f3"></span>3–4 <span class="f4"></span>5–9 <span class="f5"></span>10+ questões</p>
+          <div class="table-wrap xtall-table"><table class="data clickable" id="t-assuntos"></table></div>
+        </figure>
+        <figure class="fig span2" id="explorar">
+          <figcaption>Explorar questões <span class="hint" id="h-questoes"></span></figcaption>
+          <div class="search-row">
+            <input id="busca" type="search" placeholder="Buscar: porcentagem, escala, probabilidade, IBGE…" aria-label="Buscar questões">
+            <span class="count" id="busca-count"></span>
+            <a class="btn btn-sec" id="treinar-filtro" href="simulado.html">Treinar este recorte</a>
+          </div>
+          <div class="table-wrap tall-table">
+            <table class="data questions" id="t-questoes">
+              <thead><tr><th>Questão</th><th>Disciplina</th><th>Matéria</th><th>Abordagem</th><th>Fonte</th><th>Cálc.</th><th><span class="sr-only">Ver questão</span></th></tr></thead>
+              <tbody></tbody>
+            </table>
+          </div>
+          <button class="more" id="mais" type="button">Mostrar mais</button>
+        </figure>
+      </div>
+    </section>
+
+    <section id="fontes">
+      <h2>De onde vêm os textos</h2>
+      <p class="section-lede">Em Matemática, a maioria das questões não cita fonte: o enunciado é criado pela própria banca. <strong>Clique num tipo de fonte, numa fonte ou num autor</strong> para ver as abordagens das questões correspondentes.</p>
+      <div class="group-filters" id="gf-fontes">
+        <label class="field">Tipo de fonte <select id="f-tipo"></select></label>
+        <span class="pills" id="p-fontes"></span>
+        <button type="button" class="clear" data-clear="fontes">Limpar filtros</button>
+      </div>
+      <div class="grid g3">
+        <figure class="fig">
+          <figcaption>Tipo de fonte <span class="hint" data-scope></span></figcaption>
+          <div class="chart" id="c-tipos"></div>
+        </figure>
+        <figure class="fig">
+          <figcaption>Fontes mais citadas</figcaption>
+          <div class="table-wrap"><table class="data clickable" id="t-fontes"></table></div>
+        </figure>
+        <figure class="fig">
+          <figcaption>Autores mais citados</figcaption>
+          <div class="table-wrap"><table class="data clickable" id="t-autores"></table></div>
+        </figure>
+        <figure class="fig span3">
+          <figcaption>Abordagens <span class="hint" id="h-abordagens"></span></figcaption>
+          <div class="table-wrap"><table class="data" id="t-abordagens"></table></div>
+        </figure>
+      </div>
+    </section>
+  </main>
+
+  <!--rodape-->
+  <footer class="rodape">
+    <div class="wrap rodape-inner">
+      <p class="credito">Feito por <a href="https://byedstudio.com/" target="_blank" rel="noopener">Edmundo Pires Neto</a></p>
+      <p class="rodape-links">
+        <a href="https://byedstudio.com/" target="_blank" rel="noopener">Portfólio ↗</a>
+        <a href="https://github.com/edmundo-xicara/analise-enems" target="_blank" rel="noopener">Código e dados no GitHub ↗</a>
+        <a href="metodologia.html">Metodologia</a>
+        <span>Código MIT · dados CC BY 4.0</span>
+      </p>
+      <p class="aviso">Projeto independente e sem fins lucrativos, sem vínculo com o INEP ou o MEC. As provas e os gabaritos são publicações do INEP (<a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos" target="_blank" rel="noopener">provas e gabaritos oficiais</a>), reproduzidas sem alteração e com indicação de fonte, para fins de estudo. Os textos e imagens citados em cada questão pertencem aos seus autores, indicados na própria questão. Se você é titular de algum conteúdo e quer que ele seja retirado, <a href="https://github.com/edmundo-xicara/analise-enems/issues" target="_blank" rel="noopener">abra uma issue</a>.</p>
+    </div>
+  </footer>
+  <!--/rodape-->
+</body>
+</html>

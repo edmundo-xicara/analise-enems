@@ -3,46 +3,61 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Simulado ENEM</title>
+  <title>Simulado · O que cai no ENEM</title>
   <meta name="description" content="Simulado com questões reais do ENEM (2015–2025): filtre pelas disciplinas, matérias e anos em que você tem mais dificuldade e resolva questões sorteadas.">
+  <meta name="theme-color" content="#fbfcfe">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  <script src="site.js" defer></script>
   <script src="simulado.js" defer></script>
 </head>
 <body data-area="simulado">
-  <header class="hero hero-compact">
-    <div class="wrap">
-      <nav class="tabs" aria-label="Áreas">
-        <a href="index.html">Ciências Humanas</a>
-        <a href="linguagens.html">Linguagens</a>
-        <a href="exatas.html">Matemática e Natureza</a>
+  <!--topo-->
+  <header class="barra">
+    <div class="wrap barra-inner">
+      <a class="marca" href="index.html">O que cai no <span>ENEM</span></a>
+      <nav class="abas" aria-label="Seções do site">
+        <a href="index.html">Início</a>
+        <a href="humanas.html" data-area="humanas">Humanas</a>
+        <a href="linguagens.html" data-area="linguagens">Linguagens</a>
+        <a href="matematica.html" data-area="matematica">Matemática</a>
+        <a href="natureza.html" data-area="natureza">Natureza</a>
         <a href="simulado.html" aria-current="page">Simulado</a>
         <a href="metodologia.html">Metodologia</a>
       </nav>
-      <p class="eyebrow">Questões reais · ENEM 2015–2025</p>
-      <h1>Simulado por <em>matéria</em></h1>
-      <p class="lede">Escolha as disciplinas, matérias e anos em que você tem mais dificuldade. O site sorteia questões reais do ENEM, de anos aleatórios, e corrige com o gabarito oficial do INEP.</p>
+    </div>
+  </header>
+  <!--/topo-->
+
+  <header class="capa capa-compacta">
+    <div class="wrap capa-grid">
+      <div>
+        <h1>Simulado por <mark>matéria</mark></h1>
+        <p class="lede">Escolha as áreas, matérias e anos em que você tem mais dificuldade. O site sorteia questões reais do ENEM e corrige pelo gabarito oficial do INEP.</p>
+      </div>
     </div>
   </header>
 
   <main class="wrap">
     <!-- Configuração -->
-    <section id="config" class="sim-config">
-      <div class="card">
+    <section id="config" class="sim-config" aria-label="Montar o simulado">
+      <p class="sim-aviso" id="s-aviso" hidden></p>
+      <div class="folha">
         <div class="sim-row">
-          <span class="sim-label">Área</span>
-          <div class="seg" role="group" aria-label="Área" id="s-area">
+          <span class="sim-label" id="l-area">Área</span>
+          <div class="seg" role="group" aria-labelledby="l-area" id="s-area">
             <button type="button" data-v="todas" aria-pressed="true">Todas</button>
             <button type="button" data-v="humanas" aria-pressed="false">Humanas</button>
             <button type="button" data-v="linguagens" aria-pressed="false">Linguagens</button>
-            <button type="button" data-v="exatas" aria-pressed="false">Matemática e Natureza</button>
+            <button type="button" data-v="matematica" aria-pressed="false">Matemática</button>
+            <button type="button" data-v="natureza" aria-pressed="false">Natureza</button>
           </div>
         </div>
         <div class="sim-row">
-          <span class="sim-label">Disciplinas</span>
-          <div class="chips" id="s-disc" role="group" aria-label="Disciplinas"></div>
+          <span class="sim-label" id="l-disc">Disciplinas</span>
+          <div class="chips" id="s-disc" role="group" aria-labelledby="l-disc"></div>
         </div>
         <div class="sim-row">
           <span class="sim-label">Anos</span>
@@ -61,8 +76,8 @@
           </div>
         </div>
         <div class="sim-row">
-          <span class="sim-label">Questões</span>
-          <div class="seg" role="group" aria-label="Quantidade" id="s-qtd">
+          <span class="sim-label" id="l-qtd">Questões</span>
+          <div class="seg" role="group" aria-labelledby="l-qtd" id="s-qtd">
             <button type="button" data-v="10" aria-pressed="true">10</button>
             <button type="button" data-v="20" aria-pressed="false">20</button>
             <button type="button" data-v="45" aria-pressed="false">45</button>
@@ -78,20 +93,20 @@
     </section>
 
     <!-- Questão -->
-    <section id="prova" class="sim-prova" hidden>
+    <section id="prova" class="sim-prova" hidden aria-label="Questão do simulado">
       <div class="sim-topo">
         <div class="sim-progresso"><div id="p-barra"></div></div>
         <div class="sim-status">
           <span id="p-contador"></span>
           <span id="p-placar"></span>
-          <button type="button" class="linkbtn" id="p-encerrar">Encerrar</button>
+          <button type="button" class="linkbtn" id="p-encerrar">Encerrar e ver resultado</button>
         </div>
       </div>
-      <article class="card sim-questao">
+      <article class="folha sim-questao">
         <p class="sim-meta" id="p-meta"></p>
         <img id="p-img" alt="" decoding="async">
         <div class="sim-alts" id="p-alts" role="group" aria-label="Alternativas"></div>
-        <div class="sim-feedback" id="p-feedback" hidden></div>
+        <div class="sim-feedback" id="p-feedback" hidden aria-live="polite"></div>
         <div class="sim-acoes">
           <button type="button" class="linkbtn" id="p-pular">Pular</button>
           <button type="button" class="btn-primary" id="p-confirmar" disabled>Confirmar</button>
@@ -101,11 +116,10 @@
     </section>
 
     <!-- Resultado -->
-    <section id="resultado" class="sim-resultado" hidden>
-      <div class="card">
-        <p class="eyebrow">Resultado</p>
+    <section id="resultado" class="sim-resultado" hidden aria-label="Resultado">
+      <div class="folha">
         <h2 id="r-titulo"></h2>
-        <div class="kpis" id="r-kpis"></div>
+        <p class="placar" id="r-kpis"></p>
         <h3>Por matéria</h3>
         <div class="table-wrap"><table class="data" id="r-materias"></table></div>
         <h3>Questões que você errou</h3>
@@ -118,11 +132,19 @@
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="wrap">
-      <p>Feito por <a href="https://github.com/edmundo-xicara" target="_blank" rel="noopener">Edmundo</a> · código e dados abertos no <a href="https://github.com/edmundo-xicara/analise-enems" target="_blank" rel="noopener">GitHub</a></p>
+  <!--rodape-->
+  <footer class="rodape">
+    <div class="wrap rodape-inner">
+      <p class="credito">Feito por <a href="https://byedstudio.com/" target="_blank" rel="noopener">Edmundo Pires Neto</a></p>
+      <p class="rodape-links">
+        <a href="https://byedstudio.com/" target="_blank" rel="noopener">Portfólio ↗</a>
+        <a href="https://github.com/edmundo-xicara/analise-enems" target="_blank" rel="noopener">Código e dados no GitHub ↗</a>
+        <a href="metodologia.html">Metodologia</a>
+        <span>Código MIT · dados CC BY 4.0</span>
+      </p>
       <p class="aviso">Projeto independente e sem fins lucrativos, sem vínculo com o INEP ou o MEC. As provas e os gabaritos são publicações do INEP (<a href="https://www.gov.br/inep/pt-br/areas-de-atuacao/avaliacao-e-exames-educacionais/enem/provas-e-gabaritos" target="_blank" rel="noopener">provas e gabaritos oficiais</a>), reproduzidas sem alteração e com indicação de fonte, para fins de estudo. Os textos e imagens citados em cada questão pertencem aos seus autores, indicados na própria questão. Se você é titular de algum conteúdo e quer que ele seja retirado, <a href="https://github.com/edmundo-xicara/analise-enems/issues" target="_blank" rel="noopener">abra uma issue</a>.</p>
     </div>
   </footer>
+  <!--/rodape-->
 </body>
 </html>

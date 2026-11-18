@@ -4,5 +4,12 @@
   "buildCommand": "",
   "installCommand": "",
   "outputDirectory": "site",
-  "cleanUrls": true
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/exatas",
+      "destination": "/matematica",
+      "permanent": true
+    }
+  ]
 }

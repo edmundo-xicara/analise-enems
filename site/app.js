@@ -1,30 +1,38 @@
-// A mesma página serve as duas áreas; <body data-area="..."> escolhe qual.
+// A mesma página serve as quatro áreas; <body data-area="..."> escolhe qual.
+// Matemática e Natureza leem o mesmo arquivo (Exatas) e separam pela disciplina.
 const AREAS = {
   humanas: {
     disciplinas: ["História", "Geografia", "Filosofia", "Sociologia"],
-    cores: { "História": "--hist", "Geografia": "--geo", "Filosofia": "--filo", "Sociologia": "--soc" },
-    dados: ["data/questoes.json", "data/anual.json"],
-    provas: "provas (2009–2025)",
-    marcador: { campo: "brasil", sim: "No Brasil", nao: "Fora do Brasil", kpi: "ambientadas no Brasil (2015–2025)", icone: "🇧🇷" },
-  },
-  exatas: {
-    disciplinas: ["Matemática", "Física", "Química", "Biologia"],
-    cores: { "Matemática": "--mat", "Física": "--fis", "Química": "--qui", "Biologia": "--bio" },
-    dados: ["data/questoes_exatas.json", "data/anual_exatas.json"],
-    provas: "provas (2015–2025)",
-    marcador: { campo: "calculo", sim: "Exige cálculo", nao: "Conceitual", kpi: "exigem cálculo (2015–2025)", icone: "✓" },
+    dados: ["data/questoes.json", "data/anual.json"], pasta: "humanas",
+    marcador: { campo: "brasil", sim: "No Brasil", nao: "Fora do Brasil", meta: "ambientadas no Brasil" },
   },
   linguagens: {
     disciplinas: ["Português", "Literatura", "Língua Estrangeira", "Artes", "Educação Física"],
-    cores: { "Português": "--por", "Literatura": "--lit", "Língua Estrangeira": "--le", "Artes": "--art", "Educação Física": "--edf" },
-    dados: ["data/questoes_linguagens.json", "data/anual_linguagens.json"],
-    provas: "provas (2015–2025)",
-    marcador: { campo: "literario", sim: "Texto literário", nao: "Não literário", kpi: "partem de texto literário (2015–2025)", icone: "✓" },
+    dados: ["data/questoes_linguagens.json", "data/anual_linguagens.json"], pasta: "linguagens",
+    marcador: { campo: "literario", sim: "Texto literário", nao: "Não literário", meta: "partem de texto literário" },
+  },
+  matematica: {
+    disciplinas: ["Matemática"],
+    dados: ["data/questoes_exatas.json"], pasta: "exatas",
+    marcador: { campo: "calculo", sim: "Exige cálculo", nao: "Conceitual", meta: "exigem cálculo" },
+  },
+  natureza: {
+    disciplinas: ["Biologia", "Química", "Física"],
+    dados: ["data/questoes_exatas.json"], pasta: "exatas",
+    marcador: { campo: "calculo", sim: "Exige cálculo", nao: "Conceitual", meta: "exigem cálculo" },
   },
 };
-const AREA = AREAS[document.body.dataset.area] || AREAS.humanas;
+const CHAVE_AREA = AREAS[document.body.dataset.area] ? document.body.dataset.area : "humanas";
+const AREA = AREAS[CHAVE_AREA];
 const DISCIPLINAS = AREA.disciplinas;
-const COR_VAR = AREA.cores;
+const UMA_DISC = DISCIPLINAS.length === 1;
+const COR_VAR = {
+  "História": "--hist", "Geografia": "--geo", "Filosofia": "--filo", "Sociologia": "--soc",
+  "Português": "--por", "Literatura": "--lit", "Língua Estrangeira": "--le", "Artes": "--art", "Educação Física": "--edf",
+  "Matemática": "--mat", "Física": "--fis", "Química": "--qui", "Biologia": "--bio",
+};
+// Cores das séries de matérias quando a área tem uma disciplina só (Matemática).
+const CANETAS = ["--caneta-azul", "--caneta-vermelha", "--caneta-verde", "--caneta-roxa", "--caneta-laranja", "--tinta-2"];
 // Coluna s/n que o bloco 2 analisa: "ambientada no Brasil" em Humanas, "exige cálculo" em Exatas.
 const M = AREA.marcador;
 const TIPOS = ["Livros", "Notícias", "Revistas", "Artigos", "Imagens", "Músicas", "Poemas"];
@@ -39,13 +47,24 @@ const estado = {
 let QUESTOES = [], ANUAL = [];
 const graficos = {};
 
-const css = (v) => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+// Lê do <body>: é lá que cada área define a sua cor (--acento-forte, --br-yes).
+const css = (v) => getComputedStyle(document.body).getPropertyValue(v).trim();
 const cor = (d) => css(COR_VAR[d]);
 const fmt = (n, c = 1) => n.toLocaleString("pt-BR", { maximumFractionDigits: c, minimumFractionDigits: 0 });
 const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
 const norm = (s) => s.normalize("NFD").replace(/\p{M}/gu, "").toLowerCase();
 const tag = (d) => `<span class="tag" style="--c:var(${COR_VAR[d]})">${d}</span>`;
 const recorte = (q, v) => v === "todos" || q[M.campo] === (v === "sim");
+const codigo = (q) => `ENEM ${q.ano} · Q${q.q}`;
+const FONTE_GRAFICO = "'Atkinson Hyperlegible', system-ui, sans-serif";
+const FONTE_NUM = "'IBM Plex Mono', ui-monospace, monospace";
+
+// Link para o simulado já filtrado nesta área (e, se houver, nessas matérias).
+function linkSimulado(materias = []) {
+  const p = new URLSearchParams({ area: CHAVE_AREA });
+  if (materias.length) p.set("materias", materias.join("|"));
+  return `simulado.html?${p}`;
+}
 
 // [2016, 2017, 2018, 2021] → "2016–2018, 2021"
 function faixas(anos) {
@@ -74,9 +93,9 @@ const escopoTexto = () => (estado.ano === "todos" ? "· 2015–2025" : `· ${est
 
 function baseOpcoes() {
   return {
-    textStyle: { fontFamily: "Inter, system-ui, sans-serif", color: css("--ink") },
+    textStyle: { fontFamily: FONTE_GRAFICO, color: css("--ink") },
     grid: { left: 8, right: 16, top: 36, bottom: 8, containLabel: true },
-    tooltip: { trigger: "axis", backgroundColor: css("--surface"), borderColor: css("--line"), textStyle: { color: css("--ink") } },
+    tooltip: { trigger: "axis", backgroundColor: css("--surface"), borderColor: css("--line"), textStyle: { color: css("--ink"), fontFamily: FONTE_GRAFICO } },
     legend: { top: 0, left: 0, icon: "circle", textStyle: { color: css("--ink") } },
   };
 }
@@ -84,19 +103,51 @@ function baseOpcoes() {
 function eixo(extra = {}) {
   return {
     axisLine: { lineStyle: { color: css("--line") } },
-    axisLabel: { color: css("--muted") },
-    splitLine: { lineStyle: { color: css("--line") } },
+    axisLabel: { color: css("--muted"), fontFamily: FONTE_NUM, fontSize: 11 },
+    splitLine: { lineStyle: { color: css("--pauta"), type: "solid" } },
     ...extra,
   };
 }
 
-function grafico(id, opcoes, aoClicar) {
-  const el = document.getElementById(id);
+// Cada gráfico só é desenhado quando entra na tela, para a montagem (linhas sendo traçadas,
+// barras crescendo, roscas abrindo) acontecer à vista de quem rola a página.
+const CALMO = matchMedia("(prefers-reduced-motion: reduce)").matches;
+const pendentes = new Map();  // id → [opções, aoClicar] dos gráficos ainda fora da tela
+const naTela = new Set();
+const vigia = !CALMO && "IntersectionObserver" in window ? new IntersectionObserver((itens) => {
+  for (const it of itens) {
+    if (!it.isIntersecting) continue;
+    const id = it.target.id;
+    vigia.unobserve(it.target);
+    naTela.add(id);
+    // espera um instante para a figura terminar de aparecer antes de montar o gráfico
+    setTimeout(() => { const [o, c] = pendentes.get(id); pendentes.delete(id); desenhar(id, o, c); }, 180);
+  }
+}, { threshold: 0.2 }) : null;
+
+const ANIMACAO = CALMO ? { animation: false } : {
+  animationDuration: 1000, animationEasing: "cubicOut",
+  animationDelay: (i) => Math.min(i * 18, 360),  // barras e fatias entram em sequência curta
+  animationDurationUpdate: 450, animationEasingUpdate: "cubicInOut",
+};
+
+function desenhar(id, opcoes, aoClicar) {
   if (!graficos[id]) {
-    graficos[id] = echarts.init(el, null, { renderer: "svg" });
+    graficos[id] = echarts.init(document.getElementById(id), null, { renderer: "svg" });
     if (aoClicar) graficos[id].on("click", (p) => aoClicar(p));
   }
-  graficos[id].setOption(opcoes, true);
+  graficos[id].setOption({ ...ANIMACAO, ...opcoes }, true);
+}
+
+function grafico(id, opcoes, aoClicar) {
+  const el = document.getElementById(id);
+  if (!el) return;  // Matemática não tem o gráfico por disciplina
+  if (vigia && !naTela.has(id)) {
+    if (!pendentes.has(id)) vigia.observe(el);
+    pendentes.set(id, [opcoes, aoClicar]);  // guarda só a versão mais recente (filtros mudam antes de chegar)
+    return;
+  }
+  desenhar(id, opcoes, aoClicar);
 }
 
 // Clicar numa disciplina isola ela no filtro global; clicar de novo volta para todas.
@@ -110,17 +161,27 @@ function isolarDisciplina(d) {
 
 /* ---------- Topo e filtros ---------- */
 
-function renderKpis() {
-  const anotadas = QUESTOES.length;
-  const total = ANUAL.reduce((s, a) => s + a.total, 0);
-  const brasil = QUESTOES.filter((q) => q[M.campo]).length / anotadas;
-  const fontes = new Set(QUESTOES.map((q) => q.fonte).filter(Boolean)).size;
-  document.getElementById("kpis").innerHTML = [
-    [ANUAL.length, AREA.provas],
-    [total === anotadas ? anotadas : total, total === anotadas ? "questões anotadas uma a uma" : `questões contadas, ${anotadas} anotadas uma a uma`],
-    [`${fmt(brasil * 100, 0)}%`, M.kpi],
-    [fontes, "fontes diferentes citadas"],
-  ].map(([v, t]) => `<div class="kpi"><b>${v}</b><span>${t}</span></div>`).join("");
+// Capa: a resposta direta ("o que mais cai") antes de qualquer gráfico.
+function renderCapa() {
+  const n = QUESTOES.length;
+  const anos = [...new Set(QUESTOES.map((q) => q.ano))].sort();
+  const top = contar(QUESTOES.map((q) => q.materia).filter(Boolean)).slice(0, 5);
+  const max = top[0]?.[1] || 1;
+  document.getElementById("ranking-lista").innerHTML = top.map(([m, c]) =>
+    `<li><span class="r-nome">${esc(m)}</span><span class="r-barra" style="--w:${(c / max) * 100}%"></span><span class="r-num">${c}</span></li>`).join("");
+  document.getElementById("ranking-treinar").href = linkSimulado(top.map(([m]) => m));
+
+  const [a, b] = top;
+  const umEmCada = Math.round(n / (a[1] + b[1]));
+  const pct = fmt((QUESTOES.filter((q) => q[M.campo]).length / n) * 100, 0);
+  const manuais = QUESTOES.filter((q) => q.metodo === "manual").map((q) => q.ano);
+  const metodo = manuais.length
+    ? `${Math.min(...manuais)}–${Math.max(...manuais)} lidas à mão, o resto classificado com ajuda de IA`
+    : "classificadas com ajuda de IA";
+  const extra = ANUAL.some((x) => x.fonte === "powerbi") ? " (mais os totais de 2009–2014)" : "";
+  document.getElementById("capa-meta").innerHTML =
+    `<mark>${esc(a[0])}</mark> e <mark>${esc(b[0])}</mark> somam 1 em cada ${umEmCada} questões. ` +
+    `<span class="capa-fonte">${n} questões de ${anos[0]} a ${anos.at(-1)}${extra} · ${pct}% ${M.meta} · ${metodo}.</span>`;
 }
 
 function renderFiltros() {
@@ -130,7 +191,7 @@ function renderFiltros() {
   sel.onchange = () => { estado.ano = sel.value; estado.limite = LIMITE; atualizar(); };
 
   const chips = document.getElementById("f-disc");
-  chips.innerHTML = DISCIPLINAS.map((d) =>
+  chips.innerHTML = UMA_DISC ? "" : DISCIPLINAS.map((d) =>
     `<button class="chip" type="button" aria-pressed="true" data-d="${d}" style="--c:var(${COR_VAR[d]})"><i></i>${d}</button>`).join("");
   chips.onclick = (e) => {
     const b = e.target.closest(".chip");
@@ -187,7 +248,40 @@ function opcoesSelect(id, rotuloTodos, valores, atual) {
 
 /* ---------- Bloco 1: disciplinas ---------- */
 
+// Matemática tem uma disciplina só: o bloco 1 mostra como as matérias se revezam.
+function renderMateriasPorAno() {
+  const qs = base(), n = anosNoEscopo();
+  const anos = [...new Set(QUESTOES.map((q) => q.ano))].sort();
+  const top5 = contar(QUESTOES.map((q) => q.materia).filter(Boolean)).slice(0, 5).map(([m]) => m);
+  grafico("c-disc-ano", {
+    ...baseOpcoes(),
+    xAxis: eixo({ type: "category", data: anos, splitLine: { show: false } }),
+    yAxis: eixo({ type: "value", minInterval: 1 }),
+    series: top5.map((m, i) => ({
+      name: m, type: "line", symbolSize: 7, color: css(CANETAS[i]), lineStyle: { width: 2.5 },
+      data: anos.map((a) => QUESTOES.filter((q) => q.ano === a && q.materia === m).length),
+    })),
+  });
+
+  const todas = contar(qs.map((q) => q.materia).filter(Boolean));
+  const fatias = todas.slice(0, 5).map(([m, c], i) => ({ name: m, value: +(c / n).toFixed(1), cor: css(CANETAS[i]) }));
+  const resto = todas.slice(5).reduce((s, [, c]) => s + c, 0);
+  if (resto) fatias.push({ name: "Outras matérias", value: +(resto / n).toFixed(1), cor: css("--line-forte") });
+  grafico("c-disc-media", {
+    ...baseOpcoes(),
+    legend: { bottom: 0, left: "center", icon: "circle", itemGap: 10, selectedMode: false, textStyle: { color: css("--ink"), fontSize: 12 }, formatter: (nm) => `${nm}  ${fmt(fatias.find((f) => f.name === nm)?.value ?? 0)}` },
+    tooltip: { trigger: "item", formatter: (p) => `${p.name}: ${fmt(p.value)} questões por prova (${fmt(p.percent)}%)` },
+    series: [{
+      type: "pie", radius: ["38%", "62%"], center: ["50%", "38%"],
+      data: fatias.map((f) => ({ name: f.name, value: f.value, itemStyle: { color: f.cor } })),
+      label: { position: "inside", color: "#fff", fontSize: 11, fontWeight: 700, formatter: (p) => (p.percent >= 6 ? `${fmt(p.percent, 0)}%` : "") },
+      itemStyle: { borderColor: css("--surface"), borderWidth: 2 },
+    }],
+  });
+}
+
 function renderDisciplinas() {
+  if (UMA_DISC) return renderMateriasPorAno();
   grafico("c-disc-ano", {
     ...baseOpcoes(),
     xAxis: eixo({ type: "category", data: ANUAL.map((a) => a.ano), splitLine: { show: false } }),
@@ -263,7 +357,7 @@ function renderBrasil() {
       yAxis: eixo({ type: "category", data: props.map((x) => x.m), splitLine: { show: false }, axisLabel: { color: css("--ink"), width: 150, overflow: "truncate" } }),
       series: [
         { name: M.sim, type: "bar", stack: "p", color: css("--br-yes"), barMaxWidth: 18, data: props.map((x) => +(x.p * 100).toFixed(1)), label: { show: true, color: "#fff", fontSize: 11, formatter: (p) => (p.value >= 12 ? `${fmt(p.value, 0)}%` : "") } },
-        { name: M.nao, type: "bar", stack: "p", color: css("--br-no"), barMaxWidth: 18, data: props.map((x) => +((1 - x.p) * 100).toFixed(1)), label: { show: true, color: "#fff", fontSize: 11, formatter: (p) => (p.value >= 12 ? `${fmt(p.value, 0)}%` : "") } },
+        { name: M.nao, type: "bar", stack: "p", color: css("--br-no"), barMaxWidth: 18, data: props.map((x) => +((1 - x.p) * 100).toFixed(1)), label: { show: true, color: css("--ink"), fontSize: 11, formatter: (p) => (p.value >= 12 ? `${fmt(p.value, 0)}%` : "") } },
       ],
     });
   } else {
@@ -308,6 +402,7 @@ function renderMaterias() {
   if (estado.materia && !top.includes(estado.materia)) top = [...top.slice(0, 19), estado.materia];
   top.reverse();
   const discs = DISCIPLINAS.filter((d) => estado.disc.has(d));
+  const corSerie = (d) => (UMA_DISC ? css("--acento-forte") : cor(d));
   grafico("c-materias", {
     ...baseOpcoes(),
     tooltip: { ...baseOpcoes().tooltip, axisPointer: { type: "shadow" }, valueFormatter: (v) => (v == null ? "—" : fmt(v, 2)) },
@@ -322,7 +417,7 @@ function renderMaterias() {
       },
     }),
     series: discs.map((d) => ({
-      name: d, type: "bar", stack: "m", color: cor(d), barMaxWidth: 18, cursor: "pointer",
+      name: d, type: "bar", stack: "m", color: corSerie(d), barMaxWidth: 18, cursor: "pointer",
       data: top.map((m) => {
         const v = +(doGrafico.filter((q) => q.materia === m && q.disciplina === d).length / n).toFixed(2) || null;
         return { value: v, itemStyle: { opacity: !estado.materia || m === estado.materia ? 1 : 0.28 } };
@@ -339,14 +434,15 @@ function renderMaterias() {
   // Tabela de assuntos dentro da matéria escolhida.
   const assuntos = contar(escopoAssuntos.flatMap((q) => [...new Set(q.assuntos)])).slice(0, 60);
   document.getElementById("h-assuntos").textContent = estado.materia ? `· ${estado.materia}` : escopoTexto();
-  const max = assuntos[0]?.[1] || 1;
+  // Escala fixa de cinco tamanhos, a mesma nas quatro áreas: "cai muito" quer dizer o mesmo em todo o site.
+  const passo = (c) => (c >= 10 ? 5 : c >= 5 ? 4 : c >= 3 ? 3 : c);
   const t = document.getElementById("t-assuntos");
   t.innerHTML = `<thead><tr><th>Assunto</th><th>Disciplinas</th><th>Anos</th><th class="num">Questões</th></tr></thead><tbody>` +
     (assuntos.length ? assuntos.map(([a, c]) => {
       const rel = escopoAssuntos.filter((q) => q.assuntos.includes(a));
       const anos = faixas([...new Set(rel.map((q) => q.ano))].sort());
       const ds = [...new Set(rel.map((q) => q.disciplina))].map(tag).join(" ");
-      return `<tr data-v="${esc(a)}"${a === estado.assunto ? ' class="sel"' : ""}><td>${esc(a)}<div class="bar" style="width:${(c / max) * 100}%"></div></td><td>${ds}</td><td>${anos}</td><td class="num">${c}</td></tr>`;
+      return `<tr data-v="${esc(a)}"${a === estado.assunto ? ' class="sel"' : ""}><td><span class="marca-f f${passo(c)}">${esc(a)}</span></td><td>${ds}</td><td>${anos}</td><td class="num">${c}</td></tr>`;
     }).join("") : `<tr><td colspan="4" class="empty">Sem assuntos anotados neste recorte.</td></tr>`) + "</tbody>";
   t.onclick = (e) => {
     const tr = e.target.closest("tr[data-v]");
@@ -367,17 +463,20 @@ function renderQuestoes() {
   const partes = [estado.materia, estado.assunto, estado.brasilM !== "todos" && (estado.brasilM === "sim" ? M.sim : M.nao).toLowerCase()].filter(Boolean);
   document.getElementById("h-questoes").textContent = partes.length ? `· ${partes.join(" · ")}` : escopoTexto();
   document.getElementById("busca-count").textContent = `${qs.length} questões`;
+  const materias = [...new Set(qs.map((q) => q.materia).filter(Boolean))];
+  const treinar = document.getElementById("treinar-filtro");
+  treinar.href = linkSimulado(estado.materia ? [estado.materia] : estado.assunto || termo ? materias : []);
+  treinar.textContent = estado.materia ? `Treinar ${estado.materia}` : "Treinar este recorte";
   document.querySelector("#t-questoes tbody").innerHTML = qs.length ? qs.slice(0, estado.limite).map((q) => `
     <tr>
-      <td>${q.ano}${q.metodo === "ia" ? ' <span class="tag" title="Classificada com ajuda de IA, ainda sem revisão humana">IA</span>' : ""}</td>
-      <td class="num">${q.q}</td>
+      <td class="codigo">${codigo(q)}${q.metodo === "ia" ? ' <span class="metodo" title="Classificada com ajuda de IA, ainda sem revisão humana">IA</span>' : ' <span class="metodo manual" title="Lida e classificada à mão">à mão</span>'}</td>
       <td>${tag(q.disciplina)}</td>
       <td>${esc(q.materia)}</td>
       <td>${esc(q.abordagem || "—")}<div class="assuntos">${esc(q.assuntos.join(" · "))}</div></td>
       <td>${esc(q.fonte || "—")}</td>
-      <td>${q[M.campo] ? M.icone : ""}</td>
+      <td>${q[M.campo] ? `<span class="sim-marca" title="${M.sim}">${M.sim}</span>` : ""}</td>
       <td><button type="button" class="ver-questao" data-ano="${q.ano}" data-q="${q.q}">Ver questão</button></td>
-    </tr>`).join("") : `<tr><td colspan="8" class="empty">Nenhuma questão neste filtro.</td></tr>`;
+    </tr>`).join("") : `<tr><td colspan="7" class="empty">Nenhuma questão neste filtro. Tente limpar a busca ou os filtros acima.</td></tr>`;
   document.getElementById("mais").hidden = qs.length <= estado.limite;
 }
 
@@ -400,11 +499,11 @@ function abrirQuestao(ano, num) {
     dlg.querySelector(".qd-fechar").onclick = () => dlg.close();
     dlg.onclick = (e) => { if (e.target === dlg) dlg.close(); };  // clique fora do cartão fecha
   }
-  dlg.querySelector("#qd-titulo").textContent = `ENEM ${ano} · Questão ${num} · ${q.disciplina}`;
+  dlg.querySelector("#qd-titulo").textContent = `${codigo(q)} · ${q.disciplina} · ${q.materia}`;
   dlg.querySelector("#qd-gab").innerHTML = q.gab === "X" ? "Questão <strong>anulada</strong> pelo INEP."
     : q.gab ? `Resposta certa: <strong>${q.gab}</strong>` : "Gabarito indisponível.";
   const img = dlg.querySelector("#qd-img");
-  img.src = `questoes/${document.body.dataset.area || "humanas"}/${ano}-${num}.webp`;
+  img.src = `questoes/${AREA.pasta}/${ano}-${num}.webp`;
   img.alt = `Questão ${num} do ENEM ${ano}`;
   dlg.showModal();
 }
@@ -437,7 +536,7 @@ function renderFontes() {
   document.querySelector('[data-clear="fontes"]').hidden = !estado.tipo && !estado.fonte && !estado.autor;
 
   const tipos = contar(partes.filter((p) => passaFonte(p) && passaAutor(p)).map((p) => p.tipo)).filter(([t]) => TIPOS.includes(t));
-  const paleta = [css("--hist"), css("--soc"), css("--filo"), css("--geo"), css("--br-yes"), css("--muted"), css("--br-no")];
+  const paleta = CANETAS.map(css).concat(css("--br-no"));
   grafico("c-tipos", {
     ...baseOpcoes(),
     legend: { bottom: 0, left: "center", icon: "circle", itemGap: 12, selectedMode: false, textStyle: { color: css("--ink"), fontSize: 12 }, formatter: (n) => `${n}  ${tipos.find(([t]) => t === n)?.[1] ?? ""}` },
@@ -491,17 +590,26 @@ function atualizar() {
 }
 
 async function iniciar() {
-  [QUESTOES, ANUAL] = await Promise.all([
-    fetch(AREA.dados[0]).then((r) => r.json()),
-    fetch(AREA.dados[1]).then((r) => r.json()),
-  ]);
+  [QUESTOES, ANUAL] = await Promise.all(AREA.dados.map((u) => fetch(u).then((r) => r.json())));
   // a versão em espanhol das questões de língua estrangeira só entra no simulado
-  QUESTOES = QUESTOES.filter((q) => !q.esp);
-  renderKpis();
+  QUESTOES = QUESTOES.filter((q) => !q.esp && DISCIPLINAS.includes(q.disciplina));
+  // Matemática e Natureza não têm resumo anual próprio: ele sai das próprias questões.
+  if (!ANUAL) {
+    ANUAL = [...new Set(QUESTOES.map((q) => q.ano))].sort().map((ano) => {
+      const qs = QUESTOES.filter((q) => q.ano === ano);
+      return {
+        ano, fonte: "ia", total: qs.length, [M.campo]: qs.filter((q) => q[M.campo]).length,
+        disciplinas: Object.fromEntries(contar(qs.map((q) => q.disciplina))),
+      };
+    });
+  }
+  renderCapa();
   renderFiltros();
   atualizar();
   window.addEventListener("resize", () => Object.values(graficos).forEach((g) => g.resize()));
   matchMedia("(prefers-color-scheme: dark)").addEventListener("change", atualizar);
+  // As fontes da web chegam depois do primeiro desenho; redesenha para os rótulos usarem a fonte certa.
+  document.fonts?.ready.then(atualizar);
 }
 
 iniciar();
